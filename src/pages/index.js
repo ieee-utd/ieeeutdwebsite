@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>IEEE UTD Website</title>
+        <title>IEEE at UT Dallas - The Student Branch of IEEE at UTD</title>
         <meta
           name="description"
           content="This is the website of the UTD branch of IEEE"
