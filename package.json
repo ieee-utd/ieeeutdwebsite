@@ -13,6 +13,7 @@
     "@fullcalendar/daygrid": "^6.1.4",
     "@fullcalendar/list": "^6.1.4",
     "@fullcalendar/react": "^6.1.4",
+    "@fullcalendar/timegrid": "^6.1.4",
     "@next/font": "13.1.6",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
