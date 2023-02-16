@@ -7,17 +7,17 @@
     background-color: var(--ieeeblue);
     height: 100px;
   
-  
   }
 
   .title__logo {
 
-    margin-left: 6%;
+    margin-left: 5%;
     margin-right: auto;
     margin-top: 0.5%;
     display: flex;
+    width: 30%;
     flex-direction: row;
-   
+
 
   }
 
@@ -25,32 +25,7 @@
 
     width: 75px;
     height: 75px;
-    margin-right:25%;
-
-  }
-
-  /* navbar display changes with resizing of screen */
-
-  .navbar__options{
-
-    color: white;
-    text-align:center;
-    font-size: 24px;
-    margin-right: 50px;
-    margin-top: 35px;
-
-  }
-
-  
-  .navbar__options:hover{
-
-    color: var(--ieeeorange);
-    text-align:center;
-    font-size: 24px;
-    height: 5px;
-    margin-right: 50px;
-    margin-top: 35px;
-
+    margin-right:22%;
 
   }
 
@@ -58,10 +33,17 @@
 
     display: inline-block;
     position: relative;
- 
+   
+    
 
   }
 
+    
+  .navbar__hover__underline:hover{
+
+    color: white;
+
+  }
 
   .navbar__hover__underline:after{
 
@@ -138,12 +120,5 @@
     color: white;
     font-size: 3rem;
     white-space: nowrap;
-
-  }
-
-  .navbar__contents {
-
-    margin-top: 10%;
-    margin-bottom: 1%;
 
   }

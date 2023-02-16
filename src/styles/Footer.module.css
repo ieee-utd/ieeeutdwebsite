@@ -3,9 +3,5 @@
   .footer {
     
     background-color: var(--ieeeorange);
-    height: 4.5rem;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
 
   }
