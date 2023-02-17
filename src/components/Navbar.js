@@ -4,7 +4,7 @@ import Link from "next/Link";
 
 import logo from "../assets/ieeeutdlogo.png";
 import HamburgerMenu from "./HamburgerMenu";
-// comment
+// commen
 export default function Navbar() {
   return (
     <header className={styles.navbar}>
