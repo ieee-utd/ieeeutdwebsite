@@ -11,8 +11,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ieeeorange: "#F27E2E",
-        ieeeorangedim: "#F6AA76",
+        ieeeorange: "#C85B12",
+        ieeeorangedim: "#F27E2E",
         ieeeblue: "#2C6A9B",
         fadedblue: "#BFD2E1",
       },
