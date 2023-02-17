@@ -1,6 +1,6 @@
 import styles from "@/styles/Navigation.module.css";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 
 import logo from "../assets/ieeeutdlogo.png";
 import HamburgerMenu from "./HamburgerMenu";
