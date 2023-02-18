@@ -4,14 +4,22 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-
+import Image from "next/image";
+import logo from "../assets/ieeelogowhite.png";
 import NewsLetter from "../components/NewsLetter";
 
 export default function Footer() {
   return (
     <footer className=" bg-ieeeorange h-1/2 w-full  flex md:flex-row flex-col justify-around items-start p-20">
-      <div className="text-white p-5">
-        <p>© Copyright of IEEE at UTD</p>
+      <div className="text-white p-5 flex flex-col">
+        <div className="flex flex-row">
+          <Image className={styles.logo} src={logo} alt="IEEELOGO" />
+          <div className="flex flex-col w-60">
+            <div className={styles.title}>IEEE UTD</div>
+            <p>University of Texas at Dallas</p>
+          </div>
+        </div>
+        <p>© Copyright {new Date().getFullYear()} IEEE at UTD </p>
       </div>
       <div className="text-white p-5">
         <ul>

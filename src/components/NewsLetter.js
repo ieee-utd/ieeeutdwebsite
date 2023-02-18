@@ -64,14 +64,14 @@ export default function NewsLetter() {
             onSubmit={submitForm}
           >
             <input
-              className="text-black"
+              className="text-black mt-4 h-10 w-3/4 p-4"
               type="text"
               id="email"
               name="email"
               onChange={handleInput}
             />
             <button
-              className="border-white rounded-full border-solid border-2 mt-4"
+              className="transition ease-in-out delay-150 border-white rounded-full border-solid border-2 mt-4 w-1/2 h-12 hover:bg-white hover:text-ieeeorange"
               type="submit"
             >
               Sign Up
