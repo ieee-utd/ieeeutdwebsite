@@ -7,6 +7,10 @@ import googleCalendarPlugin from '@fullcalendar/google-calendar';
 export default function Tutoring() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
   const calendarId = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
+  if(apiKey == undefined)
+    console.log("apikey is undefined")
+  else
+    console.log("working good")
   return (
     <>
       <Head></Head>
