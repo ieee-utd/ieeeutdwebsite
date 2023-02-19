@@ -5,8 +5,8 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 
 export default function Tutoring() {
-  const apiKey = process.env.GOOGLE_API_KEY;
-  const calendarId = process.env.TUTORING_CALENDAR_ID;
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
+  const calendarId = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
   return (
     <>
       <Head></Head>
