@@ -38,6 +38,10 @@ export default function Tutoring() {
                   center: '',
                   right: '',
                 }}
+                eventClick= {function (event) {
+                  // Prevent redirect to Google Calendar
+                  event.jsEvent.preventDefault();
+              }}
                 />
               </div>
           </div>
