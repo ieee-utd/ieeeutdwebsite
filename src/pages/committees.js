@@ -6,7 +6,7 @@ export default function Committees() {
     <>
       <Head></Head>
       <main>
-        <p>This is the commitees page</p>
+        <p>Hey my name is James</p>
       </main>
     </>
   );

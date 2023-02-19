@@ -1,0 +1,17 @@
+.container {
+
+    width: 100%;
+    height: 100%;
+    margin:0;
+    position: relative;
+}
+
+
+.first__container {
+
+    width: 100%;
+    height: auto;
+    display: block;
+  
+  }
+
