@@ -1,16 +1,54 @@
 /* Web */
-
 .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  height: 150vh;
+  background-color: blue;
+}
+.title {
+  padding: 5rem;  
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.course-list-title {
+  font-size: 2.5rem;
+  padding: 5rem;
+  padding-bottom: 0rem;
+  
+}
+.course-list {
+  padding: .5rem;
+  font-size: 1.5rem;
+  position: relative;
+  left: 5rem;
+  background-color: lightgray;
+  width: 57rem;
+  height: 6rem;
+}
+.tutoring-hours-title {
+  font-size: 2.5rem;
+  padding: 5rem;
+  padding-bottom: 0rem;
+  display: flex;
+  justify-content: center;
+}
+.calendar-container {
+  display: flex;
+  justify-content: center;
+}
+.calendar-container > div {
+  width: 80vw;
+  /* display: flex;
+  /* position: relative; */
+  /* justify-content: center; */
+  /* border: 1px red solid; */
+}
+.calendar {
+  /* position: relative; */
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6rem;
-    min-height: 100vh;
-    
-  }
-  
+}
   /* Mobile */
-  
-  
