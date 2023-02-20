@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import styles from "../styles/Footer.module.css";
+
 export default function NewsLetter() {
   const [formData, setFormData] = useState({
     name: "",
@@ -56,7 +58,9 @@ export default function NewsLetter() {
         <div className="tw-flex tw-justify-center tw-mt-8">Thank you!</div>
       ) : (
         <>
-          <p>Sign up to receive our weekly newsletter</p>
+          <p className={styles.signup}>
+            Sign up to receive our weekly newsletter
+          </p>
           <form
             className="tw-flex tw-flex-col"
             action="/subscribe"
@@ -74,7 +78,7 @@ export default function NewsLetter() {
               className="tw-transition tw-ease-in-out tw-delay-150 tw-border-white tw-rounded-full tw-border-solid tw-border-2 tw-mt-4 tw-w-1/2 tw-h-12 hover:tw-bg-white hover:tw-text-ieeeorange"
               type="submit"
             >
-              Sign Up
+              <span className={styles.font__text}>Sign Up</span>
             </button>
           </form>
         </>

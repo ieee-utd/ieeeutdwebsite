@@ -43,10 +43,19 @@
 
 .title {
 
+  font-family: 'Roboto Mono', monospace;
   font-size: 8rem;
   font-weight: bold;
 
 
+}
+
+
+.about {
+
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2.5rem;
+  
 }
 
 .typewriter {
@@ -59,7 +68,7 @@
 
 .typewriter p{
 
-  
+  font-family: 'Roboto Mono', monospace;
   margin-top: 2%;
   overflow: hidden;
   border-right: 2px solid var(--ieeeorange);
