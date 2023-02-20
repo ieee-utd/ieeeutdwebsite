@@ -51,27 +51,27 @@ export default function NewsLetter() {
   };
 
   return (
-    <div className="flex text-white flex-col">
+    <div className="tw-flex tw-text-white tw-flex-col">
       {formSuccess ? (
-        <div className="flex justify-center mt-8">Thank you!</div>
+        <div className="tw-flex tw-justify-center tw-mt-8">Thank you!</div>
       ) : (
         <>
           <p>Sign up to receive our weekly newsletter</p>
           <form
-            className="flex flex-col"
+            className="tw-flex tw-flex-col"
             action="/subscribe"
             method="post"
             onSubmit={submitForm}
           >
             <input
-              className="text-black mt-4 h-10 w-3/4 p-4"
+              className="tw-text-black tw-mt-4 tw-h-10 tw-w-3/4 tw-p-4"
               type="text"
               id="email"
               name="email"
               onChange={handleInput}
             />
             <button
-              className="transition ease-in-out delay-150 border-white rounded-full border-solid border-2 mt-4 w-1/2 h-12 hover:bg-white hover:text-ieeeorange"
+              className="tw-transition tw-ease-in-out tw-delay-150 tw-border-white tw-rounded-full tw-border-solid tw-border-2 tw-mt-4 tw-w-1/2 tw-h-12 hover:tw-bg-white hover:tw-text-ieeeorange"
               type="submit"
             >
               Sign Up

@@ -29,7 +29,6 @@ export default function Home() {
               <p>Advancing Technology for Humanity</p>
             </span>
           </div>
-
           <CarouselComponent />
         </div>
         <div>

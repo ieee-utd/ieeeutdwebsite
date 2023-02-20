@@ -23,30 +23,30 @@ const images = [
 export default function CarouselComponent() {
   return (
     <Carousel fade controls={false} indicators>
-      <Carousel.Item className="h-full">
+      <Carousel.Item className="tw-h-full">
         <Image
-          className="block w-full h-full"
+          className="tw-block tw-w-full tw-h-full"
           src={images[0].image}
           alt="First Slide"
         />
       </Carousel.Item>
-      <Carousel.Item className="h-full">
+      <Carousel.Item className="tw-h-full">
         <Image
-          className="block w-full h-full"
+          className="tw-block tw-w-full tw-h-full"
           src={images[1].image}
           alt="Second Slide"
         />
       </Carousel.Item>
-      <Carousel.Item className="h-full">
+      <Carousel.Item className="tw-h-full">
         <Image
-          className="block w-full h-full"
+          className="tw-block tw-w-full tw-h-full"
           src={images[2].image}
           alt="Third Slide"
         />
       </Carousel.Item>
-      <Carousel.Item className="h-full">
+      <Carousel.Item className="tw-h-full">
         <Image
-          className="block w-full h-full"
+          className="tw-block tw-w-full tw-h-full"
           src={images[3].image}
           alt="Fourth Slide"
         />

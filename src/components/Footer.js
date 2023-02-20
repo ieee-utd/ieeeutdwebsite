@@ -10,36 +10,36 @@ import NewsLetter from "../components/NewsLetter";
 
 export default function Footer() {
   return (
-    <footer className=" bg-ieeeorange h-1/2 w-full  flex md:flex-row flex-col justify-around items-start p-20">
-      <div className="text-white p-5 flex flex-col">
-        <div className="flex flex-row">
+    <footer className=" tw-bg-ieeeorange tw-h-1/2 tw-w-full  tw-flex md:tw-flex-row tw-flex-col tw-justify-around tw-items-start tw-p-20">
+      <div className="tw-text-white tw-p-5 tw-flex tw-flex-col">
+        <div className="tw-flex tw-flex-row">
           <Image className={styles.logo} src={logo} alt="IEEELOGO" />
-          <div className="flex flex-col w-60">
+          <div className="tw-flex tw-flex-col tw-w-60">
             <div className={styles.title}>IEEE UTD</div>
             <p>University of Texas at Dallas</p>
           </div>
         </div>
         <p>© Copyright {new Date().getFullYear()} IEEE at UTD </p>
       </div>
-      <div className="text-white p-5">
+      <div className="tw-text-white p-5">
         <ul>
-          <p className="text-2xl">Contact Us</p>
+          <p className="tw-text-2xl">Contact Us</p>
           <p>IEEE UTD</p>
           <p>SPN 2.220</p>
           <p>3000 Synergy Park Blvd,</p>
           <p>Richardson TX, 75080</p>
-          <p className="underline decoration-ieeeorangedim mt-2">
+          <p className="tw-underline tw-decoration-ieeeorangedim tw-mt-2">
             ieeeutd@gmail.com
           </p>
         </ul>
       </div>
-      <div className="p-5 flex-col">
+      <div className="tw-p-5 tw-flex-col">
         <ul>
-          <div className="group flex gap-6 pb-5">
-            <FaInstagram className="transition ease-in-out delay-150 text-white text-5xl cursor-pointer hover:fill-white group-hover:text-ieeeorangedim" />
-            <FaFacebook className="transition ease-in-out delay-150 text-white  text-5xl cursor-pointer hover:fill-white group-hover:text-ieeeorangedim " />
-            <FaLinkedin className="transition ease-in-out delay-150 text-white  text-5xl cursor-pointer hover:fill-white group-hover:text-ieeeorangedim" />
-            <FaYoutube className="transition ease-in-out delay-150 text-white text-5xl cursor-pointer hover:fill-white group-hover:text-ieeeorangedim" />
+          <div className="tw-group tw-flex tw-gap-6 tw-pb-5">
+            <FaInstagram className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-text-5xl tw-cursor-pointer hover:tw-fill-white group-hover:tw-text-ieeeorangedim" />
+            <FaFacebook className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-text-5xl tw-cursor-pointer hover:tw-fill-white group-hover:tw-text-ieeeorangedim" />
+            <FaLinkedin className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-text-5xl tw-cursor-pointer hover:tw-fill-white group-hover:tw-text-ieeeorangedim" />
+            <FaYoutube className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-text-5xl tw-cursor-pointer hover:tw-fill-white group-hover:tw-text-ieeeorangedim" />
           </div>
           <NewsLetter />
         </ul>

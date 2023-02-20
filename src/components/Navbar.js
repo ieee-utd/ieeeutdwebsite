@@ -12,33 +12,33 @@ export default function Navbar() {
         <Image className={styles.logo} src={logo} alt="IEEELOGO" />
         <div className={styles.navbar__title}>IEEE UTD</div>
       </div>
-      <div className="group hidden gap-6 pb-5 mt-6 md:flex mr-10">
+      <div className="tw-group tw-hidden tw-gap-6 tw-pb-5 tw-mt-6 md:tw-flex tw-mr-10">
         <Link
           href={"/"}
-          className="transition ease-in-out delay-150 text-white cursor-pointer text-2xl group-hover:text-fadedblue"
+          className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
         >
           <p className={styles.navbar__hover__underline}>Home</p>
         </Link>
         <Link
-          className="transition ease-in-out delay-150 text-white cursor-pointer text-2xl group-hover:text-fadedblue"
+          className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
           href={"/events"}
         >
           <p className={styles.navbar__hover__underline}>Events</p>
         </Link>
         <Link
-          className="transition ease-in-out delay-150 text-white cursor-pointer text-2xl group-hover:text-fadedblue"
+          className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
           href={"/tutoring"}
         >
           <p className={styles.navbar__hover__underline}>Tutoring</p>
         </Link>
         <Link
-          className="transition ease-in-out delay-150 text-white cursor-pointer text-2xl group-hover:text-fadedblue"
+          className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
           href={"/committees"}
         >
           <p className={styles.navbar__hover__underline}>Committees</p>
         </Link>
         <Link
-          className="transition ease-in-out delay-150 text-white cursor-pointer text-2xl group-hover:text-fadedblue"
+          className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
           href={"/forge"}
         >
           <p className={styles.navbar__hover__underline}>Forge</p>
