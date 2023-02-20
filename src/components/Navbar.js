@@ -8,10 +8,14 @@ import HamburgerMenu from "./HamburgerMenu";
 export default function Navbar() {
   return (
     <header className={styles.navbar}>
-      <div className={styles.title__logo}>
-        <Image className={styles.logo} src={logo} alt="IEEELOGO" />
-        <div className={styles.navbar__title}>IEEE UTD</div>
+      <div className={styles.first__container}>
+        <Link href={"/"} className={styles.title__logo}>
+          <Image className={styles.logo} src={logo} alt="IEEELOGO" />
+
+          <div className={styles.navbar__title}>IEEE UTD</div>
+        </Link>
       </div>
+
       <div className="tw-group tw-hidden tw-gap-6 tw-pb-5 tw-mt-6 md:tw-flex tw-mr-10">
         <Link
           href={"/"}

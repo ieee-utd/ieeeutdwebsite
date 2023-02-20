@@ -7,28 +7,44 @@
     display: flex;
     flex-direction: row;
     background-color: var(--ieeeblue);
-    height: 90px;
+    height: 85px;
    
   
   }
 
   .title__logo {
 
-    margin-left: 5%;
-    margin-right: auto;
-    margin-top: 0.5%;
+    margin-left: 0.7em;
+    position: absolute;
+    margin-top: 0.8em;
     display: flex;
-    width: 30%;
+    width: max-content;
     flex-direction: row;
+
+  }
+  
+
+  .navbar__title {
+
+    color: white;
+    font-size: 2rem;
+    white-space: nowrap;
 
 
   }
 
+
+  .first__container {
+
+    margin-right: auto;
+    position: relative;
+  }
+
   .logo {
 
-    width: 75px;
-    height: 75px;
-    margin-right:22%;
+    width: 55px;
+    height: 55px;
+    margin-right:5%;
 
   }
 
@@ -114,12 +130,3 @@
 
   }
 
-
-
-  .navbar__title {
-
-    color: white;
-    font-size: 3rem;
-    white-space: nowrap;
-
-  }
