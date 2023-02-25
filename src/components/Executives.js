@@ -1,7 +1,8 @@
 
 import styles from "@/styles/Committees.module.css";
-import placeholder from "@/assets/gray.png";
-import Image from "next/image"
+import Member from "@/components/Member"
+
+
 
 
 export default function Executives() {
@@ -11,14 +12,10 @@ return(
 
 
      <div className={styles.image__container}>
-     
-     <Image className={styles.image}  src={placeholder} alt="pic" />
-     <Image className={styles.image}  src={placeholder} alt="pic" />
-     <Image className={styles.image}  src={placeholder} alt="pic" />
-     <Image className={styles.image}  src={placeholder} alt="pic" />
-     <Image className={styles.image}  src={placeholder} alt="pic" />
-     <Image className={styles.image}  src={placeholder} alt="pic" />
-     <Image className={styles.image}  src={placeholder} alt="pic" />
+     <Member name="James Odebiyi" title="Events Secretary"/>
+     <Member name="Rita" title="Assistant Web Developer"/>
+     <Member name="James Odebiyi" title="Events Secretary"/>
+     <Member name="James Odebiyi" title="Events Secretary"/>
      </div>
 
 
