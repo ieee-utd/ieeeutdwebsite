@@ -11,8 +11,11 @@
   "dependencies": {
     "@fullcalendar/core": "^6.1.4",
     "@fullcalendar/daygrid": "^6.1.4",
+    "@fullcalendar/google-calendar": "^6.1.4",
     "@fullcalendar/list": "^6.1.4",
     "@fullcalendar/react": "^6.1.4",
+    "@googleapis/calendar": "^3.0.0",
+    "@googleapis/docs": "^2.0.0",
     "@next/font": "13.1.6",
     "bootstrap": "^5.2.3",
     "eslint": "8.33.0",
