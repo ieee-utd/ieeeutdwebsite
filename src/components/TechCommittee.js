@@ -1,6 +1,6 @@
+
 import styles from "@/styles/Committees.module.css";
-import placeholder from "@/assets/gray.png";
-import Image from "next/image"
+import Member from "@/components/Member"
 
 
 export default function Executives() {
@@ -8,12 +8,10 @@ export default function Executives() {
 
 return(
 
-
      <div className={styles.image__container}>
-     
-     <Image className={styles.image}  src={placeholder} alt="pic" />
-     <Image className={styles.image}  src={placeholder} alt="pic" />
-     </div>
+     <Member name="Muneeb Shahid" title="Co-Director"/>
+     <Member name=" Logan Gonzalez" title="Co-Director"/>
+</div>
 
 
 

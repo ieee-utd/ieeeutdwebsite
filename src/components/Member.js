@@ -8,11 +8,11 @@ export default function Member({name="default", title, email, linkedin}) {
 
     return(
         <div className={styles.profile__container}>
-        <Image className={styles.image}  src={placeholder} alt="pic" />
-        <div className={styles.info}>
-            <p>{name}</p>
-            <p className={styles.info__title}>{title}</p>
-        </div>
+            <Image className={styles.image}  src={placeholder} alt="pic" />
+            <div className={styles.info}>
+                <p className={styles.test}>{name}</p>
+                <p className={styles.info__title}>{title}</p>
+            </div>
         </div>
     )
 }

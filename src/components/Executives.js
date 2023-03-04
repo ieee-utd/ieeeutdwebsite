@@ -12,10 +12,11 @@ return(
 
 
      <div className={styles.image__container}>
-     <Member name="James Odebiyi" title="Events Secretary"/>
-     <Member name="Rita" title="Assistant Web Developer"/>
-     <Member name="James Odebiyi" title="Events Secretary"/>
-     <Member name="James Odebiyi" title="Events Secretary"/>
+     <Member name="Allison Pham" title="President"/>
+     <Member name="Caroline Lowes" title="Vice President"/>
+     <Member name="Bryan Marcias" title="Vice President"/>
+     <Member name="Alec Manley" title="Treasurer"/>
+     <Member name="Krishna Chilukuri" title="Secretary"/>
      </div>
 
 
