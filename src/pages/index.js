@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import logo from "@/assets/ieeelogotransparent.png";
 import Image from "next/image";
 import CarouselComponent from "@/components/CarouselComponent";
+import WhoWeAre from "@/components/WhoWeAre";
+import NewsLetterAbout from "@/components/NewsLetterAbout";
 
 export default function Home() {
   return (
@@ -32,9 +34,8 @@ export default function Home() {
           <CarouselComponent />
         </div>
         {/*  About us */}
-        <div>
-          <h1 className={styles.about}>Who we are</h1>
-        </div>
+        <WhoWeAre />
+        <NewsLetterAbout />
       </main>
     </>
   );

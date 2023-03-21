@@ -1,0 +1,166 @@
+/* Web */
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--ieeeblue);
+    position: relative;
+
+}
+
+.title {
+
+  font-family: 'Roboto Mono', monospace;
+  color: #FFFFFF;
+  width: fit-content;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 3.5rem;
+  margin-left: 35%;
+  margin-top: 2%;
+  
+
+}
+
+.Signup__container {
+
+    display: flex;
+    background: var(--ieeeblue);
+    font-family: 'Roboto Mono', monospace;
+    color:#FFFFFF;
+    height: 50vh;
+    border: 2px solid black;
+
+}
+
+.inner_left {
+
+
+    width: 50%;
+    border: 2px solid black;
+
+
+}
+.inner_right {
+
+    border: 2px solid black;
+    position: relative;
+
+}
+
+
+
+.Signup__message {
+
+    margin-left: 5%;
+    font-size: 1.8rem;
+    border: 2px solid black;
+
+}
+
+.inner_left_signup{
+
+    margin-left: 30%;
+}
+
+.inner_right_message {
+
+    position: absolute;
+    top: 20%;
+    left: 5rem;
+    width: 100px;
+    border: 2px solid black;
+}
+
+
+.Signup__text {
+
+    font-family: 'Roboto Mono', monospace;
+
+}
+.aboutContainer {
+
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    height: 100%;
+    background: #EAF0F5;
+
+
+}
+
+.logo__about {
+
+    display: flex;
+    height: 70vh;
+    padding-bottom: 4%;
+    margin-top: 2%;
+  
+  }
+
+  .logo{
+
+    height: 300px;
+    width: 300px;
+    margin-top: 10%;
+
+
+  }
+  .logo__space {
+
+    display: flex;
+    width: 250vh;
+    padding: 2%;
+    justify-content: center;
+
+
+  }
+
+
+
+.aboutText {
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.9rem;
+    font-weight: 500;
+    padding: 5rem;
+    box-sizing: border-box;
+
+
+
+}
+
+
+@media screen and (max-width: 800px){
+
+    .aboutText {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1000px){
+
+    .aboutText {
+
+
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    .aboutText {
+
+        height: 100%;
+       
+
+    }
+
+ 
+}
+
+
+
+
+
+
+/* Mobile */
