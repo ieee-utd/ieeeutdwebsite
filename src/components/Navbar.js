@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="tw-group tw-hidden tw-gap-6 tw-pb-5 tw-mt-6 md:tw-flex tw-mr-10">
         <Link
           href={"/"}
-          className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
+          className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-text-2xl group-hover:tw-text-fadedblue"
         >
           <p className={styles.navbar__hover__underline}>Home</p>
         </Link>

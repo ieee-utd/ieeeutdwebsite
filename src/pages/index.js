@@ -7,6 +7,8 @@ import Image from "next/image";
 import CarouselComponent from "@/components/CarouselComponent";
 import WhoWeAre from "@/components/WhoWeAre";
 import NewsLetterAbout from "@/components/NewsLetterAbout";
+import WhatWeDo from "@/components/WhatWeDo";
+import GridSection from "@/components/GridPhotos";
 
 export default function Home() {
   return (
@@ -35,6 +37,10 @@ export default function Home() {
         </div>
         {/*  About us */}
         <WhoWeAre />
+        {/*What we do*/}
+        <WhatWeDo />
+        <GridSection />
+        <div>Corporate Sponsors</div>
         <NewsLetterAbout />
       </main>
     </>
