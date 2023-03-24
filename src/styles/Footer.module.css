@@ -1,0 +1,22 @@
+
+
+  .footer {
+    
+    background-color: var(--ieeeorange);
+
+  }
+
+  .logo {
+
+    width: 75px;
+    height: 75px;
+    margin-right:4%;
+
+  }
+
+  .title {
+
+    font-size: 2rem;
+    white-space: nowrap
+
+  }

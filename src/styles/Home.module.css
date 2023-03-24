@@ -1,5 +1,6 @@
 /* Web */
 
+
 .main {
   display: flex;
   flex-direction: column;
@@ -8,6 +9,7 @@
   padding: 6rem;
   min-height: 100vh;
 }
+
 
 /* Mobile */
 
