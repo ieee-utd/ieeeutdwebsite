@@ -11,14 +11,17 @@
   padding: 10rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
+  background-color: #173f56;
 }
 .title {
+  font-family: 'Roboto', sans-serif;
   font-size: 3rem;
   display: flex;
   justify-content: center;
   font-weight: 900;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   padding-bottom: 3rem;
+  color: white;
 }
 .course-list-title {
   font-size: 2.5rem;
@@ -26,12 +29,14 @@
   text-decoration: underline;
   text-underline-offset: 12px;
   font-weight: 500;
+  color: white;
 }
 .course-list-container > ul > li{
   font-size: 1.75rem;
   font-weight: 400;
   margin-bottom: 25px;
   line-height: 10px;
+  color: white;
 }
 .section-two-container {
   background-color: rgb(192, 192, 192);
