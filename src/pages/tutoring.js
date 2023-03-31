@@ -10,15 +10,15 @@ import escnMap from "public/escnmap.png"
 export default function Tutoring() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
   const calendarId = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
-  // if(apiKey == undefined)
-  //   console.log("apikey is undefined")
-  // else
-  //   console.log("working good")
   return (
     <>
       <Head></Head>
       {/* header */}
       <main>
+        <div className={styles["header-container"]}>
+          <img src="/tutoring_banner.jpg" alt="Tutoring Banner"/>
+          Tutoring
+        </div>
         <div className={styles["section-one-container"]}>
           <h1 className={styles.title}>Tutoring</h1>
           <div className={styles["course-list-container"]}>
@@ -42,7 +42,7 @@ export default function Tutoring() {
             <Image width={700} height={700} src={utdMap}/>
             <Image width={700} height={700} src={escnMap}/>
           </div>
-          <p>The tutoring room is located at ECSN 2.318. We are the room in the main lobby with IEEE signs and a big window. The entrance is in the hallway on the other side of the tutoring room.</p>
+          <p style={{color: 'white', fontFamily: 'Roboto Mono, monospace'}}>The tutoring room is located at ECSN 2.318. We are the room in the main lobby with IEEE signs and a big window. The entrance is in the hallway on the other side of the tutoring room.</p>
         </div>
         <div className={styles["section-three-container"]}>
           <p className={styles["tutoring-hours-title"]}>Tutoring hours</p>
