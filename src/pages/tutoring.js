@@ -6,6 +6,7 @@ import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import Image from "next/image";
 import utdMap from "public/utdmap.png";
 import escnMap from "public/escnmap.png"
+import banner from "public/tutoring_banner.jpg"
 
 export default function Tutoring() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
@@ -16,11 +17,10 @@ export default function Tutoring() {
       {/* header */}
       <main>
         <div className={styles["header-container"]}>
-          <img src="/tutoring_banner.jpg" alt="Tutoring Banner"/>
-          Tutoring
+          <Image priority={true} placeholder={"blur"} className="object-cover h-[200px] md:h-[600px] brightness-50" src={banner} alt="Tutoring Banner"/>
+          <h1 className={styles.title}>Tutoring</h1>
         </div>
         <div className={styles["section-one-container"]}>
-          <h1 className={styles.title}>Tutoring</h1>
           <div className={styles["course-list-container"]}>
             <p className={styles["course-list-title"]}>We provide tutoring for the following courses:</p>
             <ul>
