@@ -11,6 +11,17 @@ import banner from "public/tutoring_banner.jpg"
 export default function Tutoring() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
   const calendarId = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
+  // console.log("apikey", apiKey);
+  let eventIndex = 0;
+  const colors = ['#8f1600', '#9c5d00', '#7a9c00', '#009c17', '#007d9c', '#00009c']; //temp colors
+  const handleEventDidMount = (eventInfo) => {
+    const eventColor = colors[eventIndex % colors.length];
+    eventIndex++;
+    eventInfo.el.style.backgroundColor = eventColor;
+  };
+  const handleViewDidMount = (viewInfo) => {
+    viewInfo.el.style.borderColor = 'black';
+  }
   return (
     <>
       <Head></Head>
@@ -48,10 +59,13 @@ export default function Tutoring() {
           <p className={styles["tutoring-hours-title"]}>Tutoring hours</p>
           <div className={styles["calendar-container"]}>
             <div className={styles["calendar-container"]}>
-              <FullCalendar className={styles.calendar}
+              <FullCalendar className={"fc"}
+                styles={{backgroundColor: 'black'}}
                 plugins={[timeGridPlugin, googleCalendarPlugin]}  
                 googleCalendarApiKey={apiKey}
                 events={{googleCalendarId: calendarId}}
+                viewDidMount={handleViewDidMount}
+                eventDidMount={handleEventDidMount} // custom render function
                 initialDate={'2023-02-06'}  //START DATE FOR THE WEEK
                 slotDuration="00:15:00"
                 slotMinTime="10:00"
