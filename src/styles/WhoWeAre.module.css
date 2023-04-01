@@ -1,0 +1,178 @@
+/* Web */
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--ieeeblue);
+    padding-bottom: 2vh;
+    position: relative;
+
+
+}
+
+.title {
+
+  font-family: 'Roboto Mono', monospace;
+  color: #FFFFFF;
+  width: fit-content;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 3.5rem;
+  margin-left: 35%;
+  margin-top: 2%;
+  
+
+}
+
+.Signup__container {
+
+    display: flex;
+    background: var(--ieeeblue);
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color:#FFFFFF;
+    height: 50vh;
+    padding-bottom: 5vh;
+
+
+}
+
+.form__container {
+
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.inner_left {
+
+
+    width: 50%;
+
+}
+.inner_right {
+
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.Signup__message {
+
+    margin-left: 30%;
+    font-size: 1.8rem;
+    width: 70%;
+
+
+}
+
+.inner_left_signup{
+
+    margin-left: 30%;
+}
+
+.inner_right_message {
+
+    width: 90%;
+    font-size: 1.6rem;
+    margin-bottom: 8%;
+
+}
+
+
+.Signup__text {
+
+    font-family: 'Roboto Mono', monospace;
+
+}
+.aboutContainer {
+
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background: #EAF0F5;
+
+
+}
+
+.logo__about {
+
+    display: flex;
+    height: 50vh;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 2%;
+
+  
+  }
+
+  .logo{
+
+    height: 250px;
+    width: 250px;
+    align-self: center;
+
+
+  }
+  .logo__space {
+
+    display: flex;
+    width: 250vh;
+    padding: 2%;
+    justify-content: center;
+
+
+  }
+
+
+
+.aboutText {
+
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding-left: 5rem;
+    padding-top: 2.5rem;
+
+}
+
+
+@media screen and (max-width: 800px){
+
+    .aboutText {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1000px){
+
+    .aboutText {
+
+
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    .aboutText {
+
+      
+       
+
+    }
+
+ 
+}
+
+
+
+
+
+
+/* Mobile */

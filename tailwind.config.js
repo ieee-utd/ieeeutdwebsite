@@ -14,8 +14,10 @@ module.exports = {
       colors: {
         ieeeorange: "#C85B12",
         ieeeorangedim: "#F27E2E",
+        ieeeorangedark: "#AD4E0F",
         ieeeblue: "#2C6A9B",
         fadedblue: "#BFD2E1",
+        lightgray: "#e9e9e9",
       },
     },
   },

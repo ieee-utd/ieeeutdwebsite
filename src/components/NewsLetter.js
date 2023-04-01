@@ -23,27 +23,27 @@ export default function NewsLetter() {
   const submitForm = (e) => {
     e.preventDefault(); // do not refresh page
 
-    const formURL = e.target.action;
-
-    const data = new FormData();
+    const data = {};
 
     // turn the form data state into data we can use for form submission
 
     Object.entries(formData).forEach(([key, value]) => {
-      data.append(key, value);
+      if (key == "email") data[key] = value;
     });
 
     // post the data to the url of the form
 
-    fetch(formURL, {
+    console.log(data);
+
+    fetch("/api/subscribe", {
       method: "POST",
-      body: data,
+      body: JSON.stringify(data),
       headers: {
         accept: "application/json",
       },
     }).then(() => {
       // reset the data
-      console.log(`name_field: ${data.name}`);
+      console.log(`email: ${data.email}`);
       setFormData({
         name: "",
         email: "",
