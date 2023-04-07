@@ -1,4 +1,3 @@
-
 import styles from "@/styles/Committees.module.css";
 import Member from "@/components/Member"
 

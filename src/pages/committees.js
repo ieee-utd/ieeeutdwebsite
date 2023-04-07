@@ -10,7 +10,7 @@ import styles from "@/styles/Committees.module.css";
 
 export default function Committees() {
   return (
-    <div className="container">
+    <div>
      <div className={styles.title}>
       Executives
      </div>
