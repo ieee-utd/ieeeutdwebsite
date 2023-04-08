@@ -55,6 +55,7 @@
 .inner_right {
 
     width:50%;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,6 +67,7 @@
 
     margin-left: 30%;
     font-size: 1.8rem;
+    padding-top: 2rem;
     width: 70%;
 
 
@@ -74,12 +76,15 @@
 .inner_left_signup{
 
     margin-left: 30%;
+
+   
 }
 
 .inner_right_message {
 
     width: 90%;
     font-size: 1.6rem;
+    padding-top: 2rem;
     margin-bottom: 8%;
 
 }

@@ -33,8 +33,7 @@ export default function Footer() {
             <p className={styles.font__text}>Contact Us</p>
           </div>
           <p className={styles.font__text}>IEEE UTD</p>
-          <p className={styles.font__text}>SPN 2.220</p>
-          <p className={styles.font__text}>3000 Synergy Park Blvd,</p>
+          <p className={styles.font__text}>ECSN 2.318,</p>
           <p className={styles.font__text}>Richardson TX, 75080</p>
           <div className="tw-underline tw-decoration-ieeeorangedim tw-mt-2">
             <p className={styles.font__text}>ieeeutd@gmail.com</p>
@@ -57,7 +56,6 @@ export default function Footer() {
               <FaYoutube className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-text-5xl tw-cursor-pointer hover:tw-fill-white group-hover:tw-text-ieeeorangedim" />
             </a>
           </div>
-          <NewsLetter />
         </ul>
       </div>
     </footer>

@@ -94,6 +94,12 @@
   padding-bottom: 12vh;
 }
 
+.professor__profile {
+
+
+  
+
+}
 .what__we__do {
 
 
@@ -199,6 +205,95 @@
   right: 5%;
 
 }
+
+.profsection {
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: var(--ieeeorange);
+  padding: 1.5rem;
+  color:#FFFFFF;
+
+}
+
+ .profheader{
+
+
+  font-size: 2.5rem;
+  text-align: center;
+
+
+ }
+
+ 
+.professors {
+
+  margin-top: 2rem;;
+  display: flex;
+  flex-direction: row;
+  font-size: 2.5rem;
+  justify-content: space-around;
+  text-align: center;
+
+}
+
+.sponsors__section {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  color: black;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 80vh;
+
+
+}
+
+.sponsors__title {
+
+  margin-top: 1%;
+  font-size: 3rem;
+  text-align:  center;
+  font-weight: 500;
+  width: 100%;
+  height:fit-content;
+
+
+}
+
+.logo__section {
+
+  margin-top: 4%;
+  position: relative;
+  height: 100%;
+  padding: 2.5rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+.murata {
+
+  position: absolute;
+  top: 6%;
+  left: 30%;
+ 
+}
+
+.intertek {
+
+  position: absolute;
+
+  bottom: 25%;
+  right: 2%;
+ 
+
+}
+
+.texas {
+
+  position: absolute;
+  bottom: 25%;
+
+}
+
 
 .link {
 
