@@ -6,6 +6,7 @@
   align-items: center;
   height: 150vh;
   background-color: blue;
+  width: 100vw;
 }
 .header-container {
   position: relative;
@@ -18,9 +19,9 @@
 }
 
 .section-one-container {
-  padding: 10rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   background-color: #c85b12;
 }
 .title {
@@ -39,7 +40,7 @@
   color: white;
 }
 .course-list-title {
-  font-size: 2.5rem;
+  font-size: 250%;
   padding-bottom: 3rem;
   text-decoration: underline;
   text-underline-offset: 12px;
@@ -47,10 +48,9 @@
   color: white;
 }
 .course-list-container > ul > li{
-  font-size: 1.75rem;
+  font-size: 150%;
   font-weight: 400;
-  margin-bottom: 25px;
-  line-height: 10px;
+  margin-bottom: 1%;
   color: white;
 }
 .section-two-container {
@@ -60,6 +60,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+.imagemap {
+  padding-inline: 1%;
+  width: clamp(300px, 50%, 1000px);
 }
 .section-two-title {
   font-family: 'Roboto Mono', Monospace ;
@@ -77,12 +82,12 @@
   color: #c85b12;
 
 }
-.image-container {
+/* .image-container {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   padding: 2rem;
-}
+} */
 .section-two-container > p {
   font-size: 1.75rem;
   width: 70%;
@@ -103,9 +108,8 @@
   color: white;
   text-shadow: 0 4px 4px rgba(0,0,0,.25);
 }
-.fc .fc-daygrid-day-number {
-  color: red;
-  font-size: 24px;
+.fc {
+  padding: 1%;
 }
 .calendar-container {
   display: flex;
@@ -129,11 +133,5 @@
   font-family: 'Roboto Mono', Monospace;
   color: white;
 }
-.section-four-container > h3 {
-  padding-left: 4rem;
-  font-size: 2rem;
-  font-weight: 500;
-  text-decoration: underline;
-  color: white;
-}
+
   /* Mobile */
