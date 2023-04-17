@@ -19,7 +19,7 @@ export default function NewsLetter() {
     }));
   };
 
-  const submitForm = (e) => {
+  async function submitForm(e) {
     e.preventDefault(); // do not refresh page
 
     const data = {};
@@ -31,25 +31,32 @@ export default function NewsLetter() {
     });
 
     // post the data to the url of the form
-
+    data["groupEmail"] = "ieee-utdallas@googlegroups.com";
     console.log(data);
 
-    fetch("/api/subscribe", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        accept: "application/json",
-      },
-    }).then(() => {
-      // reset the data
-      console.log(`email: ${data.email}`);
-      setFormData({
-        name: "",
-        email: "",
-      });
-      setFormSuccess(true);
+    console.log("Attempting to add to google groups....");
+
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbz4nCYMIL8-Wd8-Ymh3hp1SAONwJCdFt4SioSgbPdUb6fDWcx4hGzFL7DggWvNgyaTA/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        credentials: "same-origin",
+        referrerPolicy: "no-referrer",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+    // reset the data
+    console.log(response);
+    setFormData({
+      name: "",
+      email: "",
     });
-  };
+    setFormSuccess(true);
+  }
 
   return (
     <div className={styles.Signup__container}>

@@ -2,17 +2,17 @@ const committeeMembers = [
   {
     id: 0,
     name: "James Odebiyi",
-    src: "./Andrea",
+    src: require("../assets/Andrea.jpg"),
   },
   {
     id: 1,
     name: "James Odebiyi",
-    src: "./Cogan",
+    src: require("../assets/Andrea.jpg"),
   },
   {
     id: 2,
     name: "James Odebiyi",
-    src: "./Fahimi",
+    src: require("../assets/Andrea.jpg"),
   },
 ];
 

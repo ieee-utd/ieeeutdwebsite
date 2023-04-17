@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../assets/ieeelogowhite.png";

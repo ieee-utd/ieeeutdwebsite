@@ -9,9 +9,6 @@ import WhoWeAre from "@/components/WhoWeAre";
 import NewsLetterAbout from "@/components/NewsLetterAbout";
 import WhatWeDo from "@/components/WhatWeDo";
 import GridSection from "@/components/GridPhotos";
-import Cogan from "@/assets/Cogan.jpg";
-import Andrea from "@/assets/Andrea.jpg";
-import Babak from "@/assets/Fahimi.jpg";
 import Murata from "@/assets/murata.png";
 import Intertek from "@/assets/intertek.png";
 import Texas from "@/assets/texas.png";
@@ -30,16 +27,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div>
-          <Image src={require(committeeMembers[0]["src"])} alt="image1" />
-          <Image src={require(committeeMembers[1]["src"])} alt="image2" />
-          <Image src={require(committeeMembers[2]["src"])} alt="image3" />
-          <Image src={require(committeeMembers[3]["src"])} alt="image4" />
-        </div>
         <div className={styles.carousel}>
           <div className={styles.overlay}>
             <div className={styles.title__logo}>
-              <Image src={logo} alt="transparentlogo" className={styles.logo} />
+              <Image
+                src={logo}
+                alt="transparentlogo"
+                className={styles.logo}
+                width={50}
+              />
               <p className={styles.title}>IEEE UTD</p>
             </div>
             <span className={styles.typewriter}>
@@ -59,17 +55,20 @@ export default function Home() {
             <Image
               className={styles.texas}
               src={Texas}
+              alt="texas-instruments-logo"
               width={500}
               height={250}
             />
             <Image
               className={styles.murata}
               src={Murata}
+              alt="murata-logo"
               width={500}
               height={250}
             />
             <Image
               className={styles.intertek}
+              alt="intertek-logo"
               src={Intertek}
               width={500}
               height={250}
