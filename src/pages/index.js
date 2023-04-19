@@ -30,12 +30,7 @@ export default function Home() {
         <div className={styles.carousel}>
           <div className={styles.overlay}>
             <div className={styles.title__logo}>
-              <Image
-                src={logo}
-                alt="transparentlogo"
-                className={styles.logo}
-                width={50}
-              />
+              <Image src={logo} alt="transparentlogo" className={styles.logo} />
               <p className={styles.title}>IEEE UTD</p>
             </div>
             <span className={styles.typewriter}>
