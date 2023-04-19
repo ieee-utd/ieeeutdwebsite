@@ -14,7 +14,6 @@ export default function Committees() {
      <div className={styles.title}>
       Executives
      </div>
-     
      <Executives />
 
 

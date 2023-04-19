@@ -1,5 +1,5 @@
-import Aaron from "@/assets/Aaron_Lin.png"
-import styles from "@/styles/Committees.module.css"
+import Aaron from "@/assets/Aaron_Lin.png";
+import styles from "@/styles/Committees.module.css";
 import Image from "next/image";
 export default function test()
 {
