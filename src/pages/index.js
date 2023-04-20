@@ -47,26 +47,30 @@ export default function Home() {
         <div className={styles.sponsors__section}>
           <div className={styles.sponsors__title}>Corporate Sponsors</div>
           <div className={styles.logo__section}>
+            <div className={styles.texas}>
+              <Image
+                
+                src={Texas}
+                alt="texas-instruments-logo"
+                fill
+              />
+            </div>
+            </div>
+            <div className={styles.murata}>
+              <Image
+                
+                src={Murata}
+                alt="murata-logo"
+                fill
+                
+              />
+            </div>
+            <div className={styles.intertek}>
             <Image
-              className={styles.texas}
-              src={Texas}
-              alt="texas-instruments-logo"
-              width={500}
-              height={250}
-            />
-            <Image
-              className={styles.murata}
-              src={Murata}
-              alt="murata-logo"
-              width={500}
-              height={250}
-            />
-            <Image
-              className={styles.intertek}
+              
               alt="intertek-logo"
               src={Intertek}
-              width={500}
-              height={250}
+              fill
             />
           </div>
         </div>

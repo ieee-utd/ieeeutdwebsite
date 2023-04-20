@@ -216,6 +216,8 @@
 .murata {
 
   position: absolute;
+  width: 50vh;
+  height: 25vh;
   top: 6%;
   left: 30%;
  
@@ -224,7 +226,8 @@
 .intertek {
 
   position: absolute;
-
+  width: 50vh; 
+  height: 25vh;
   bottom: 25%;
   right: 2%;
  
@@ -235,6 +238,8 @@
 
   position: absolute;
   bottom: 25%;
+  width: 50vh;
+  height: 25vh;
 
 }
 

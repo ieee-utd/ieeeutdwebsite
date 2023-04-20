@@ -24,10 +24,12 @@ a:hover { text-decoration: none; }
 
 a:active { text-decoration: none; }
 
-body {
-
+html, body {
+  overflow-x: hidden;
 }
-
+body {
+  position: relative
+}
 
 
 @tailwind base;
