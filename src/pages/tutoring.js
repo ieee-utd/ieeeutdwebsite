@@ -35,18 +35,19 @@ export default function Tutoring() {
         </div>
         <div className={styles["section-one-container"]}>
           <div className={styles["course-list-container"]}>
-            <p className={styles["course-list-title"]}>We provide tutoring for the following courses:</p>
-            <ul>
+            <h2>Courses</h2>
+            <p className={"pb-12 underline font-medium text-white text-3xl"}>We provide tutoring for the following courses:</p>
+            <div className={"flex flex-col flex-wrap"}>
               {/* maybe add hyperlinks to utd course info page */}
-              <li>Introduction to Electrical Engineering II (CE/EE 1202) </li>
-              <li>Introduction to Programming (CS 1325)</li>
-              <li>Introduction to Digital Systems (CE/EE 2310)</li>
-              <li>Fundamentals I (CE/EE 3201)</li>
-              <li>Digital Circuits (CE/EE 3320)</li>
-              <li>Electrical Network Analysis (CE/EE 3301)</li>
-              <li>Signals and Systems (CE/EE 3302)</li>
-              <li>Electromagnetic Engineering (CE/EE 4301)</li>
-            </ul>
+              <li>Introduction to Electrical Engineering II <br/>(CE/EE 1202) </li>
+              <li>Introduction to Programming <br/>(CS 1325)</li>
+              <li>Introduction to Digital Systems <br/>(CE/EE 2310)</li>
+              <li>Fundamentals I <br/>(CE/EE 3201)</li>
+              <li>Digital Circuits <br/>(CE/EE 3320)</li>
+              <li>Electrical Network Analysis <br/>(CE/EE 3301)</li>
+              <li>Signals and Systems <br/>(CE/EE 3302)</li>
+              <li>Electromagnetic Engineering <br/>(CE/EE 4301)</li>
+            </div>
           </div>
         </div>
         <div className={styles["section-two-container"]}>
@@ -90,7 +91,7 @@ export default function Tutoring() {
           </div>
         </div>
         <div className={styles["section-four-container"]}>
-          <h2 className={styles["test"]}>Resources</h2>
+          <h2>Resources</h2>
           <h3 className="pl-[5%] text-white text-[250%] underline ">Lab Tools</h3>
           <div className="flex flex-row">
             <span className="pl-[5%] text-white text-[120%] py-4 pr-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
