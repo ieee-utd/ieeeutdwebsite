@@ -1,7 +1,5 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import logo from "@/assets/ieeelogotransparent.png";
 import Image from "next/image";
 import CarouselComponent from "@/components/CarouselComponent";
@@ -12,7 +10,6 @@ import GridSection from "@/components/GridPhotos";
 import Murata from "@/assets/murata.png";
 import Intertek from "@/assets/intertek.png";
 import Texas from "@/assets/texas.png";
-import committeeMembers from "@/components/committeeMembers";
 
 export default function Home() {
   return (
