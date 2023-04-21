@@ -107,7 +107,7 @@
 
   display: flex;
   flex-direction: column;
-  padding: 6%;
+  padding: 4%;
   height: 100%;
 }
 
@@ -116,7 +116,6 @@
   margin-top: 2%;
   height: 41%;
   text-align: center;
-
 
 }
 .grid__title {
@@ -446,6 +445,14 @@
     height: 40vh;
     width: 48vh;
   
+  }
+
+  .grid__text{
+
+  
+    min-height: 20px;
+
+
   }
   .what__we__do {
 
