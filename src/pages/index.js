@@ -12,7 +12,7 @@ import GridSection from "@/components/GridPhotos";
 import Murata from "@/assets/murata.png";
 import Intertek from "@/assets/intertek.png";
 import Texas from "@/assets/texas.png";
-import committeeMembers from "@/components/committeeMembers";
+
 
 export default function Home() {
   return (

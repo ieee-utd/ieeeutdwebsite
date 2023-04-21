@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-
+import Divider from '@mui/material/Divider';
 import logo from "../assets/ieeeutdlogo.png";
 import HamburgerMenu from "./HamburgerMenu";
 
@@ -64,21 +64,37 @@ export default function Navbar() {
 
       {burgerOpen ? (
         <ul className={styles.mobile_nav_list}>
+          <Divider />
+          <Link href={"/"}>
           <li>
-            <Link href={"/"}>Home</Link>
+            Home
           </li>
+          </Link>
+          <Divider />
+          <Link href={"/events"}>
           <li>
-            <Link href={"/events"}>Events</Link>
+            Events
           </li>
+          </Link>
+          <Divider />
+          <Link href={"/tutoring"}>
           <li>
-            <Link href={"/tutoring"}>Tutoring</Link>
+            Tutoring
           </li>
+          </Link>
+          <Divider />
+          <Link href={"/committees"}>
           <li>
-            <Link href={"/committees"}>Committees</Link>
+            Committees
           </li>
+          </Link>
+          <Divider />
+          <Link href={"/forge"}>
           <li>
-            <Link href={"/forge"}>Forge</Link>
+            Forge
           </li>
+          </Link>
+          <Divider />
         </ul>
       ) : (
         ""

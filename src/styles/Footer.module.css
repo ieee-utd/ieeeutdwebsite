@@ -2,7 +2,7 @@
 
   .footer {
     
-    font-family: 'Roboto Mono', monospace;
+   
     background-color: var(--ieeeorange);
 
 
@@ -10,22 +10,14 @@
 
   .copyright__group {
 
-    font-family: 'Roboto Mono', monospace;
-    position: relative;
     display: flex;
     flex-direction: row;
-
-  }
-
-  .font__text {
-
-    font-family: 'Roboto Mono', monospace;
 
   }
   
   .signup {
 
-    font-family: 'Roboto Mono', monospace;
+
     width: 80%;
     font-size: 1rem;
 
@@ -36,17 +28,17 @@
   .copyright {
 
     font-size: 1.5rem;
-
+    align-self: center;
 
   }
   
   .copyright__text {
     
-    position: absolute;
-    top: 20%;
-    left: 7%;
-    align-content: flex-end;
 
+   
+    margin-left: 1%;
+    margin-top: 1%;
+    align-self: center;
   }
 
   .logo {
@@ -59,7 +51,7 @@
 
   .title {
 
-    font-family: 'Roboto Mono', monospace;
+
     font-size: 2rem;
     white-space: nowrap
 
