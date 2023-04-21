@@ -127,8 +127,8 @@ export default function Tutoring() {
           <p></p>
           <h3 className="pt-3 pl-[5%] text-white text-4xl underline ">Discord Server</h3>
           <p className="pl-[5%] text-white text-[120%] w-[80%] py-4 pr-4">Our tutoring program includes a Discord server where students can connect with tutors in real-time. Whenever a tutor is available, students can join a voice call or send a message to receive help with their coursework. Our Discord server is a convenient way for students to get the support they need, whether they&apos;re working on a problem set or studying for an exam. We encourage all students to join the server and take advantage of this valuable resource.</p>
-          <a target="_blank" className="pl-[5%] w-fit" href="https://discord.com/invite/23Fn3CVPZB">
-            <Image rel="noreferrer" className="pl-[5%] m-0 w-[50%] max-w-[500px] "src={discordImage}/>
+          <a rel="noreferrer" target="_blank" className="pl-[5%] w-fit" href="https://discord.com/invite/23Fn3CVPZB">
+            <Image className="pl-[5%] m-0 w-[50%] max-w-[500px] "src={discordImage}/>
           </a>
           {/* <a href="https://discord.com/invite/23Fn3CVPZB" className="pl-[5%] text-[120%] w-[80%] py-4 pr-4">Discord</a> */}
           <h3 className="pt-3 pl-[5%] text-white text-4xl underline ">Exam Review Sessions</h3>
