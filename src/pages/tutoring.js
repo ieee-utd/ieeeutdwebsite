@@ -89,9 +89,9 @@ export default function Tutoring() {
                 height={'44rem'}
                 weekends={false}
                 allDaySlot={false}
-                dayMinWidth={225}
                 contentHeight='auto'
-                stickyFooterScrollbar={true}
+                // dayMinWidth={225}
+                // stickyFooterScrollbar={true}
                 headerToolbar={{
                   left: '',
                   center: '',
