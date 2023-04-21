@@ -9,6 +9,10 @@ import WhoWeAre from "@/components/WhoWeAre";
 import NewsLetterAbout from "@/components/NewsLetterAbout";
 import WhatWeDo from "@/components/WhatWeDo";
 import GridSection from "@/components/GridPhotos";
+import Murata from "@/assets/murata.png";
+import Intertek from "@/assets/intertek.png";
+import Texas from "@/assets/texas.png";
+
 
 export default function Home() {
   return (
@@ -40,7 +44,36 @@ export default function Home() {
         {/*What we do*/}
         <WhatWeDo />
         <GridSection />
-        <div>Corporate Sponsors</div>
+        <div className={styles.sponsors__section}>
+          <div className={styles.sponsors__title}>Corporate Sponsors</div>
+          <div className={styles.logo__section}>
+            <div className={styles.texas}>
+              <Image
+                
+                src={Texas}
+                alt="texas-instruments-logo"
+             
+              />
+            </div>
+            <div className={styles.murata}>
+              <Image
+                
+                src={Murata}
+                alt="murata-logo"
+          
+                
+              />
+            </div>
+            <div className={styles.intertek}>
+            <Image
+              
+              alt="intertek-logo"
+              src={Intertek}
+              
+            />
+            </div>
+          </div>
+        </div>
         <NewsLetterAbout />
       </main>
     </>

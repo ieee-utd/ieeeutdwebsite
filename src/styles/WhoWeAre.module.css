@@ -5,15 +5,15 @@
     display: flex;
     flex-direction: column;
     background-color: var(--ieeeblue);
-    padding-bottom: 2vh;
-    position: relative;
+    height: 80vh;
+    padding-bottom: 1.5vh;
+  
 
 
 }
 
 .title {
 
-  font-family: 'Roboto Mono', monospace;
   color: #FFFFFF;
   width: fit-content;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -31,7 +31,7 @@
     font-family: 'Roboto Mono', monospace;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color:#FFFFFF;
-    height: 50vh;
+    height: fit-content;
     padding-bottom: 5vh;
 
 
@@ -48,8 +48,9 @@
 
 .inner_left {
 
-
+    
     width: 50%;
+    height: 100%;
 
 }
 .inner_right {
@@ -66,36 +67,38 @@
 
     margin-left: 30%;
     font-size: 1.8rem;
+    padding-top: 2rem;
     width: 70%;
 
 
 }
 
+
 .inner_left_signup{
 
     margin-left: 30%;
+    
+
+   
 }
 
 .inner_right_message {
 
     width: 90%;
     font-size: 1.6rem;
+    padding-top: 2rem;
     margin-bottom: 8%;
 
 }
 
-
-.Signup__text {
-
-    font-family: 'Roboto Mono', monospace;
-
-}
 .aboutContainer {
 
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
+    padding-bottom: 2.5%;
     background: #EAF0F5;
-
+    padding-left: 7.5%;
+    padding-top: 4%;
 
 }
 
@@ -103,11 +106,8 @@
 
     display: flex;
     height: 50vh;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-top: 2%;
+    margin-top: 2.5%;
 
-  
   }
 
   .logo{
@@ -124,55 +124,278 @@
     width: 250vh;
     padding: 2%;
     justify-content: center;
-
-
+    
   }
 
 
 
 .aboutText {
 
-    font-family: 'Roboto Mono', monospace;
+   
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 1.7rem;
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
     font-weight: 500;
-    padding-left: 5rem;
-    padding-top: 2.5rem;
+    margin: auto;
+    text-align: center;
 
 }
 
+@media screen and (min-width: 820px) and (max-width: 930px) {
 
-@media screen and (max-width: 800px){
+    .Signup__message{
+
+        margin-left: 20%;
+        
+    }
+
+    .inner_right_message {
+
+
+        font-size: 1.2rem;
+        padding-left: 30px;
+        width: 100%;
+        
+    
+    }
+
+    .form__container {
+
+        margin-left: 20%;
+
+    
+    }
+    
+
+    .inner_right {
+
+        width:40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+        
+    .inner_left {
+
+        width: 60%;
+
+    }
+    
+
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 820px){
+
+
 
     .aboutText {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+    }
+
+    .inner_right {
+
+        
+        padding-bottom: 20px;
+    
+    }
+    .inner_left {
+
+        width: 100%;
+    }
+
+    .inner_right_message {
+
+ 
+        margin-left: 40px;
+        font-size: 1.2rem;
+        margin: auto;
+    
+    }
+
+    
+    .form__container {
+
+        margin-left: 20%;
+
+    
+    }
+    .logo{
+
+        height: 220px;
+        width: 220px;
+        align-self: center;
+    
+    
+      }
+
+    .Signup__message {
+
+        font-size: 1.5rem;
+        margin-left: 20%;
+        text-align: center;
     }
 }
 
+@media screen and (min-width: 450px) and (max-width: 600px){
 
-@media screen and (min-width: 800px) and (max-width: 1000px){
+    .inner_left_signup{
 
-    .aboutText {
-
-
+        margin-left: 10%;
+        
     }
-}
 
-@media screen and (min-width: 1000px){
+    .title {
 
-    .aboutText {
+        font-size: 2.5rem;
+       
+    }
+    .inner_right {
 
+        display: none;
+        position: absolute;
+     
+        top: 0;
+    }
+    .inner_left {
+
+        width: 100%;
+    }
+
+    
+    .form__container {
+
+        margin-left: 20%;
+
+    
+    }
+    
+    .Signup__message {
+
+        font-size: 1.5rem;
+        margin-left: 20%;
+       
+    }
+    .logo{
+  
+      width: 150px;
+      height: 150px;
       
+    }
+
+    .logo__space {
+
+        display: flex;
+        width: 150vh;
+        margin-bottom: 14%;
+        height: fit-content;
+        justify-content: center;
+        align-self: center;
+    
+      }
+ 
+    .aboutContainer {
+
+        padding-left: 2rem;
+        height: fit-content;
+        max-height: 90%;
+     
+        
+    }
+    .container {
+
+        height: auto;
        
 
     }
+    .aboutText {
+        
+        font-size: 1.05rem;
+        padding-left: 2rem;
+  
+    }
 
- 
+  
 }
 
-
-
-
-
-
 /* Mobile */
+
+@media screen and (max-width: 450px){ 
+
+    .inner_left_signup{
+
+        margin-left: 10%;
+        
+    }
+
+    .inner_right {
+
+        display: none;
+        position: absolute;
+        top: 0;
+    }
+    .inner_left {
+
+        width: 100%;
+    }
+    .Signup__message {
+
+        font-size: 1.5rem;
+        margin-left: 20%;
+       
+    }
+
+    .logo__space {
+    
+      display: 0;
+      z-index: -99;
+      position: absolute;
+      top: 0;
+
+    }
+
+    
+    .form__container {
+
+        margin-left: 20%;
+
+    
+    }
+    
+
+    .aboutContainer {
+
+        width: 100%;
+        height: 80%;
+        border-radius: 25px;
+        margin: 5%;
+        padding: 6%;
+
+     
+    }
+
+        
+    .title {
+
+        font-size: 2.5rem;
+        margin-left: 18%;
+        margin-top: 2%;
+        
+    
+    }
+  
+    .container {
+
+        height: auto;
+
+    }
+    .aboutText {
+        
+        font-size: 1rem;
+
+    }
+
+    
+}

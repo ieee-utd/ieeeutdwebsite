@@ -23,33 +23,13 @@
 
 
 .logo {
+
   margin-top: 3%;
   width: 150px;
   height: 150px;
 
 
 }
-
-.title__logo {
-
-  margin-top: 5%;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-
-
-}
-
-
-.title {
-
-  font-family: 'Roboto Mono', monospace;
-  font-size: 8rem;
-  font-weight: bold;
-
-
-}
-
 
 .about {
 
@@ -68,7 +48,6 @@
 
 .typewriter p{
 
-  font-family: 'Roboto Mono', monospace;
   margin-top: 2%;
   overflow: hidden;
   border-right: 2px solid var(--ieeeorange);
@@ -84,8 +63,6 @@
 /* What we do */
 .main__container {
 
-  
-  font-family: 'Roboto Mono', monospace;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -96,15 +73,11 @@
 
 .what__we__do {
 
-
-    margin-right: 40%;
     color: #FFFFFF;
-    width: fit-content;
+    width: 100%;
+    text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 3.5rem;
-    margin-left: 35%;
-    margin-top: 2%;
-
 }
 
 .what__container{
@@ -114,10 +87,12 @@
   display: grid;
   padding: 2vh;
   row-gap: 10vh;
-  column-gap: 15vh;
+  column-gap: 10vw;
   grid-auto-rows: minmax(100px, auto);
 
-}
+} 
+
+
 .grid__item {
 
   position: relative;
@@ -126,25 +101,21 @@
   height: 45vh;
   width: 60vh;
 
-
 }
 
 .grid__content {
 
   display: flex;
   flex-direction: column;
-  padding: 6%;
+  padding: 4%;
   height: 100%;
-
-
 }
 
 .grid__text{
 
-  margin-top: 4%;
-  height: 15vh;
+  margin-top: 2%;
+  height: 41%;
   text-align: center;
-
 
 }
 .grid__title {
@@ -200,13 +171,70 @@
 
 }
 
+.sponsors__section {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  color: black;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 80vh;
+
+}
+
+.sponsors__title {
+
+  margin-top: 1%;
+  font-size: 3rem;
+  text-align:  center;
+  font-weight: 500;
+  width: 100%;
+  height:fit-content;
+
+}
+
+.logo__section {
+
+  margin-top: 4%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.murata {
+
+  width: 62vh;
+  height: fit-content;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  
+}
+
+.intertek {
+
+  width: 62vh;
+  height: fit-content;
+  grid-column: 3 / 3;
+  grid-row: 3 / 3;
+
+}
+
+.texas {
+
+  width: 62vh;
+  height: fit-content;
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+
+}
+
+
 .link {
 
   width: 60%;
-  height: 12vh;
+  height: 30%;
   align-self: center;
 
-  
 }
 
 .image__grid{
@@ -221,6 +249,256 @@
   height: 100%;
 }
 
+
+.title__logo {
+
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+}
+
+.title {
+
+  font-size: 8rem;
+  font-weight: bold;
+
+}
+
+@media screen and (min-width: 950px) and (max-width: 1100px){
+
+  .murata {
+
+    width: 48vh;
+
+  }
+  
+  .intertek {
+  
+    width: 45vh;
+
+   
+  
+  }
+  
+  .texas {
+  
+    width: 48vh;
+
+  
+  }
+  
+}
+
+@media screen and (max-width: 950px){
+
+  .what__container{
+
+
+ 
+    column-gap: 2vw;
+    
+  
+  } 
+
+  .murata {
+
+    width: 45vh;
+
+  }
+  
+  .intertek {
+  
+    width: 45vh;
+
+   
+  
+  }
+  
+  .texas {
+  
+    width: 45vh;
+
+  
+  }
+  
+  
+  
+  .intertek {
+
+    width: 40vh;
+  
+  }
+  
+
+}
+
+@media screen and (max-width: 870px){
+
+  .what__container{
+ 
+    column-gap: 2vw;
+
+  }
+  .what__container{
+
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  .intertek {
+
+    width: 35vh;
+  
+  }
+  
+  
+
+}
+ 
+@media screen and (min-width: 600px) and (max-width: 820px){
+
+  .title__logo {
+    font-size: 1.1rem;
+  }
+
+  .title {
+
+    font-size: 4rem;
+  
+  }
+
+  .logo {
+
+    width: 70px;
+    height: 70px;
+
+
+  }
+
+  .typewriter p{
+
+    font-size: 1.4rem;
+    
+  }
+
+
+.logo__section {
+
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+}
+
+@media screen and ( min-width: 400px ) and (max-width: 600px){
+
+  .title__logo {
+    font-size: 1.1rem;
+  }
+
+  .title {
+
+    font-size: 4rem;
+
+  }
+
+  .logo {
+
+    width: 70px;
+    height: 70px;
+
+
+  }
+
+
+    .typewriter p{
+
+      display: none;
+      
+    }
+
+    .logo__section {
+
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+    
+    }
+  
+
+}
+
+@media screen and (max-width: 400px){
+
+  .grid__item {
+
+  
+    height: 40vh;
+    width: 48vh;
+  
+  }
+
+  .what__container{
+
+    row-gap: 5vh;
+
+  }
+
+  .grid__text{
+
+  
+    min-height: 20px;
+
+
+  }
+  .what__we__do {
+
+    font-size: 2.5rem;
+  }
+  .title {
+
+    font-size: 2.5rem;
+
+  
+  }
+
+  .logo {
+
+    width: 70px;
+    height: 70px;
+  
+  
+  }
+
+  .typewriter p{
+
+    display: none;
+    
+  }
+
+  .logo__section {
+
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  
+  }
+
+
+}
+
+
 @keyframes typing {
 
   from {width: 0}
@@ -234,4 +512,6 @@
 }
 
 /* Mobile */
+
+
 
