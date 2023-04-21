@@ -56,7 +56,6 @@
 .inner_right {
 
     width:50%;
-   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,8 +125,6 @@
     padding: 2%;
     justify-content: center;
     
-
-
   }
 
 
@@ -147,10 +144,15 @@
 
 @media screen and (min-width: 820px) and (max-width: 930px) {
 
+    .Signup__message{
+
+        margin-left: 20%;
+        
+    }
 
     .inner_right_message {
 
-      
+
         font-size: 1.2rem;
         padding-left: 30px;
         width: 100%;
@@ -158,9 +160,36 @@
     
     }
 
+    .form__container {
+
+        margin-left: 20%;
+
+    
+    }
+    
+
+    .inner_right {
+
+        width:40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+        
+    .inner_left {
+
+        width: 60%;
+
+    }
+    
+
+
 }
 
 @media screen and (min-width: 600px) and (max-width: 820px){
+
+
 
     .aboutText {
         font-size: 1.2rem;
@@ -168,26 +197,58 @@
 
     .inner_right {
 
-        margin: auto;
+        
         padding-bottom: 20px;
+    
+    }
+    .inner_left {
+
+        width: 100%;
     }
 
     .inner_right_message {
 
-        font-size: 1rem;
-        height: 100%;
+ 
         margin-left: 40px;
+        font-size: 1.2rem;
+
+        margin: auto;
+    
+    
 
     }
+
+    
+    .form__container {
+
+        margin-left: 20%;
+
+    
+    }
+    .logo{
+
+        height: 220px;
+        width: 220px;
+        align-self: center;
+    
+    
+      }
 
     .Signup__message {
 
         font-size: 1.5rem;
+        margin-left: 20%;
         text-align: center;
     }
 }
 
 @media screen and (min-width: 450px) and (max-width: 600px){
+
+    .inner_left_signup{
+
+        margin-left: 10%;
+        
+    }
 
     .title {
 
@@ -198,15 +259,26 @@
 
         display: none;
         position: absolute;
+     
         top: 0;
     }
     .inner_left {
 
         width: 100%;
     }
+
+    
+    .form__container {
+
+        margin-left: 20%;
+
+    
+    }
+    
     .Signup__message {
 
         font-size: 1.5rem;
+        margin-left: 20%;
        
     }
     .logo{
@@ -215,15 +287,18 @@
       height: 150px;
       
     }
+
     .logo__space {
 
         display: flex;
         width: 150vh;
+        margin-bottom: 14%;
         height: fit-content;
         justify-content: center;
         align-self: center;
     
       }
+ 
     .aboutContainer {
 
         padding-left: 2rem;
@@ -252,7 +327,12 @@
 
 @media screen and (max-width: 450px){ 
 
-   
+    .inner_left_signup{
+
+        margin-left: 10%;
+        
+    }
+
     .inner_right {
 
         display: none;
@@ -266,6 +346,7 @@
     .Signup__message {
 
         font-size: 1.5rem;
+        margin-left: 20%;
        
     }
 
@@ -277,6 +358,15 @@
       top: 0;
 
     }
+
+    
+    .form__container {
+
+        margin-left: 20%;
+
+    
+    }
+    
 
     .aboutContainer {
 
