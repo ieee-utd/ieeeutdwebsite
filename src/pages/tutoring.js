@@ -22,22 +22,22 @@ export default function Tutoring() {
     const eventColor = colors[eventIndex % colors.length];
     eventIndex++;
     eventInfo.el.style.backgroundColor = eventColor;
-    eventInfo.el.style.color ='black';
+    // eventInfo.el.style.color ='black';
   };
-  useEffect(() => {
-    const fullCalendarEl = document.querySelector('.fc');
+  // useEffect(() => {
+  //   const fullCalendarEl = document.querySelector('.fc');
 
-    if (fullCalendarEl) {
-      const eventTimeEls = document.querySelectorAll('.fc-event');
-      fullCalendarEl.style.backgroundColor = '#f5f5f5';
-      fullCalendarEl.style.color = 'black';
-      const events = document.querySelectorAll('.fc-v-event');
-      events.forEach((event) => {
-        event.style.backgroundColor = 'black';
-        event.style.color = 'white';
-      });
-    }
-  }, []);
+  //   if (fullCalendarEl) {
+  //     const eventTimeEls = document.querySelectorAll('.fc-event');
+  //     fullCalendarEl.style.backgroundColor = '#f5f5f5';
+  //     fullCalendarEl.style.color = 'black';
+  //     const events = document.querySelectorAll('.fc-v-event');
+  //     events.forEach((event) => {
+  //       event.style.backgroundColor = 'black';
+  //       event.style.color = 'white';
+  //     });
+  //   }
+  // }, []);
   return (
     <>
       <Head></Head>
