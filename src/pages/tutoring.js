@@ -9,31 +9,40 @@ import utdMap from "public/utdmap.png";
 import escnMap from "public/escnmap.png"
 import banner from "public/tutoring_banner.jpg"
 import labtools from "public/labtools.jpg"
+import { useEffect } from "react";
 
 export default function Tutoring() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
   const calendarId = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
-  // console.log("apikey", apiKey);
   let eventIndex = 0;
   const colors = ['#8f1600', '#9c5d00', '#7a9c00', '#009c17', '#007d9c', '#00009c']; //temp colors
   const handleEventDidMount = (eventInfo) => {
     const eventColor = colors[eventIndex % colors.length];
     eventIndex++;
     eventInfo.el.style.backgroundColor = eventColor;
-    eventInfo.el.style.eventTextColor ='black';
+    eventInfo.el.style.color ='black';
   };
-  const handleViewDidMount = (viewInfo) => {
-    viewInfo.el.style.borderColor = 'black';
+  useEffect(() => {
+    const fullCalendarEl = document.querySelector('.fc');
 
-  }
+    if (fullCalendarEl) {
+      const eventTimeEls = document.querySelectorAll('.fc-event');
+      fullCalendarEl.style.backgroundColor = '#f5f5f5';
+      fullCalendarEl.style.color = 'black';
+      const events = document.querySelectorAll('.fc-v-event');
+      events.forEach((event) => {
+        event.style.backgroundColor = 'black';
+        event.style.color = 'white';
+      });
+    }
+  }, []);
   return (
     <>
       <Head></Head>
-      {/* header */}
       <main>
         <div className={styles["header-container"]}>
           <Image priority={true} placeholder={"blur"} className="object-cover h-[200px] md:h-[700px] brightness-50" src={banner} alt="Tutoring Banner"/>
-          <h1 className={styles.title}>Tutoring</h1>
+          <h1 className={styles.title}>TUTORING</h1>
         </div>
         <div className={styles["section-one-container"]}>
           <div className={styles["course-list-container"]}>
@@ -70,7 +79,6 @@ export default function Tutoring() {
                 plugins={[timeGridPlugin, googleCalendarPlugin, scrollGridPlugin]}  
                 googleCalendarApiKey={apiKey}
                 events={{googleCalendarId: calendarId}}
-                viewDidMount={handleViewDidMount}
                 eventDidMount={handleEventDidMount} // custom render function
                 initialDate={'2023-02-06'}  //START DATE FOR THE WEEK
                 slotDuration="00:15:00"
@@ -82,7 +90,7 @@ export default function Tutoring() {
                 allDaySlot={false}
                 dayMinWidth={175}
                 contentHeight='auto'
-                stickyFooterScrollbar={true}
+                // stickyFooterScrollbar={true}
                 headerToolbar={{
                   left: '',
                   center: '',
@@ -99,13 +107,24 @@ export default function Tutoring() {
         <div className={styles["section-four-container"]}>
           <h2>Resources</h2>
           <h3 className="pl-[5%] text-white text-[250%] underline ">Lab Tools</h3>
-          <div className="flex flex-row">
-            <span className="pl-[5%] text-white text-[120%] py-4 pr-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-            <Image className="pr-10 min-w-[10%] max-w-[30%] h-auto aspect-square" src={labtools}></Image>
+          <div className="flex flex-col justify-center content-center">
+            <div className="pl-[5%] text-white text-[120%] w-[80%] py-4 pr-4" >
+                <p>Our tutoring room is equipped with a variety of electrical engineering tools to help students learn and master the subject. Here are some of the tools available in the room:</p>
+                <ul className="">
+                  <li className="p-[2%]">Oscilloscopes: Our tutoring room has a range of oscilloscopes that students can use to visualize and analyze electrical signals. These tools can help students understand waveforms, measure voltage and frequency, and diagnose problems in circuits.</li>
+                  <li className="p-[2%]">Campus computers: We have several computers available for students to use during tutoring sessions. These computers are loaded with a range of software programs commonly used in electrical engineering, such as MATLAB, LTSpice, and Multisim.</li>
+                  <li className="p-[2%]">Power supplies: Our tutoring room has a variety of power supplies that students can use to provide voltage and current to their circuits. These tools are essential for testing and troubleshooting electrical devices.</li>
+                  <li className="p-[2%]">Multimeters: We also have multimeters available for students to use during tutoring sessions. These tools can measure voltage, current, and resistance in electrical circuits, providing students with valuable information about their projects.</li>
+                  <li className="p-[2%]">Other general purpose electrical engineering tools: In addition to the above tools, our tutoring room is also equipped with a variety of other general purpose electrical engineering tools, such as function generators, signal generators, and logic analyzers. These tools can help students learn about a range of electrical engineering concepts and techniques.</li>
+                </ul>
+                <p>We encourage all students to take advantage of the tools available in our tutoring room. Our knowledgeable tutors are available to help students learn how to use these tools effectively and gain a deeper understanding of electrical engineering concepts.</p>
+            </div>
+            <Image className="relative left-[30%] max-w-[30vw] w-[60%] content-center justify-center" src={labtools}></Image>
           </div>
-          <p></p>
-          <h3 className="pl-16 text-white text-4xl underline ">Discord Server</h3>
 
+          <p></p>
+          <h3 className="pl-[5%] text-white text-4xl underline ">Discord Server</h3>
+          <p className="pl-[5%] text-white text-[120%] w-[80%] py-4 pr-4">Our university's online tutoring program includes a Discord server where students can connect with tutors in real-time. Whenever a tutor is available, students can join a voice call or send a message to receive help with their coursework. Our Discord server is a convenient way for students to get the support they need, whether they're working on a problem set or studying for an exam. We encourage all students to join the server and take advantage of this valuable resource.</p>
         </div>
       </main>
     </>
