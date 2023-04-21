@@ -50,10 +50,12 @@ const EventsPage = ({ pageDimensions }) => {
 						views={viewOptions}
 						initialView={'dayGridMonth'}
 						windowResize={() => {
-							if (window.innerWidth >= 768) {
-								calendarRef.current.getApi().changeView('dayGridMonth');
-							} else {
-								calendarRef.current.getApi().changeView('listMonth');
+							if(calendarRef){
+								if (window.innerWidth >= 768) {
+									calendarRef.current.getApi().changeView('dayGridMonth');
+								} else {
+									calendarRef.current.getApi().changeView('listMonth');
+								}
 							}
 						}}
 						eventSources={[
