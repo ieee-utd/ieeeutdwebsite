@@ -77,7 +77,6 @@ export default function Tutoring() {
             <div className={styles["calendar-container"]}>
               <FullCalendar className={"fc"}
                 schedulerLicenseKey={'CC-Attribution-NonCommercial-NoDerivatives'}
-                styles={{backgroundColor: 'black'}}
                 plugins={[timeGridPlugin, googleCalendarPlugin, scrollGridPlugin]}  
                 googleCalendarApiKey={apiKey}
                 events={{googleCalendarId: calendarId}}
@@ -92,7 +91,7 @@ export default function Tutoring() {
                 allDaySlot={false}
                 dayMinWidth={225}
                 contentHeight='auto'
-                // stickyFooterScrollbar={true}
+                stickyFooterScrollbar={true}
                 headerToolbar={{
                   left: '',
                   center: '',
