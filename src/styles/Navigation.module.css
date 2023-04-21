@@ -3,7 +3,6 @@
 .navbar {
 
 
-    font-family: 'Roboto Mono', monospace;  
     display: flex;
     flex-direction: row;
     background-color: var(--ieeeblue);
@@ -104,7 +103,6 @@
   .mobile_nav_list {
 
   display: none;
-  font-family: 'Roboto Mono', monospace;  
   
 
   }
@@ -126,7 +124,7 @@
 
   }
 
-  @media  (max-width: 768px){
+  @media  (max-width: 820px){
 
     .navbar__options {
           

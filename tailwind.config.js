@@ -20,6 +20,14 @@ module.exports = {
         lightgray: "#e9e9e9",
       },
     },
+    screens: {
+
+      "lg-sm": "821px",
+    },
+    minWidth: {
+      '24': '7rem',
+      'input': '20rem'
+    }
   },
   plugins: [],
 };

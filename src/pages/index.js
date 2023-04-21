@@ -52,16 +52,15 @@ export default function Home() {
                 
                 src={Texas}
                 alt="texas-instruments-logo"
-                fill
+             
               />
-            </div>
             </div>
             <div className={styles.murata}>
               <Image
                 
                 src={Murata}
                 alt="murata-logo"
-                fill
+          
                 
               />
             </div>
@@ -70,8 +69,9 @@ export default function Home() {
               
               alt="intertek-logo"
               src={Intertek}
-              fill
+              
             />
+            </div>
           </div>
         </div>
         <NewsLetterAbout />

@@ -27,7 +27,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="tw-group tw-hidden tw-gap-6 tw-pb-5 tw-mt-6 md:tw-flex tw-mr-10">
+        <div className="tw-group tw-hidden tw-gap-6 tw-pb-5 tw-mt-6 lg-sm:tw-flex tw-mr-10">
           <Link
             href={"/"}
             className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-text-2xl group-hover:tw-text-fadedblue"
