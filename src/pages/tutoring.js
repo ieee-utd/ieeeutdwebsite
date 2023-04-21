@@ -17,7 +17,7 @@ import { useEffect } from "react";
 
 const FullCalendar = dynamic(
   () => import('@fullcalendar/react'),
-  { ssr: false }
+  { ssr: true }
 )
 export default function Tutoring() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
@@ -82,7 +82,8 @@ export default function Tutoring() {
           <div className={styles["calendar-container"]}>
               <FullCalendar 
                 // schedulerLicenseKey={'CC-Attribution-NonCommercial-NoDerivatives'}
-                plugins={[timeGridPlugin, googleCalendarPlugin, scrollGridPlugin]}  
+                // schedulerLicenseKey='GPL-My-Project-Is-Open-Source'
+                plugins={[timeGridPlugin, googleCalendarPlugin]}  
                 googleCalendarApiKey={apiKey}
                 events={{googleCalendarId: calendarId}}
                 eventDidMount={handleEventDidMount} // custom render function
@@ -94,9 +95,9 @@ export default function Tutoring() {
                 height={'44rem'}
                 weekends={false}
                 allDaySlot={false}
-                contentHeight='auto'
-                dayMinWidth={225}
-                stickyFooterScrollbar={true}
+                // contentHeight='auto'
+                // dayMinWidth={225}
+                // stickyFooterScrollbar={true}
                 headerToolbar={{
                   left: '',
                   center: '',
