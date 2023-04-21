@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Tutoring.module.css";
-import FullCalendar from "@fullcalendar/react";
+// import FullCalendar from "@fullcalendar/react";
+import dynamic from "next/dynamic";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import scrollGridPlugin from "@fullcalendar/scrollgrid";
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
@@ -13,6 +14,11 @@ import banner from "public/tutoring_banner.jpg"
 import labtools from "public/labtools.jpg"
 import { useEffect } from "react";
 
+
+const FullCalendar = dynamic(
+  () => import('@fullcalendar/react'),
+  { ssr: false }
+)
 export default function Tutoring() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
   const calendarId = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
@@ -74,10 +80,9 @@ export default function Tutoring() {
         <div className={styles["section-three-container"]}>
           <p className={styles["tutoring-hours-title"]}>Tutoring hours</p>
           <div className={styles["calendar-container"]}>
-            <div className={styles["calendar-container"]}>
               <FullCalendar 
                 schedulerLicenseKey={'CC-Attribution-NonCommercial-NoDerivatives'}
-                plugins={[timeGridPlugin, googleCalendarPlugin]}  
+                plugins={[timeGridPlugin, googleCalendarPlugin, scrollGridPlugin]}  
                 googleCalendarApiKey={apiKey}
                 events={{googleCalendarId: calendarId}}
                 eventDidMount={handleEventDidMount} // custom render function
@@ -90,8 +95,8 @@ export default function Tutoring() {
                 weekends={false}
                 allDaySlot={false}
                 contentHeight='auto'
-                // dayMinWidth={225}
-                // stickyFooterScrollbar={true}
+                dayMinWidth={225}
+                stickyFooterScrollbar={true}
                 headerToolbar={{
                   left: '',
                   center: '',
@@ -102,7 +107,6 @@ export default function Tutoring() {
                   event.jsEvent.preventDefault();
                 }}
               />
-            </div>
           </div>
         </div>
         <div className={styles["section-four-container"]}>
@@ -129,7 +133,6 @@ export default function Tutoring() {
           <a rel="noreferrer" target="_blank" className="pl-[5%] w-fit" href="https://discord.com/invite/23Fn3CVPZB">
             <Image className="pl-[5%] m-0 w-[50%] max-w-[500px] "src={discordImage}/>
           </a>
-          {/* <a href="https://discord.com/invite/23Fn3CVPZB" className="pl-[5%] text-[120%] w-[80%] py-4 pr-4">Discord</a> */}
           <h3 className="pt-3 pl-[5%] text-white text-4xl underline ">Exam Review Sessions</h3>
           <p className="pl-[5%] text-white text-[120%] w-[80%] py-4 pr-4">Our tuoring program also offers exam review sessions for specific classes, which are live-streamed on Microsoft Teams and later uploaded to our YouTube channel. These sessions are designed to help students prepare for upcoming exams by reviewing key concepts, practicing problems, and answering questions. Our knowledgeable tutors lead these review sessions, providing students with valuable insights and guidance to help them succeed. Whether you&apos;re struggling with a particular topic or simply want to review the material before an exam, our review sessions are a great resource to help you prepare. We encourage all students to attend these live sessions or watch the recorded videos on our YouTube channel to strengthen their understanding of the material and boost their confidence before exams.</p>
           <a rel="noreferrer" target="_blank" className="pl-[5%] w-fit" href="https://www.youtube.com/@ieeeutdallas1989">
