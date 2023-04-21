@@ -14,6 +14,7 @@
     "@fullcalendar/google-calendar": "^6.1.4",
     "@fullcalendar/list": "^6.1.4",
     "@fullcalendar/react": "^6.1.4",
+    "@fullcalendar/scrollgrid": "^6.1.5",
     "@fullcalendar/timegrid": "^6.1.4",
     "@next/font": "13.1.6",
     "dotenv": "^16.0.3",

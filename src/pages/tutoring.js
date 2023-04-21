@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Tutoring.module.css";
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
+import scrollGridPlugin from "@fullcalendar/scrollgrid";
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import Image from "next/image";
 import utdMap from "public/utdmap.png";
@@ -23,6 +24,7 @@ export default function Tutoring() {
   };
   const handleViewDidMount = (viewInfo) => {
     viewInfo.el.style.borderColor = 'black';
+
   }
   return (
     <>
@@ -37,7 +39,7 @@ export default function Tutoring() {
           <div className={styles["course-list-container"]}>
             <h2>Courses</h2>
             <p className={"pb-12 underline font-medium text-white text-3xl"}>We provide tutoring for the following courses:</p>
-            <div className={"flex flex-col flex-wrap"}>
+            <div className={styles["course-list"]}>
               {/* maybe add hyperlinks to utd course info page */}
               <li>Introduction to Electrical Engineering II <br/>(CE/EE 1202) </li>
               <li>Introduction to Programming <br/>(CS 1325)</li>
@@ -63,8 +65,9 @@ export default function Tutoring() {
           <div className={styles["calendar-container"]}>
             <div className={styles["calendar-container"]}>
               <FullCalendar className={"fc"}
+                schedulerLicenseKey={'CC-Attribution-NonCommercial-NoDerivatives'}
                 styles={{backgroundColor: 'black'}}
-                plugins={[timeGridPlugin, googleCalendarPlugin]}  
+                plugins={[timeGridPlugin, googleCalendarPlugin, scrollGridPlugin]}  
                 googleCalendarApiKey={apiKey}
                 events={{googleCalendarId: calendarId}}
                 viewDidMount={handleViewDidMount}
@@ -72,11 +75,14 @@ export default function Tutoring() {
                 initialDate={'2023-02-06'}  //START DATE FOR THE WEEK
                 slotDuration="00:15:00"
                 slotMinTime="10:00"
-                slotMaxTime="16:30"
+                slotMaxTime="16:00"
                 slotEventOverlap={false}
                 height={'44rem'}
                 weekends={false}
                 allDaySlot={false}
+                dayMinWidth={175}
+                contentHeight='auto'
+                stickyFooterScrollbar={true}
                 headerToolbar={{
                   left: '',
                   center: '',

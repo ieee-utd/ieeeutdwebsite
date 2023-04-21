@@ -20,6 +20,11 @@
 .course-list-container > ul > li{
   width: fit-content;
 }
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+}
 .section-one-container {
   padding: 10%;
   padding-top: 0;
@@ -41,13 +46,7 @@
   padding-bottom: 3rem;
   color: white;
 }
-.course-list-container > div {
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-  grid-gap: 20px;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(3, auto);
-}
+
 .course-list-container > div > li{
   font-size: 150%;
   font-weight: 400;
