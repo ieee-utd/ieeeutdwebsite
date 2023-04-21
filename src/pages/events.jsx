@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import FullCalendar from '@fullcalendar/react'; // must go before plugins
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import listPlugin from '@fullcalendar/list';
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import useWindowDimensions from '../hooks/useWindowDimensions';
-import dynamic from 'next/dynamic';
 
-const EventsPage = () => {
-	const [events, setEvents] = React.useState();
+const EventsPage = ({ pageDimensions }) => {
+	
 	const calendarRef = React.createRef();
-	const { width, height } = useWindowDimensions();
-	React.useEffect(() => {
-		width > 768 ? 'listPlugin' : 'dayGridPlugin';
-	}, [width]);
+	const [listView, setListView] = useState(false)
+
+	useEffect(() => {
+
+		setListView(pageDimensions.width < 768 ? true : false)
+
+	}, [pageDimensions.width])
+
 
 	return (
 		<>
@@ -21,7 +24,7 @@ const EventsPage = () => {
 
 				<div className="tw-my-12 tw-font-semibold tw-text-2xl tw-max-w-lg">
 					Over the course of the school year, we provide{' '}
-					<span className="tw-text-[#CF165F]">workshops</span>,{' '}
+					<span className="tw-text-[#568203]">workshops</span>,{' '}
 					<span className="tw-text-[#3277D5]">general</span> , and social events.
 				</div>
 				<div className="tw-w-full lg:tw-w-2/3">
@@ -29,12 +32,13 @@ const EventsPage = () => {
 						plugins={[dayGridPlugin, listPlugin, googleCalendarPlugin]}
 						ref={calendarRef}
 						headerToolbar={{
-							right: 'listMonth,dayGridMonth,prev,next'
+							right: 'listMonth,' + (listView == false ? 'dayGridMonth,' 
+							:  '') + ',prev,next'
 						}}
 						googleCalendarApiKey="AIzaSyAfPLw0W2oEPGS_GaXsJhCpaZw0zTXAxOI"
 						selectable={false}
-						initialView={'listMonth'}
-						windowResize={function (view) {
+						initialView={'dayGridMonth'}
+						windowResize={() => {
 							if (window.innerWidth >= 768) {
 								calendarRef.current.getApi().changeView('dayGridMonth');
 							} else {
@@ -49,8 +53,25 @@ const EventsPage = () => {
 							{
 								googleCalendarId: 'kren4e2ph3dccrj4og6v780rsc@group.calendar.google.com',
 								color: '#CF165F'
+							},
+							{
+
+								googleCalendarId: 'r68kjt9b8vt1jh3sk9ak197gdk@group.calendar.google.com',
+								color: '#568203'
+							}, 
+							{
+
+								googleCalendarId: 'ieeeutd@gmail.com',
+								color: '#2C6A9B'
+
 							}
 						]}
+						eventClick= {(event) => {
+							// Prevent redirect to Google Calendar
+							event.jsEvent.preventDefault();
+						}
+						}
+					
 					/>
 				</div>
 			</div>
