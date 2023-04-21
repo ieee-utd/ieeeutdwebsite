@@ -9,10 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@fullcalendar/core": "^6.1.4",
     "@fullcalendar/daygrid": "^6.1.4",
+    "@fullcalendar/google-calendar": "^6.1.4",
+    "@fullcalendar/scrollgrid": "^6.1.5",
     "@fullcalendar/list": "^6.1.4",
     "@fullcalendar/react": "^6.1.4",
+    "@mui/material": "^5.12.1",
+    "@googleapis/calendar": "^3.0.0",
+    "@googleapis/docs": "^2.0.0",
     "@next/font": "13.1.6",
     "bootstrap": "^5.2.3",
     "eslint": "8.33.0",

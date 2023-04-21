@@ -1,19 +1,16 @@
 import styles from "../styles/Footer.module.css";
-
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-
-import Link from "next/link";
 import Image from "next/image";
 import logo from "../assets/ieeelogowhite.png";
-import NewsLetter from "../components/NewsLetter";
+
 
 export default function Footer() {
   return (
-    <footer className=" tw-bg-ieeeorange tw-h-1/2 tw-w-full  tw-flex md:tw-flex-row tw-flex-col tw-justify-around tw-items-start tw-p-20">
-      <div className="tw-text-white tw-p-5 tw-flex tw-flex-col">
+    <footer className=" tw-bg-ieeeorange tw-h-1/2 tw-w-full tw-flex md:tw-flex-row tw-flex-col tw-justify-around tw-items-start tw-p-20">
+      <div className="tw-text-white tw-p-3 tw-flex tw-flex-col">
         <div className="tw-flex tw-flex-row">
           <Image className={styles.logo} src={logo} alt="IEEELOGO" />
           <div className="tw-flex tw-flex-col tw-w-60">
@@ -28,7 +25,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <div className="tw-text-white p-5">
+      <div className="tw-text-white p-3">
         <ul>
           <div className="tw-text-2xl">
             <p className={styles.font__text}>Contact Us</p>

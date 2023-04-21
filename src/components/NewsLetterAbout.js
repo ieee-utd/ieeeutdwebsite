@@ -73,23 +73,26 @@ export default function NewsLetter() {
             onSubmit={submitForm}
           >
             <input
-              className="tw-border-white tw-rounded-full tw-border-solid tw-border-2 tw-mt-8 tw-w-5/6 tw-h-12 tw-text-black tw-p-4"
+              className="tw-border-white tw-min-w-[8px] tw-rounded-full tw-border-solid tw-border-2 tw-mt-8 tw-w-5/6 tw-h-12 tw-text-black tw-p-4"
               type="text"
               id="email"
               name="email"
               onChange={handleInput}
             />
+
             {formSuccess ? (
               <div className="tw-mt-6 tw-text-lg ">
                 Check your email for an invite to the mailing list!
               </div>
             ) : (
-              <button
-                className="tw-transition tw-ease-in-out tw-delay-150 tw-border-white tw-rounded-full tw-border-solid tw-border-2 tw-mt-6 tw-w-1/4 tw-h-12 hover:tw-bg-white hover:tw-text-ieeeblue"
-                type="submit"
-              >
-                <span className={styles.Signup__text}>Sign Up</span>
-              </button>
+              <div className="tw-w-1/3 tw-min-w-24">
+                <button
+                  className="tw-transition tw-ease-in-out tw-delay-150 tw-border-white tw-rounded-full tw-border-solid tw-border-2 tw-mt-6 tw-w-full tw-h-12 hover:tw-bg-white hover:tw-text-ieeeblue"
+                  type="submit"
+                >
+                  <span className={styles.Signup__text}>Sign Up</span>
+                </button>
+              </div>
             )}
           </form>
         </div>
