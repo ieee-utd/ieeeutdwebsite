@@ -77,7 +77,7 @@ export default function Tutoring() {
             <div className={styles["calendar-container"]}>
               <FullCalendar 
                 schedulerLicenseKey={'CC-Attribution-NonCommercial-NoDerivatives'}
-                plugins={[timeGridPlugin, googleCalendarPlugin, scrollGridPlugin]}  
+                plugins={[timeGridPlugin, googleCalendarPlugin]}  
                 googleCalendarApiKey={apiKey}
                 events={{googleCalendarId: calendarId}}
                 eventDidMount={handleEventDidMount} // custom render function
