@@ -81,7 +81,7 @@ export default function Tutoring() {
           <p className={styles["tutoring-hours-title"]}>Tutoring hours</p>
           <div className={styles["calendar-container"]}>
               <FullCalendar 
-                schedulerLicenseKey={'CC-Attribution-NonCommercial-NoDerivatives'}
+                // schedulerLicenseKey={'CC-Attribution-NonCommercial-NoDerivatives'}
                 plugins={[timeGridPlugin, googleCalendarPlugin, scrollGridPlugin]}  
                 googleCalendarApiKey={apiKey}
                 events={{googleCalendarId: calendarId}}
