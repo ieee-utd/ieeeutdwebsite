@@ -32,7 +32,7 @@
     font-family: 'Roboto Mono', monospace;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color:#FFFFFF;
-    height: 50vh;
+    height: fit-content;
     padding-bottom: 5vh;
 
 
@@ -51,6 +51,7 @@
 
     
     width: 50%;
+    height: 100%;
 
 }
 .inner_right {
@@ -78,6 +79,7 @@
 .inner_left_signup{
 
     margin-left: 30%;
+    
 
    
 }
@@ -144,11 +146,48 @@
 
 }
 
+@media screen and (min-width: 820px) and (max-width: 930px) {
+
+
+    .inner_right_message {
+
+      
+        font-size: 1.2rem;
+        padding-left: 30px;
+        width: 100%;
+        
+    
+    }
+
+}
 
 @media screen and (min-width: 600px) and (max-width: 820px){
 
     .aboutText {
         font-size: 1.2rem;
+    }
+
+    .inner_right {
+
+        margin: auto;
+        padding-bottom: 20px;
+    }
+
+    .inner_right_message {
+
+      
+        font-size: 1rem;
+        height: 100%;
+        
+        margin-left: 40px;
+
+    
+    }
+
+    .Signup__message {
+
+        font-size: 1.5rem;
+        text-align: center;
     }
 }
 
@@ -157,6 +196,23 @@
     .title {
 
         font-size: 2.5rem;
+       
+    }
+
+    .inner_right {
+
+        display: none;
+        position: absolute;
+        top: 0;
+    }
+    
+    .inner_left {
+
+        width: 100%;
+    }
+    .Signup__message {
+
+        font-size: 1.5rem;
        
     }
 
