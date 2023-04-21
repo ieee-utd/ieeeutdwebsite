@@ -5,6 +5,8 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import scrollGridPlugin from "@fullcalendar/scrollgrid";
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import Image from "next/image";
+import discordImage from "public/discord.png";
+import youtubeImage from "public/youtube.png";
 import utdMap from "public/utdmap.png";
 import escnMap from "public/escnmap.png"
 import banner from "public/tutoring_banner.jpg"
@@ -88,7 +90,7 @@ export default function Tutoring() {
                 height={'44rem'}
                 weekends={false}
                 allDaySlot={false}
-                dayMinWidth={175}
+                dayMinWidth={225}
                 contentHeight='auto'
                 // stickyFooterScrollbar={true}
                 headerToolbar={{
@@ -111,20 +113,29 @@ export default function Tutoring() {
             <div className="pl-[5%] text-white text-[120%] w-[80%] py-4 pr-4" >
                 <p>Our tutoring room is equipped with a variety of electrical engineering tools to help students learn and master the subject. Here are some of the tools available in the room:</p>
                 <ul className="">
-                  <li className="p-[2%]">Oscilloscopes: Our tutoring room has a range of oscilloscopes that students can use to visualize and analyze electrical signals. These tools can help students understand waveforms, measure voltage and frequency, and diagnose problems in circuits.</li>
-                  <li className="p-[2%]">Campus computers: We have several computers available for students to use during tutoring sessions. These computers are loaded with a range of software programs commonly used in electrical engineering, such as MATLAB, LTSpice, and Multisim.</li>
-                  <li className="p-[2%]">Power supplies: Our tutoring room has a variety of power supplies that students can use to provide voltage and current to their circuits. These tools are essential for testing and troubleshooting electrical devices.</li>
-                  <li className="p-[2%]">Multimeters: We also have multimeters available for students to use during tutoring sessions. These tools can measure voltage, current, and resistance in electrical circuits, providing students with valuable information about their projects.</li>
-                  <li className="p-[2%]">Other general purpose electrical engineering tools: In addition to the above tools, our tutoring room is also equipped with a variety of other general purpose electrical engineering tools, such as function generators, signal generators, and logic analyzers. These tools can help students learn about a range of electrical engineering concepts and techniques.</li>
+                  <li className="pl-[2%] pb-2">Oscilloscopes: Our tutoring room has a range of oscilloscopes that students can use to visualize and analyze electrical signals. These tools can help students understand waveforms, measure voltage and frequency, and diagnose problems in circuits.</li>
+                  <li className="pl-[2%] pb-2">Campus computers: We have several computers available for students to use during tutoring sessions. These computers are loaded with a range of software programs commonly used in electrical engineering, such as MATLAB, LTSpice, and Multisim.</li>
+                  <li className="pl-[2%] pb-2">Power supplies: Our tutoring room has a variety of power supplies that students can use to provide voltage and current to their circuits. These tools are essential for testing and troubleshooting electrical devices.</li>
+                  <li className="pl-[2%] pb-2">Multimeters: We also have multimeters available for students to use during tutoring sessions. These tools can measure voltage, current, and resistance in electrical circuits, providing students with valuable information about their projects.</li>
+                  <li className="pl-[2%] pb-2">Other general purpose electrical engineering tools: In addition to the above tools, our tutoring room is also equipped with a variety of other general purpose electrical engineering tools, such as function generators, signal generators, and logic analyzers. These tools can help students learn about a range of electrical engineering concepts and techniques.</li>
                 </ul>
                 <p>We encourage all students to take advantage of the tools available in our tutoring room. Our knowledgeable tutors are available to help students learn how to use these tools effectively and gain a deeper understanding of electrical engineering concepts.</p>
             </div>
-            <Image className="relative left-[30%] max-w-[30vw] w-[60%] content-center justify-center" src={labtools}></Image>
+            <Image className="relative left-[30%] w-[60%] max-w-[600px] content-center justify-center" src={labtools}></Image>
           </div>
 
           <p></p>
-          <h3 className="pl-[5%] text-white text-4xl underline ">Discord Server</h3>
-          <p className="pl-[5%] text-white text-[120%] w-[80%] py-4 pr-4">Our university's online tutoring program includes a Discord server where students can connect with tutors in real-time. Whenever a tutor is available, students can join a voice call or send a message to receive help with their coursework. Our Discord server is a convenient way for students to get the support they need, whether they're working on a problem set or studying for an exam. We encourage all students to join the server and take advantage of this valuable resource.</p>
+          <h3 className="pt-3 pl-[5%] text-white text-4xl underline ">Discord Server</h3>
+          <p className="pl-[5%] text-white text-[120%] w-[80%] py-4 pr-4">Our tutoring program includes a Discord server where students can connect with tutors in real-time. Whenever a tutor is available, students can join a voice call or send a message to receive help with their coursework. Our Discord server is a convenient way for students to get the support they need, whether they're working on a problem set or studying for an exam. We encourage all students to join the server and take advantage of this valuable resource.</p>
+          <a target="_blank" className="pl-[5%] w-fit" href="https://discord.com/invite/23Fn3CVPZB">
+            <Image className="pl-[5%] m-0 w-[50%] max-w-[500px] "src={discordImage}/>
+          </a>
+          {/* <a href="https://discord.com/invite/23Fn3CVPZB" className="pl-[5%] text-[120%] w-[80%] py-4 pr-4">Discord</a> */}
+          <h3 className="pt-3 pl-[5%] text-white text-4xl underline ">Exam Review Sessions</h3>
+          <p className="pl-[5%] text-white text-[120%] w-[80%] py-4 pr-4">Our tuoring program also offers exam review sessions for specific classes, which are live-streamed on Microsoft Teams and later uploaded to our YouTube channel. These sessions are designed to help students prepare for upcoming exams by reviewing key concepts, practicing problems, and answering questions. Our knowledgeable tutors lead these review sessions, providing students with valuable insights and guidance to help them succeed. Whether you're struggling with a particular topic or simply want to review the material before an exam, our review sessions are a great resource to help you prepare. We encourage all students to attend these live sessions or watch the recorded videos on our YouTube channel to strengthen their understanding of the material and boost their confidence before exams.</p>
+          <a target="_blank" className="pl-[5%] w-fit" href="https://www.youtube.com/@ieeeutdallas1989">
+            <Image className="pl-[5%] m-0 w-[50%] max-w-[200px] " src={youtubeImage}/>
+          </a>
         </div>
       </main>
     </>
