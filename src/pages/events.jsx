@@ -80,7 +80,7 @@ const EventsPage = ({ pageDimensions }) => {
 							}
 						]}
 						eventDisplay='block'
-						eventClick = {(event) => {
+						eventClick = {(event) => {git 
 							// Prevent redirect to Google Calendar
 							event.jsEvent.preventDefault();
 						}}

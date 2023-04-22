@@ -1,6 +1,6 @@
 import styles from '@/styles/Committees.module.css';
 import Member from '@/components/Member';
-import committeeMembers from './CommitteeMembers';
+import committeeMembers from './committeeMembers';
 
 export default function Developers() {
 	return (
