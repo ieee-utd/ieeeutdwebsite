@@ -13,7 +13,7 @@ export default function Member({
   return (
     <div className={styles.profile__container}>
       <div className={styles.image}>
-        <Image width={480} height={640} src={image} alt="pic" />
+        <Image width={300} src={image} alt="pic" />
       </div>
       <div className={styles.info}>
         <p className={styles.name}>{name}</p>
