@@ -1,7 +1,7 @@
 import styles from '@/styles/Committees.module.css';
 import Member from '@/components/Member';
 import committeeMembers from './committeeMembers';
-
+// cute comment
 export default function Developers() {
 	return (
 		<div className={styles.image__container}>
