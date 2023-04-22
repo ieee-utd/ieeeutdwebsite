@@ -2,18 +2,19 @@ import Image from "next/image";
 import styles from "@/styles/Committees.module.css";
 import { FaLinkedin } from "react-icons/fa";
 import { SiMicrosoftoutlook } from "react-icons/si";
+import committeeMembers from "./committeeMembers";
 
 export default function Member({
   name = "default",
   title,
   email,
   linkedin,
-  image,
+  image=committeeMembers[0]["src"],
 }) {
   return (
     <div className={styles.profile__container}>
       <div className={styles.image}>
-        <Image width={300} src={image} alt="pic" />
+        <Image width={350} src={image} alt="pic" />
       </div>
       <div className={styles.info}>
         <p className={styles.name}>{name}</p>
