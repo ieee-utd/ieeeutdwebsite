@@ -143,5 +143,12 @@
   color: white;
 
 }
+.calendarEvent {
+  padding-left: 5%;
+}
+.calendarText {
+  word-wrap: break-word;
+  white-space: pre-line;
+}
 
   /* Mobile */

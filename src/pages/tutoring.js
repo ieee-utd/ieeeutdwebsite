@@ -12,14 +12,21 @@ import utdMap from "public/utdmap.png";
 import escnMap from "public/escnmap.png"
 import banner from "public/tutoring_banner.jpg"
 import labtools from "public/labtools.jpg"
-import { useEffect } from "react";
+import React from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
-
-const FullCalendar = dynamic(
-  () => import('@fullcalendar/react'),
-  { ssr: true }
-)
+const FullCalendar = dynamic(() => import("@fullcalendar/react"), {
+  ssr: false,
+});
 export default function Tutoring() {
+  // const Router = useRouter()
+  const [renderCalendar, setRenderCalendar] = useState(false);
+  const calendarComponentRef = React.createRef();
+  useEffect(() => {
+    setRenderCalendar(true);
+
+  }, []);
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
   const calendarId = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
   let eventIndex = 0;
@@ -28,7 +35,6 @@ export default function Tutoring() {
     const eventColor = colors[eventIndex % colors.length];
     eventIndex++;
     eventInfo.el.style.backgroundColor = eventColor;
-    // eventInfo.el.style.color ='black';
   };
   // useEffect(() => {
   //   const fullCalendarEl = document.querySelector('.fc');
@@ -57,7 +63,6 @@ export default function Tutoring() {
             <h2>Courses</h2>
             <p className={"pb-12 underline font-medium text-white text-3xl"}>We provide tutoring for the following courses:</p>
             <div className={styles["course-list"]}>
-              {/* maybe add hyperlinks to utd course info page */}
               <li>Introduction to Electrical Engineering II <br/>(CE/EE 1202) </li>
               <li>Introduction to Programming <br/>(CS 1325)</li>
               <li>Introduction to Digital Systems <br/>(CE/EE 2310)</li>
@@ -82,11 +87,12 @@ export default function Tutoring() {
           <div className={styles["calendar-container"]}>
               <FullCalendar 
                 // schedulerLicenseKey={'CC-Attribution-NonCommercial-NoDerivatives'}
-                // schedulerLicenseKey='GPL-My-Project-Is-Open-Source'
-                plugins={[timeGridPlugin, googleCalendarPlugin]}  
+                schedulerLicenseKey='GPL-My-Project-Is-Open-Source'
+                // schedulerLicenseKey={'test'}
+                plugins={[timeGridPlugin, googleCalendarPlugin, scrollGridPlugin]}  
                 googleCalendarApiKey={apiKey}
                 events={{googleCalendarId: calendarId}}
-                eventDidMount={handleEventDidMount} // custom render function
+                eventDidMount={handleEventDidMount} // set colors for events
                 initialDate={'2023-02-06'}  //START DATE FOR THE WEEK
                 slotDuration="00:15:00"
                 slotMinTime="10:00"
@@ -95,9 +101,21 @@ export default function Tutoring() {
                 height={'44rem'}
                 weekends={false}
                 allDaySlot={false}
-                // contentHeight='auto'
-                // dayMinWidth={225}
-                // stickyFooterScrollbar={true}
+                contentHeight='auto'
+                dayMinWidth={215}
+                stickyFooterScrollbar={true}
+                eventContent={(eventInfo) => {
+                  return (
+                    <div>
+                      <div className={styles.calendarEvent}>
+                        <div className={styles.calendarText}>{eventInfo.timeText}</div>
+                        <div className={styles.calendarText}>{eventInfo.event.title}</div>
+                      </div>                      
+                    </div>
+
+                  );
+
+                }}
                 headerToolbar={{
                   left: '',
                   center: '',
