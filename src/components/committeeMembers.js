@@ -69,11 +69,6 @@ const committeeMembers = [
     name: "Stephanie Barnard",
     src: require("../assets/IEEE/Stephanie_Barnard.png"),
   },
-  {
-    id: 14,
-    name: "Arhum Khan",
-    src: require("../assets/IEEE/Arhum_Khan.png"),
-  },
 ];
 
 export default committeeMembers;
