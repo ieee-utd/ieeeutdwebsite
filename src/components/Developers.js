@@ -7,6 +7,7 @@ export default function Developers() {
 		<div className={styles.image__container}>
 			<Member
 				name="James Odebiyi"
+				image={committeeMembers[7]['src']}
 				title="Lead Web Developer"
 				linkedin="https://www.linkedin.com/in/james-odebiyi-a87049214/"
 				email="jxo190003@utdallas.edu"
