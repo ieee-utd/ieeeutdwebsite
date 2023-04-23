@@ -3,18 +3,35 @@ import styles from "@/styles/Committees.module.css";
 import { FaLinkedin } from "react-icons/fa";
 import { SiMicrosoftoutlook } from "react-icons/si";
 import committeeMembers from "./committeeMembers";
+import { useEffect, useRef, useState } from "react";
 
 export default function Member({
   name = "default",
   title,
   email,
   linkedin,
-  image=committeeMembers[0]["src"],
+  image=committeeMembers[committeeMembers.length - 1]["src"],
 }) {
+
+  const [isVisible, setIsVisible] = useState(false);
+  const imgRef = useRef(image);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver((entries) => {
+		  entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+			  setIsVisible(true);
+			  observer.unobserve(entry.target);
+			}
+		  });
+		});
+		observer.observe(imgRef.current);
+	  }, []);
+
   return (
-    <div className={styles.profile__container}>
+    <div className={`${styles.profile__container} ${isVisible ? styles.fade__in : ''}`}>
       <div className={styles.image}>
-        <Image width={350} src={image} alt="pic" />
+        <Image width={350} ref={imgRef} src={image} alt="pic" />
       </div>
       <div className={styles.info}>
         <p className={styles.name}>{name}</p>

@@ -1,8 +1,11 @@
 import styles from '@/styles/Committees.module.css';
 import Member from '@/components/Member';
 import committeeMembers from './committeeMembers';
+import {useEffect} from 'react'
 
 export default function Executives() {
+
+	
 	return (
 		<div className={styles.image__container}>
 			<Member
