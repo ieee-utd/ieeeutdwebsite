@@ -39,8 +39,45 @@
     margin-left: 25%;
 
   }
+  .group__container {
+
+    width: 100%;
+    height: 40vw;
+    overflow: hidden;
+    position: relative;
+
+  }
+  .overlay__title {
+
+ 
+    display: flex;
+    font-size: 5rem;
+    color: #FFFFFF;
+    margin-top: 15%;
+    justify-content: center;
 
   
+  }
+
+  .overlay {
+
+  position: absolute;
+  top: 0;
+  z-index: 12;
+  font-size: 2.5rem;
+  background:rgba(54, 53, 53, 0.6);
+  width: 100%;
+  height: 100%;
+
+  }
+
+  .group__container .group__img {
+
+    
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 
   .image{
 
@@ -161,6 +198,15 @@
       font-size: 1rem;
     }
 
+  }
+
+  @media screen and (max-width: 600px){
+
+    .overlay__title {
+
+      font-size: 2.5rem;
+    
+    }
   }
 
 
