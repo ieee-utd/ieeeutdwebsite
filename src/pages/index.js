@@ -18,7 +18,6 @@ export default function Home() {
 				<title>IEEE at UT Dallas - The Student Branch of IEEE at UTD</title>
 				<meta name="description" content="This is the website of the UTD branch of IEEE" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main>
 				<div className={styles.carousel}>
