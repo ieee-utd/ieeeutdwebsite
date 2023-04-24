@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import styles from '@/styles/Events.module.css'
 import FullCalendar from '@fullcalendar/react'; // must go before plugins
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
+
+import interactionPlugin from '@fullcalendar/interaction';
+import timeGridPlugin from '@fullcalendar/timegrid';
+
 import listPlugin from '@fullcalendar/list';
 import scrollGridPlugin from '@fullcalendar/scrollgrid';
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
