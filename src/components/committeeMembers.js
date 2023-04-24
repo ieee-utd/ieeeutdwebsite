@@ -76,6 +76,17 @@ const committeeMembers = [
     src: require("../assets/IEEE/Arhum_Khan.png"),
   },
   {
+    id: 15,
+    name: "Ritambhara Kaushik",
+    src: require("../assets/IEEE/Ritambhara_Kaushik.jpeg"),
+  },
+  {
+    id: 16,
+    name: "Steven Nguyen",
+    src: require("../assets/IEEE/Steven_Nguyen.jpeg"),
+  },
+ 
+  {
 
     id: -1,
     name: "Placeholder",

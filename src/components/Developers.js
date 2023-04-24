@@ -20,12 +20,14 @@ export default function Developers() {
 			/>
 			<Member
 				name="Steven Nguyen"
+				image={committeeMembers[16]['src']}
 				title="Assistant Web Developer"
 				linkedin="https://www.linkedin.com/in/stevenknguyen/"
 				email="Steven.Nguyen7@UTDallas.edu"
 			/>
 			<Member
 				name="Rita Kaushik"
+				image={committeeMembers[15]['src']}
 				title="Assistant Web Developer"
 				linkedin="https://www.linkedin.com/in/ritakaushik/"
 				email="rxk200044@utdallas.edu"

@@ -26,7 +26,7 @@ export default function Forge() {
               </li>
               <li>
                 <h1>Motion-Tracking Camera</h1>
-                <p>Design a camera that tracks an object's movement (such as a face) using computer vision software and hardware 
+                <p>Design a camera that tracks an object&apos;s movement (such as a face) using computer vision software and hardware 
                   (servos and a micro-controller) to follow it in real-time.</p>
                 <div className={styles.button}>
                 <a>Learn More</a>
