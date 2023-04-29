@@ -42,6 +42,7 @@ const EventsPage = ({ pageDimensions }) => {
 				</div>
 				<div className="tw-w-full lg:tw-w-2/3">
 					<FullCalendar
+					
 						plugins={[dayGridPlugin, listPlugin, googleCalendarPlugin]}
 						ref={calendarRef}
 						headerToolbar={{
@@ -84,7 +85,7 @@ const EventsPage = ({ pageDimensions }) => {
 							}
 						]}
 						eventDisplay='block'
-						eventClick = {(event) => {git 
+						eventClick = {(event) => {
 							// Prevent redirect to Google Calendar
 							event.jsEvent.preventDefault();
 						}}
