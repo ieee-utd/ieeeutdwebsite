@@ -15,7 +15,6 @@
   .title {
 
     font-size: 36px;
-    font-family: 'Roboto Mono', monospace;
     margin-top: 8vh;
     text-align: center;
     text-decoration: underline;
@@ -83,11 +82,20 @@
 
     background-color: gray;
     display: flex;
+    width: 350px;
     overflow: hidden;
     margin-right: 1rem;
     margin-bottom: 1.5rem;
 
   }
+
+  .image_itself {
+
+    object-fit: cover;
+
+  }
+
+  
 
   .fade__in {
     opacity: 0;

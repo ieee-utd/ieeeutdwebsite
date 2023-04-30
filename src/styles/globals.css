@@ -27,6 +27,7 @@ a:active { text-decoration: none; }
 html, body {
   overflow-x: hidden;
   font-family: 'Roboto Mono', monospace;
+  scroll-behavior:  smooth;
   
 }
 body {

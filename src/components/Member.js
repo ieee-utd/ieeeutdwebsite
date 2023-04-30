@@ -31,7 +31,7 @@ export default function Member({
   return (
     <div className={`${styles.profile__container} ${isVisible ? styles.fade__in : ''}`}>
       <div className={styles.image}>
-        <Image width={350} ref={imgRef} src={image} alt="pic" />
+        <Image width={350}  ref={imgRef} src={image} alt="pic" />
       </div>
       <div className={styles.info}>
         <p className={styles.name}>{name}</p>
