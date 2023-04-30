@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/Events.module.css'
-import FullCalendar from '@fullcalendar/react'; // must go before plugins
-import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
+// import FullCalendar from '@fullcalendar/react'; // must go before plugins
 
-import interactionPlugin from '@fullcalendar/interaction';
-import timeGridPlugin from '@fullcalendar/timegrid';
-
+import dynamic from 'next/dynamic';
 import listPlugin from '@fullcalendar/list';
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import scrollGridPlugin from '@fullcalendar/scrollgrid';
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
+
+
+const FullCalendar = dynamic(() => import('@fullcalendar/react'), {
+	ssr: false
+});
 
 const EventsPage = ({ pageDimensions }) => {
 	
@@ -28,6 +31,7 @@ const EventsPage = ({ pageDimensions }) => {
 		}
 	
 	}
+	const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 
 
 	return (
@@ -40,19 +44,23 @@ const EventsPage = ({ pageDimensions }) => {
 					<span className="tw-text-[#C85B12]">workshops</span>,{' '}
 					<span className="tw-text-[#2C6A9B]">general</span> , and social events.
 				</div>
-				<div className="tw-w-full lg:tw-w-2/3">
+				<div className=" tw-self-center tw-w-full lg:tw-w-3/4">
 					<FullCalendar
-					
-						plugins={[dayGridPlugin, listPlugin, googleCalendarPlugin]}
+
+						
+						plugins={[dayGridPlugin, listPlugin, googleCalendarPlugin, scrollGridPlugin]}
 						ref={calendarRef}
+						schedulerLicenseKey="GPL-My-Project-Is-Open-Source"
 						headerToolbar={{
 							right: 'listMonth,' + (listView == false ? 'dayGridMonth,' 
 							:  '') + ',prev,next'
 						}}
-						googleCalendarApiKey="AIzaSyAfPLw0W2oEPGS_GaXsJhCpaZw0zTXAxOI"
+						stickyFooterScrollbar={true}
+						googleCalendarApiKey={apiKey}
 						selectable={false}
 						dayMaxEventRows={true}
 						views={viewOptions}
+						height={"44rem"}
 						initialView={'dayGridMonth'}
 						windowResize={() => {
 							if(calendarRef){

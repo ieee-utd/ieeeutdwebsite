@@ -30,8 +30,10 @@ export default function Member({
 
   return (
     <div className={`${styles.profile__container} ${isVisible ? styles.fade__in : ''}`}>
+      <div className={styles.outer_image}>
       <div className={styles.image}>
-        <Image width={350}  ref={imgRef} src={image} alt="pic" />
+        <Image cover ref={imgRef} src={image} alt="pic" />
+      </div>
       </div>
       <div className={styles.info}>
         <p className={styles.name}>{name}</p>
@@ -40,7 +42,7 @@ export default function Member({
           <a href={linkedin}>
             <FaLinkedin className="tw-transition tw-ease-in-out tw-delay-150 tw-text-3xl w-cursor-pointer hover:tw-fill-orange" />
           </a>
-          <a href={email}>
+          <a href={`mailto:${email}`}>
             <SiMicrosoftoutlook className="tw-transition tw-ease-in-out tw-delay-150 tw-text-3xl tw-cursor-pointer hover:tw-fill-blue" />
           </a>
         </div>
