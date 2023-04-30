@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/Events.module.css'
-// import FullCalendar from '@fullcalendar/react'; // must go before plugins
-
-import dynamic from 'next/dynamic';
+ import FullCalendar from '@fullcalendar/react'; // must go before plugins
 import listPlugin from '@fullcalendar/list';
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import scrollGridPlugin from '@fullcalendar/scrollgrid';
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 
-
-const FullCalendar = dynamic(() => import('@fullcalendar/react'), {
-	ssr: false
-});
 
 const EventsPage = ({ pageDimensions }) => {
 	

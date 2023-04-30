@@ -18,6 +18,7 @@ import { useEffect, useState } from 'react';
 const FullCalendar = dynamic(() => import('@fullcalendar/react'), {
 	ssr: false
 });
+
 export default function Tutoring() {
 	// const Router = useRouter()
 	const [renderCalendar, setRenderCalendar] = useState(false);
