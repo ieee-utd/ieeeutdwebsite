@@ -88,7 +88,7 @@ const committeeMembers = [
   {
     id: 17,
     name: "Kevin Debord",
-    src: require("../assets/IEEE/Kevin_Debord.JPG"),
+    src: require("../assets/IEEE/Kevin_Debord.png"),
   },
  
   {
