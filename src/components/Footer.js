@@ -1,5 +1,5 @@
 import styles from "../styles/Footer.module.css";
-import { FaInstagram } from "react-icons/fa";
+import { FaDiscord, FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
@@ -41,6 +41,9 @@ export default function Footer() {
       <div className="tw-p-5 tw-flex-col">
         <ul>
           <div className="tw-group tw-flex tw-gap-6 tw-pb-5">
+            <a href="https://discord.gg/8SXQe9pGu9">
+              <FaDiscord className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-text-5xl tw-cursor-pointer hover:tw-fill-white group-hover:tw-text-ieeeorangedim"/>
+            </a>
             <a href="https://www.instagram.com/ieeeutd/">
               <FaInstagram className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-text-5xl tw-cursor-pointer hover:tw-fill-white group-hover:tw-text-ieeeorangedim" />
             </a>
