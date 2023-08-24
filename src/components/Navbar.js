@@ -54,9 +54,9 @@ export default function Navbar() {
           </Link>
           <Link
             className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
-            href={"/forge"}
+            href={"/pes"}
           >
-            <p className={styles.navbar__hover__underline}>Forge</p>
+            <p className={styles.navbar__hover__underline}>PES</p>
           </Link>
         </div>
         <HamburgerMenu burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen} />
@@ -89,9 +89,9 @@ export default function Navbar() {
           </li>
           </Link>
           <Divider />
-          <Link href={"/forge"}>
+          <Link href={"/pes"}>
           <li>
-            Forge
+            PES
           </li>
           </Link>
           <Divider />

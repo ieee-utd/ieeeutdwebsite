@@ -2,7 +2,7 @@ import Executives from '@/components/Executives';
 import EventsCommittee from '@/components/EventsCommittee';
 import TechCommittee from '@/components/TechCommittee';
 import Tutoring from '@/components/Tutoring';
-import Forge from '@/components/Forge';
+import Pes from '@/components/Pes'
 import Developers from '@/components/Developers';
 import styles from '@/styles/Committees.module.css';
 import Image from 'next/image';
@@ -42,7 +42,7 @@ export default function Committees() {
 					Engineer projects for solutions to real-world problems faced by the UT Dallas community,
 					designed, built, tested, and used by UTD students, faculty and staff
 				</div>
-				<Forge />
+				<Pes/>
 				<div className={styles.title}>Web Developers</div>
 				<div className={styles.description}>Developed the website</div>
 				<Developers />
