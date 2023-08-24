@@ -9,12 +9,17 @@ import HamburgerMenu from "./HamburgerMenu";
 
 export default function Navbar() {
   const [burgerOpen, setBurgerOpen] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
+
 
   const router = useRouter();
 
   useEffect(() => {
     setBurgerOpen(false);
+    setDropDown(false);
   }, [router.asPath]);
+
+
 
   return (
     <>
@@ -52,17 +57,41 @@ export default function Navbar() {
           >
             <p className={styles.navbar__hover__underline}>Committees</p>
           </Link>
-          <Link
-            className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
-            href={"/pes"}
+          <li
+            className="tw-list-none tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
+            onMouseEnter={() => { setDropDown(true)}}
+            onMouseLeave={() => { setDropDown(false)}}
           >
-            <p className={styles.navbar__hover__underline}>PES</p>
-          </Link>
+            <p className={styles.navbar__hover__underline}>Societies</p>
+              {
+                dropDown && (
+                <ul className={styles.nav_list}>
+                  <Divider />
+                    <li>
+                  <Link href={"/pes"}>
+                      PES
+                  </Link>
+                    </li>
+                  <Divider />
+                    <li>
+                  <Link href={"/pes"}>
+                      Robotics
+                  </Link>
+                    </li>
+                  <Divider />
+                  <li>
+                    <Link href={"/pes"}>
+                        RFS
+                    </Link>
+                  </li>
+                </ul>
+                )
+              }
+            </li>
         </div>
         <HamburgerMenu burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen} />
       </header>
-
-      {burgerOpen ? (
+      {burgerOpen && (
         <ul className={styles.mobile_nav_list}>
           <Divider />
           <Link href={"/"}>
@@ -91,13 +120,11 @@ export default function Navbar() {
           <Divider />
           <Link href={"/pes"}>
           <li>
-            PES
+            Societies
           </li>
           </Link>
           <Divider />
         </ul>
-      ) : (
-        ""
       )}
     </>
   );
