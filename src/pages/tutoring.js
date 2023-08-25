@@ -138,6 +138,7 @@ export default function Tutoring() {
 								slotMinTime="10:00"
 								slotMaxTime="16:00"
 								slotEventOverlap={false}
+								dayHeaderFormat={{weekday: 'long'}}
 								height={'44rem'}
 								weekends={false}
 								allDaySlot={false}
