@@ -33,12 +33,9 @@ export default function Tutoring() {
 	const colors = ['#8f1600', '#9c5d00', '#7a9c00', '#009c17', '#007d9c', '#00009c']; //temp colors
 	const handleEventDidMount = (eventInfo) => {
 		const eventColor = colors[eventIndex % colors.length];
-
 		eventIndex++;
 		eventInfo.el.style.backgroundColor = eventColor;
 		eventInfo.el.style.borderColor = eventColor;
-		
-		
 	};
 
 	return (
@@ -137,6 +134,7 @@ export default function Tutoring() {
 								slotDuration="00:15:00"
 								slotMinTime="10:00"
 								slotMaxTime="16:00"
+								dayHeaderFormat={{ weekday:'long'}}
 								slotEventOverlap={false}
 								dayHeaderFormat={{weekday: 'long'}}
 								height={'44rem'}
