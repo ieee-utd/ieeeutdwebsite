@@ -2,7 +2,7 @@
 .mainContainer {
 
   min-height: 100vh;
-  background-color: var(--ieeeblue);
+
 
 }
 .main {
@@ -93,7 +93,6 @@
     min-height: 85vh;
     max-height: fit-content;
     width: 100%;
-    background-color: var(--ieeeblue);
     display: flex;
     flex-direction: column;
     color: white;
@@ -186,8 +185,8 @@
 
   .projects {
 
-    background-color: var(--ieeeblue);
     display: flex;
+    background-color: var(--ieeeblue);
     flex-direction: column;
     padding-left: 8%;
     padding-right: 8%;

@@ -32,7 +32,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="tw-group tw-hidden tw-gap-6 tw-pb-5 tw-mt-6 lg-sm:tw-flex tw-mr-10">
+        <div className="tw-group tw-hidden tw-gap-6 tw-pb-5 tw-mt-6 lg-sm:tw-flex tw-mr-12">
           <Link
             href={"/"}
             className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-text-2xl group-hover:tw-text-fadedblue"
@@ -58,7 +58,7 @@ export default function Navbar() {
             <p className={styles.navbar__hover__underline}>Committees</p>
           </Link>
           <li
-            className="tw-list-none tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
+            className={"tw-list-none tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue " + (dropDown ? "tw-w-[20vw]" : "")}
             onMouseEnter={() => { setDropDown(true)}}
             onMouseLeave={() => { setDropDown(false)}}
           >
@@ -69,19 +69,19 @@ export default function Navbar() {
                   <Divider />
                     <li>
                   <Link href={"/pes"}>
-                      PES
+                      Power & Energy
                   </Link>
                     </li>
                   <Divider />
                     <li>
-                  <Link href={"/pes"}>
+                  <Link href={"/robotics"}>
                       Robotics
                   </Link>
                     </li>
                   <Divider />
                   <li>
-                    <Link href={"/pes"}>
-                        RFS
+                    <Link href={"/rfs"}>
+                        Radio Frequency
                     </Link>
                   </li>
                 </ul>
@@ -118,12 +118,38 @@ export default function Navbar() {
           </li>
           </Link>
           <Divider />
-          <Link href={"/pes"}>
-          <li>
-            Societies
+          <li
+            onMouseEnter={() => { setDropDown(true)}}
+            onMouseLeave={() => { setDropDown(false)}}
+          >
+          Societies
           </li>
-          </Link>
           <Divider />
+          {
+            dropDown && ( <ul
+            onMouseEnter={() => { setDropDown(true)}}
+            onMouseLeave={() => { setDropDown(false)}}
+            >
+                <li>
+              <Link href={"/pes"}>
+                  Power & Energy
+              </Link>
+                </li>
+              <Divider />
+                <li>
+              <Link href={"/robotics"}>
+                  Robotics
+              </Link>
+                </li>
+              <Divider />
+              <li>
+                <Link href={"/rfs"}>
+                    Radio Frequency
+                </Link>
+              </li>
+            </ul>)
+          }
+          
         </ul>
       )}
     </>

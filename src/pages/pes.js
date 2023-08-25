@@ -77,7 +77,7 @@ export default function Pes() {
 					</ul>	
 				</div>
 			</div>
-			<div>
+			<div className="tw-bg-white">
 				<h1 className="tw-mt-6 tw-text-center tw-text-4xl">Officers</h1>
 				<div className="tw-flex tw-justify-evenly">
 				{
