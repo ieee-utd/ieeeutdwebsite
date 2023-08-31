@@ -136,7 +136,7 @@ export default function Tutoring() {
 								initialDate={'2023-02-06'} //START DATE FOR THE WEEK
 								slotDuration="00:15:00"
 								slotMinTime="10:00"
-								slotMaxTime="16:00"
+								slotMaxTime="18:00"
 								slotEventOverlap={false}
 								dayHeaderFormat={{weekday: 'long'}}
 								height={'44rem'}
