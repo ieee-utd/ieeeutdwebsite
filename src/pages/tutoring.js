@@ -62,12 +62,12 @@ export default function Tutoring() {
 						</p>
 						<ul className={styles['course-list']}>
 							<li>
-								Introduction to Electrical Engineering II <br />
-								(CE/EE 1202){' '}
-							</li>
-							<li>
 								Introduction to Programming <br />
 								(CS 1325)
+							</li>
+							<li>
+								Introduction to Electrical Engineering II <br />
+								(CE/EE 1202){' '}
 							</li>
 							<li>
 								Introduction to Digital Systems <br />
@@ -76,6 +76,10 @@ export default function Tutoring() {
 							<li>
 								Fundamentals I <br />
 								(CE/EE 3201)
+							</li>
+							<li>
+								Fundamentals II <br />
+								(CE/EE 3202)
 							</li>
 							<li>
 								Digital Circuits <br />
@@ -92,6 +96,22 @@ export default function Tutoring() {
 							<li>
 								Electromagnetic Engineering <br />
 								(CE/EE 4301)
+							</li>
+							<li>
+								Statics <br />
+								(MECH 2310)
+							</li>
+							<li>
+								Dynamics <br />
+								(MECH 2330)
+							</li>
+							<li>
+								Mechanics of Materials <br />
+								(MECH 2320)
+							</li>
+							<li>
+								Linear Algebra <br />
+								(ENGR 3300)
 							</li>
 						</ul>
 					</div>
@@ -122,10 +142,7 @@ export default function Tutoring() {
 					<p className={styles['tutoring-hours-title']}>Tutoring hours</p>
 						<div className={styles["calendar-container"]}>
 							<FullCalendar
-								
-								// schedulerLicenseKey={'CC-Attribution-NonCommercial-NoDerivatives'}
 								schedulerLicenseKey="GPL-My-Project-Is-Open-Source"
-								// schedulerLicenseKey={'test'}
 								plugins={[timeGridPlugin, googleCalendarPlugin, scrollGridPlugin]}
 								googleCalendarApiKey={apiKey}
 								events={{ googleCalendarId: calendarId }}
@@ -136,7 +153,6 @@ export default function Tutoring() {
 								slotMaxTime="16:00"
 								dayHeaderFormat={{ weekday:'long'}}
 								slotEventOverlap={false}
-								dayHeaderFormat={{weekday: 'long'}}
 								height={'44rem'}
 								weekends={false}
 								allDaySlot={false}

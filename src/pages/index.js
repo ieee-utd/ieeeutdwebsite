@@ -4,7 +4,6 @@ import logo from '@/assets/ieeelogotransparent.png';
 import Image from 'next/image';
 import CarouselComponent from '@/components/CarouselComponent';
 import WhoWeAre from '@/components/WhoWeAre';
-import NewsLetterAbout from '@/components/NewsLetterAbout';
 import WhatWeDo from '@/components/WhatWeDo';
 import GridSection from '@/components/GridPhotos';
 import Murata from '@/assets/murata.png';
@@ -51,7 +50,6 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<NewsLetterAbout />
 			</main>
 		</>
 	);

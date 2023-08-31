@@ -1,27 +1,23 @@
+
 import styles from '@/styles/Pes.module.css';
 import Image from 'next/image';
 import titleCard from 'src/assets/forge_image.jpeg'
-import bit from 'src/assets/8bit-cpu.jpeg'
-import schematic from 'src/assets/cpu-schematic.png'
-import motion from 'src/assets/motion_tracking.png'
-import motion_two from 'src/assets/motion_tracking_two.png'
-import digital_poster from 'src/assets/digital_poster_two.jpeg'
-import digital_frame from 'src/assets/digital_frame.png'
-import voice_one from 'src/assets/voice_one.jpeg'
-import voice_two from 'src/assets/voice_controlled_two.jpeg'
 import { SiMicrosoftoutlook } from 'react-icons/si';
 import UpcomingEvents from '@/components/UpcomingEvents';
 
-export default function Pes() {
-	
+
+export default function Pes(props) {
+	// const [events, setEvents] = useState(props.events)
 	const officers = [
-		{ 
+		{ 	
+			id: 1,
 			name: "Manuel De Jesus Contreras",
 			email: "manuel.dejesuscontreras@utdallas.edu",
 			image: require("../assets/IEEE/placeholder.jpeg")
 
 		},
 		{ 
+			id: 2,
 			name: "Muhammad Zaid",
 			email: "muhammad.zaid@utdallas.edu",
 			image: require("../assets/IEEE/placeholder.jpeg")
@@ -41,16 +37,15 @@ export default function Pes() {
 			</div>
 			<div className="tw-bg-ieeeblue tw-flex tw-flex-row tw-p-6">
 					<div>
+						{props.data}
 						<h1 className="tw-text-white tw-mt-6 tw-underline-offset-[10px] tw-underline 
 						tw-text-center tw-text-4xl">Upcoming Events</h1> 
 						<br />
 						<div className="tw-text-3xl tw-text-white">PES have alot of events coming up so keep an eye out!</div>
 					</div>
 					<div className="tw-w-[65%]">
-						<UpcomingEvents />
+						{/* <UpcomingEvents/> */}
 					</div>
-				
-
 			</div>
 			<div className={styles.projects}>
 				<h1>Projects</h1>
@@ -83,8 +78,8 @@ export default function Pes() {
 				{
 					officers.map(officer => {
 						return (
-						<div>
-							<Image src={officer.image} width={320} height={320}/>
+						<div key={officer.id}>
+							<Image src={officer.image} alt="placeholder image" width={320} height={320}/>
 							<div className="tw-mt-5 tw-flex tw-justify-center">
 								<div>
 									<h1 className="tw-text-[135%]">{officer.name}</h1>
@@ -105,3 +100,17 @@ export default function Pes() {
 		</div>
 	);
 }
+// fetch calendar events on request
+
+export const getServerSideProps = async () => {
+
+	const iCalUrl = 'https://calendar.google.com/calendar/ical/84ee6f7804dd316e4c7044b93ca75255848479763d1305cf69496262abd54a45%40group.calendar.google.com/public/basic.ics'
+	
+	const response = await fetch(iCalUrl)
+
+	const data = await response.text()
+
+	// console.log(data)
+	return { props: { data }}
+}
+

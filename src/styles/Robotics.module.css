@@ -16,6 +16,17 @@
     
 }
 
+.about_image {
+
+    width: 450px;
+}
+
+.regional_image {
+
+    width: 450px;
+    
+}
+
 .title_card_container {
 
     width: 100%;
@@ -34,7 +45,6 @@
     background:rgba(54, 53, 53, 0.6);
     width: 100%;
     height: 100%;
-
 }
 
 .overlay__title {
