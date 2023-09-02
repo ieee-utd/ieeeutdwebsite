@@ -11,6 +11,41 @@
   
   }
 
+
+  .nav_list {
+
+    display: flex;
+    position:absolute;
+    flex-direction: column;
+    color: white;
+    z-index: 50;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(44, 107, 155, 0.9);
+    list-style: none;
+    padding: 0;
+
+  }
+  .nav_list li {
+
+    padding: 0.5rem;
+    padding-left: 0.4rem;
+ 
+    
+  }
+
+  .nav_list li:hover{
+    background-color: rgba(45, 136, 201, 0.9);
+  }
+
+  .nav_list a:hover {
+    
+    text-decoration: none;
+    display: block;
+    color:inherit;
+
+  }
+
   .title__logo {
 
     margin-left: 0.7em;
