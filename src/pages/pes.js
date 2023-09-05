@@ -1,9 +1,10 @@
 
-import styles from '@/styles/Pes.module.css';
-import Image from 'next/image';
-import titleCard from 'src/assets/forge_image.jpeg'
+import styles from '@/styles/Pes.module.css'
+import Image from 'next/image'
+import PESLogo from '@/assets/IEEEPESblacknwhite.gif'
 import { SiMicrosoftoutlook } from 'react-icons/si';
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 const ical = require('ical')
 const _ = require('lodash')
 import UpcomingEvents from '@/components/UpcomingEvents';
@@ -33,14 +34,11 @@ export default function Pes(props) {
 	}, [])
 	return (
 		<div className={styles.mainContainer}>
-			<div className={styles.title_card_container}>
-				<div className={styles.overlay}>
-					<pre className={styles.overlay__title}>
-							POWER & ENERGY {"\n"}
-							   SOCIETY
-					</pre>
+			<div className="tw-h-[45vh] tw-flex tw-justify-center tw-p-6 tw-mr-[25%]">
+				<div className="">
+					<Image src={PESLogo} width={250} height={250} />
+					<h1 className="tw-text-[2.6rem] tw-border-b-4 tw-border-b-ieeeorange tw-w-fit">Power & Energy Society</h1>
 				</div>
-			<Image src={titleCard} alt="guy soldering" className={styles.forge__image}/>
 			</div>
 			<div className="tw-bg-ieeeblue tw-flex tw-flex-row tw-p-6">
 					<div>
@@ -55,28 +53,17 @@ export default function Pes(props) {
 			</div>
 			<div className={styles.projects}>
 				<h1>Projects</h1>
-				<div className={styles.title_description}>
-					<p>PES currently offers the following projects</p>
-				</div>
-				<div className={styles.spacer}>
-					<ul>
-						<li>
-							<a href='#8bit'><h1>8-Bit Processor</h1></a>
-							
-						</li>
-						<li>
-							<a href='#motion'><h1>Motion-Tracking Camera</h1></a>
-
-						</li>
-						<li>
-							<a href='#poster'><h1>Dynamic Poster</h1></a>
-
-						</li>
-						<li>
-							<a href='#voice'><h1>Voice-Controlled Car</h1></a>
-						</li>
-					</ul>	
-				</div>
+				<p className="tw-text-white tw-text-3xl tw-underline-offset-[10px] tw-underline">BLDC Motor Project</p>
+				<br />
+				<p className="tw-text-white tw-text-2xl  ">
+				This project seeks to improve electric vehicle (EV) performance by designing and optimizing trapezoidal-controlled Brushless DC (BLDC) motors to replace traditional motors. 
+				The project aims to enhance EV driving range, torque output, and acceleration by leveraging the advantages of BLDC motors. Through advanced motor design software, finite element analysis (FEA), and comprehensive testing, 
+				the project aims to demonstrate how trapezoidal-controlled BLDC motors can significantly enhance EV efficiency and viability, 
+				contributing to the advancement of sustainable transportation solutions.
+				</p> 
+				<br />
+				<Link href="https://docs.google.com/forms/d/1sI528OgMre64usChAFhn_Y0Q9M1_mexbzVfSvCktM1Y/edit?pli=1" 
+				className="tw-decoration-none tw-self-center tw-text-white tw-text-3xl tw-underline-offset-[10px] tw-underline">Apply here</Link>
 			</div>
 			<div className="tw-bg-white">
 				<h1 className="tw-mt-6 tw-text-center tw-text-4xl">Officers</h1>
