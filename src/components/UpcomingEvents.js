@@ -11,10 +11,10 @@ return( <div className=" tw-pl-4 tw-items-center tw-ml-2">
                         events.map(event => {
                             return (
                                 <div key={event.id} className="tw-inline-block tw-align-middle 
-                                tw-m-2 tw-p-6 tw-bg-white tw-w-[300px]">
-                                    <h1 className="tw-text-2xl tw-border-b-black tw-border-b-4">{event.title}</h1>
+                                tw-m-2 tw-p-6 tw-bg-white tw-w-[300px] tw-whitespace-normal">
+                                    <h1 className="tw-text-2xl tw-border-b-black tw-border-b-4">{event.eventName}</h1>
                                     <br/>
-                                    <h2>{event.location}</h2>
+                                    {/* <h2>{event.location}</h2> */}
                                     <h2>{event.date}</h2>
                                     <span>Starts at <h2>{event.time}</h2></span>
 

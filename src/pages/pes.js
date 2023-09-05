@@ -3,11 +3,14 @@ import styles from '@/styles/Pes.module.css';
 import Image from 'next/image';
 import titleCard from 'src/assets/forge_image.jpeg'
 import { SiMicrosoftoutlook } from 'react-icons/si';
+import { useEffect, useState } from 'react'
+const ical = require('ical')
+const _ = require('lodash')
 import UpcomingEvents from '@/components/UpcomingEvents';
 
 
 export default function Pes(props) {
-	// const [events, setEvents] = useState(props.events)
+	const [events, setEvents] = useState(props.events)
 	const officers = [
 		{ 	
 			id: 1,
@@ -24,6 +27,10 @@ export default function Pes(props) {
 	 
 		}
 	]
+
+	useEffect(() => {
+		console.log(events)
+	}, [])
 	return (
 		<div className={styles.mainContainer}>
 			<div className={styles.title_card_container}>
@@ -37,14 +44,13 @@ export default function Pes(props) {
 			</div>
 			<div className="tw-bg-ieeeblue tw-flex tw-flex-row tw-p-6">
 					<div>
-						{props.data}
 						<h1 className="tw-text-white tw-mt-6 tw-underline-offset-[10px] tw-underline 
 						tw-text-center tw-text-4xl">Upcoming Events</h1> 
 						<br />
 						<div className="tw-text-3xl tw-text-white">PES have alot of events coming up so keep an eye out!</div>
 					</div>
 					<div className="tw-w-[65%]">
-						{/* <UpcomingEvents/> */}
+						<UpcomingEvents events={events}/>
 					</div>
 			</div>
 			<div className={styles.projects}>
@@ -109,8 +115,15 @@ export const getServerSideProps = async () => {
 	const response = await fetch(iCalUrl)
 
 	const data = await response.text()
-
+	const events = _.values(ical.parseICS(data)).map((event) => {
+		return {
+			id: event.uid,
+			eventName: event.summary,
+			date: event.start.toDateString(),
+			time: event.start.toLocaleTimeString("en", { timeStyle: "short"})
+		}
+	})
 	// console.log(data)
-	return { props: { data }}
+	return { props: { events }}
 }
 
