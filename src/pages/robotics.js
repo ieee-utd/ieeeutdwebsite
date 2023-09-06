@@ -34,7 +34,7 @@ export default function Robotics() {
         <div className={styles.mainContainer}>
             <div className="tw-h-[50vh]">
             <div className="tw-flex tw-justify-center">
-                <Image src={rfsIcon} width={250} height={250}/>
+                <Image src={rfsIcon} alt="logo for robotics society" width={250} height={250}/>
             </div>    
                 <div>
                     <h1 className="tw-text-5xl tw-text-center 
@@ -122,9 +122,9 @@ export default function Robotics() {
                         <h2 className="tw-w-fit tw-text-[1.8rem] tw-border-b-4 tw-border-b-ieeeorange tw-drop-shadow-roboto">What is it?</h2>
                     </div>
                     <br />
-                    <p>Micromouse is not just a game; it's a thrilling fusion of technology, strategy, and innovation. 
+                    <p>Micromouse is not just a game; it&apos;s a thrilling fusion of technology, strategy, and innovation. 
                     Imagine designing a tiny autonomous robot that navigates a maze, swiftly conquering twists, turns, and dead-ends to reach the hidden treasure at its core. 
-                    It's a high-speed chess match between engineering prowess and labyrinth challenges.</p>
+                    It&apos;s a high-speed chess match between engineering prowess and labyrinth challenges.</p>
                     <br />
                         <div className="tw-flex tw-justify-center">
                         <h2 className="tw-w-fit tw-text-[1.8rem] tw-border-b-4 tw-border-b-ieeeorange tw-drop-shadow-roboto">Why Participate?</h2>

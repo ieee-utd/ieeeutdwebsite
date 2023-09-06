@@ -29,14 +29,11 @@ export default function Pes(props) {
 		}
 	]
 
-	useEffect(() => {
-		console.log(events)
-	}, [])
 	return (
 		<div className={styles.mainContainer}>
 			<div className="tw-h-[45vh] tw-flex tw-justify-center tw-p-6 tw-mr-[25%]">
 				<div className="">
-					<Image src={PESLogo} width={250} height={250} />
+					<Image src={PESLogo} alt="logo for pes" width={250} height={250} />
 					<h1 className="tw-text-[2.6rem] tw-border-b-4 tw-border-b-ieeeorange tw-w-fit">Power & Energy Society</h1>
 				</div>
 			</div>

@@ -29,7 +29,7 @@ export default function RFS() {
     return (
         <div className={styles.mainContainer}>
             <div className="tw-h-[50vh] tw-flex tw-flex-row tw-items-center tw-justify-center">
-            <Image src={rfsIcon} width={250} height={250}/>
+            <Image src={rfsIcon} alt="rfs logo" width={250} height={250}/>
                 <div>
                     <h1 className="tw-text-6xl tw-drop-shadow-roboto tw-mb-[1rem]">Radio Frequency Society</h1>
                     <h3 className="tw-text-black tw-border-b-2 tw-w-fit tw-border-b-ieeeorange"
