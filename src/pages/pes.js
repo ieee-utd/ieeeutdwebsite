@@ -29,11 +29,14 @@ export default function Pes(props) {
 		}
 	]
 
+	useEffect(() => {
+		console.log(events)
+	}, [events])
 	return (
 		<div className={styles.mainContainer}>
 			<div className="tw-h-[45vh] tw-flex tw-justify-center tw-p-6 tw-mr-[25%]">
 				<div className="">
-					<Image src={PESLogo} alt="logo for pes" width={250} height={250} />
+					<Image src={PESLogo} width={250} height={250} />
 					<h1 className="tw-text-[2.6rem] tw-border-b-4 tw-border-b-ieeeorange tw-w-fit">Power & Energy Society</h1>
 				</div>
 			</div>
@@ -94,7 +97,7 @@ export default function Pes(props) {
 
 export const getServerSideProps = async () => {
 
-	const iCalUrl = 'https://calendar.google.com/calendar/ical/84ee6f7804dd316e4c7044b93ca75255848479763d1305cf69496262abd54a45%40group.calendar.google.com/public/basic.ics'
+	const iCalUrl = 'https://calendar.google.com/calendar/ical/84207716886ecc07653a56e2e667623275d7b902108ccd20e7e7533d4c4e2422%40group.calendar.google.com/public/basic.ics'
 	
 	const response = await fetch(iCalUrl)
 
@@ -107,7 +110,6 @@ export const getServerSideProps = async () => {
 			time: event.start.toLocaleTimeString("en", { timeStyle: "short"})
 		}
 	})
-	// console.log(data)
-	return { props: { events }}
+	return { props: { events: events.length ? events : [] }}
 }
 

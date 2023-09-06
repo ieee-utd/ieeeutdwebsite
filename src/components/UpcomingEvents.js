@@ -5,7 +5,10 @@ import axios from 'axios'
 export default function UpcomingEvents({events}) {
 
 
-return( <div className=" tw-pl-4 tw-items-center tw-ml-2">
+return( <>
+        {
+            events.length ? (
+            <div className="tw-pl-4 tw-items-center tw-ml-2 ">
                 <div className="tw-whitespace-nowrap tw-overflow-x-auto ">
                     {
                         events.map(event => {
@@ -23,7 +26,15 @@ return( <div className=" tw-pl-4 tw-items-center tw-ml-2">
                         })
                     }
                 </div>
-        </div>
+            </div>
+            ) : 
+            (
+                <div className="tw-pl-4 tw-mt-[18%] tw-align-middle tw-text-center tw-text-white tw-underline tw-underline-offset-2 tw-decoration-white">
+                There are no upcoming events
+                </div>
+            )
+        }
+        </>
       )
 
 

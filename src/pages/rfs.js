@@ -4,27 +4,12 @@ import { useState } from 'react'
 import UpcomingEvents from '@/components/UpcomingEvents'
 import Image from 'next/image'
 import Link from 'next/link'
+const ical = require('ical')
+const _ = require('lodash')
 
-export default function RFS() {
+export default function RFS(props) {
 
-    const [events, setEvents] = useState([{
-        id: 1,
-        eventName: "Random Event1",
-        date: "Wednesday, September 12th 2023",
-        time: "12:00PM"
-    }, 
-    {
-        id: 2,
-        eventName: "Random Event2",
-        date: "Wednesday, September 12th 2023",
-        time: "12:00PM"
-    }, 
-    {
-        id: 3,
-        eventName: "Random Event3",
-        date: "Wednesday, September 12th 2023",
-        time: "12:00PM"
-    }])
+    const [events, setEvents] = useState(props.events)
 
     return (
         <div className={styles.mainContainer}>
@@ -86,4 +71,25 @@ export default function RFS() {
         </div>
     )
 }
+
+export const getServerSideProps = async () => {
+
+	const iCalUrl = 'https://calendar.google.com/calendar/ical/2b983347d360e55a28ae1b08822080013f7d5302f0323535c7edd32347875cee%40group.calendar.google.com/public/basic.ics'
+	
+	const response = await fetch(iCalUrl)
+
+	const data = await response.text()
+	const events = _.values(ical.parseICS(data)).map((event) => {
+		return {
+			id: event.uid,
+			eventName: event.summary,
+			date: event.start.toDateString(),
+			time: event.start.toLocaleTimeString("en", { timeStyle: "short"})
+		}
+	})
+	// console.log(data)
+	return { props: { events }}
+}
+
+
 

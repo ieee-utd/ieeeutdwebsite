@@ -7,27 +7,12 @@ import robotics from '@/assets/robotics.jpg'
 import micromouse from '@/assets/maze.jpg'
 import UpcomingEvents from '@/components/UpcomingEvents'
 import Link from 'next/link'
+const ical = require('ical')
+const _ = require('lodash')
 
-export default function Robotics() {
+export default function Robotics(props) {
 
-    const [events, setEvents] = useState([{
-        id: 1,
-        eventName: "Random Event1",
-        date: "Wednesday, September 12th 2023",
-        time: "12:00PM"
-    }, 
-    {
-        id: 2,
-        eventName: "Random Event2",
-        date: "Wednesday, September 12th 2023",
-        time: "12:00PM"
-    }, 
-    {
-        id: 3,
-        eventName: "Random Event3",
-        date: "Wednesday, September 12th 2023",
-        time: "12:00PM"
-    }])
+    const [events, setEvents] = useState(props.events)
 
 
     return (
@@ -147,4 +132,25 @@ export default function Robotics() {
             </div>
         </div>
     )
+    
 }
+
+export const getServerSideProps = async () => {
+
+	const iCalUrl = 'https://calendar.google.com/calendar/ical/be604ad985fb0a7457f068405e89062ae1418e3d371df2b9c2de6db647ab1146%40group.calendar.google.com/public/basic.ics'
+	
+	const response = await fetch(iCalUrl)
+
+	const data = await response.text()
+	const events = _.values(ical.parseICS(data)).map((event) => {
+		return {
+			id: event.uid,
+			eventName: event.summary,
+			date: event.start.toDateString(),
+			time: event.start.toLocaleTimeString("en", { timeStyle: "short"})
+		}
+	})
+	// console.log(data)
+	return { props: { events: events.length ? events : [] }}
+}
+
