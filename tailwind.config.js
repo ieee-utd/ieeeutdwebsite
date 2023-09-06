@@ -26,7 +26,10 @@ module.exports = {
       minWidth: {
         '24': '7rem',
         'input': '20rem'
-      }
+      },
+      dropShadow: {
+          'roboto': '0px 4px 4px rgba(0, 0, 0, 0.25)',
+      },
     },
     },
    

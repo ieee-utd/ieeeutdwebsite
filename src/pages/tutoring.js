@@ -33,12 +33,9 @@ export default function Tutoring() {
 	const colors = ['#8f1600', '#9c5d00', '#7a9c00', '#009c17', '#007d9c', '#00009c']; //temp colors
 	const handleEventDidMount = (eventInfo) => {
 		const eventColor = colors[eventIndex % colors.length];
-
 		eventIndex++;
 		eventInfo.el.style.backgroundColor = eventColor;
 		eventInfo.el.style.borderColor = eventColor;
-		
-		
 	};
 
 	return (
@@ -65,12 +62,12 @@ export default function Tutoring() {
 						</p>
 						<ul className={styles['course-list']}>
 							<li>
-								Introduction to Electrical Engineering II <br />
-								(CE/EE 1202){' '}
-							</li>
-							<li>
 								Introduction to Programming <br />
 								(CS 1325)
+							</li>
+							<li>
+								Introduction to Electrical Engineering II <br />
+								(CE/EE 1202){' '}
 							</li>
 							<li>
 								Introduction to Digital Systems <br />
@@ -79,6 +76,10 @@ export default function Tutoring() {
 							<li>
 								Fundamentals I <br />
 								(CE/EE 3201)
+							</li>
+							<li>
+								Fundamentals II <br />
+								(CE/EE 3202)
 							</li>
 							<li>
 								Digital Circuits <br />
@@ -95,6 +96,22 @@ export default function Tutoring() {
 							<li>
 								Electromagnetic Engineering <br />
 								(CE/EE 4301)
+							</li>
+							<li>
+								Statics <br />
+								(MECH 2310)
+							</li>
+							<li>
+								Dynamics <br />
+								(MECH 2330)
+							</li>
+							<li>
+								Mechanics of Materials <br />
+								(MECH 2320)
+							</li>
+							<li>
+								Linear Algebra <br />
+								(ENGR 3300)
 							</li>
 						</ul>
 					</div>
@@ -125,10 +142,7 @@ export default function Tutoring() {
 					<p className={styles['tutoring-hours-title']}>Tutoring hours</p>
 						<div className={styles["calendar-container"]}>
 							<FullCalendar
-								
-								// schedulerLicenseKey={'CC-Attribution-NonCommercial-NoDerivatives'}
 								schedulerLicenseKey="GPL-My-Project-Is-Open-Source"
-								// schedulerLicenseKey={'test'}
 								plugins={[timeGridPlugin, googleCalendarPlugin, scrollGridPlugin]}
 								googleCalendarApiKey={apiKey}
 								events={{ googleCalendarId: calendarId }}
@@ -137,8 +151,8 @@ export default function Tutoring() {
 								slotDuration="00:15:00"
 								slotMinTime="10:00"
 								slotMaxTime="17:30"
+								dayHeaderFormat={{ weekday:'long'}}
 								slotEventOverlap={false}
-								dayHeaderFormat={{weekday: 'long'}}
 								height={'44rem'}
 								weekends={false}
 								allDaySlot={false}
