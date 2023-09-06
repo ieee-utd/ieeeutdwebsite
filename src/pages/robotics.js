@@ -2,7 +2,7 @@ import styles from '@/styles/Robotics.module.css'
 import { useState } from 'react'
 import Image from 'next/image'
 import aboutImage from '@/assets/titlerobotics.jpg'
-import rfsIcon from '@/assets/rfs-icon.png'
+import roboticsLogo from '@/assets/roboticslogo.png'
 import robotics from '@/assets/robotics.jpg'
 import micromouse from '@/assets/maze.jpg'
 import UpcomingEvents from '@/components/UpcomingEvents'
@@ -33,12 +33,12 @@ export default function Robotics() {
     return (
         <div className={styles.mainContainer}>
             <div className="tw-h-[50vh]">
-            <div className="tw-flex tw-justify-center">
-                <Image src={rfsIcon} alt="logo for robotics society" width={250} height={250}/>
+            <div className="tw-flex tw-justify-center tw-mt-6">
+                <Image  src={roboticsLogo} alt="logo for robotics society" width={250} height={250}/>
             </div>    
                 <div>
                     <h1 className="tw-text-5xl tw-text-center 
-                    tw-drop-shadow-roboto tw-mb-[1rem]">Robotics and Automation <br /> Society</h1>
+                    tw-drop-shadow-roboto tw-mt-8">Robotics and Automation <br /> Society</h1>
                 </div>
             </div>
             <div className="tw-p-6 tw-bg-ieeeblue tw-flex tw-justify-center">
