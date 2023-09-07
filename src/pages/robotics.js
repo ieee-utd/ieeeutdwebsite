@@ -79,7 +79,7 @@ export default function Robotics(props) {
                     </p>
                     <br/>
                     <div className="tw-drop-shadow-roboto tw-w-fit tw-m-auto tw-text-4xl tw-border-b-4 tw-border-b-ieeeorange">
-                        <Link href="https://docs.google.com/forms/d/1sI528OgMre64usChAFhn_Y0Q9M1_mexbzVfSvCktM1Y/edit?pli=1" 
+                        <Link href="https://forms.gle/5dN9Kv5T8qoPLhJz5" 
                         >Apply here</Link>
                     </div>
                     </div>

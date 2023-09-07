@@ -62,7 +62,7 @@ export default function Pes(props) {
 				contributing to the advancement of sustainable transportation solutions.
 				</p> 
 				<br />
-				<Link href="https://docs.google.com/forms/d/1sI528OgMre64usChAFhn_Y0Q9M1_mexbzVfSvCktM1Y/edit?pli=1" 
+				<Link href="https://forms.gle/5dN9Kv5T8qoPLhJz5" 
 				className="tw-decoration-none tw-self-center tw-text-white tw-text-3xl tw-underline-offset-[10px] tw-underline">Apply here</Link>
 			</div>
 			<div className="tw-bg-white">
