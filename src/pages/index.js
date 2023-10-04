@@ -9,6 +9,7 @@ import GridSection from '@/components/GridPhotos';
 import Murata from '@/assets/murata.png';
 import Intertek from '@/assets/intertek.png';
 import Texas from '@/assets/texas.png';
+import TutoringCalendar from '@/components/TutoringCalendar';
 
 export default function Home() {
 	return (
@@ -35,6 +36,7 @@ export default function Home() {
 				<WhoWeAre />
 				{/*What we do*/}
 				<WhatWeDo />
+				<TutoringCalendar />
 				<GridSection />
 				<div className={styles.sponsors__section}>
 					<div className={styles.sponsors__title}>Corporate Sponsors</div>
