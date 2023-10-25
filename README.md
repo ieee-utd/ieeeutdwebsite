@@ -1,6 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# IEEE UTD Website
 
-## Getting Started
+## How to add a new feature / fix
+
+1. Clone the repo and switch to the dev branch
+This can be done by typing 
+
+```bash 
+git clone https://github.com/ieee-utd/ieeeutdwebsite.git
+```
+on your terminal and then 
+```bash 
+git checkout dev
+```
+2. Creature a branch off of dev
+```bash
+git checkout -b some-feature dev
+```
+3. Add whatever features you want and commit them 
+4. Switch to dev branch and merge there
+```bash
+git checkout dev
+```
+and then
+```bash
+git merge some-branch
+```
+5. Correct merge conflicts, and then commit your changes
+6. Push, which will put in a Pull Request
+7. And that's all, wait for code owner to review and accept the changes
+## Running the website locally
 
 First, run the development server:
 
@@ -13,10 +41,6 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
