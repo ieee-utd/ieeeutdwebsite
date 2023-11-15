@@ -8,7 +8,9 @@ import WhatWeDo from '@/components/WhatWeDo';
 import GridSection from '@/components/GridPhotos';
 import Murata from '@/assets/murata.png';
 import Intertek from '@/assets/intertek.png';
-import Texas from '@/assets/texas.png';
+import Geico from '@/assets/geico.png';
+import Qorvo from '@/assets/qorvo.png';
+/*import Texas from '@/assets/texas.png'; */
 import TutoringCalendar from '@/components/TutoringCalendar';
 
 export default function Home() {
@@ -42,14 +44,20 @@ export default function Home() {
 					<div>Laith is working on this part</div>
 					<div className={styles.sponsors__title}>Corporate Sponsors</div>
 					<div className={styles.logo__section}>
-						<div className={styles.texas}>
-							<Image src={Texas} alt="texas-instruments-logo" />
-						</div>
+						{/*<div className={styles.texas}>
+							<Image src={Texas} alt="texas-instruments-logo" /> 
+						</div> */}
 						<div className={styles.murata}>
 							<Image src={Murata} alt="murata-logo" />
 						</div>
 						<div className={styles.intertek}>
 							<Image alt="intertek-logo" src={Intertek} />
+						</div>
+						<div className={styles.geico}>
+							<Image alt="geico-logo" src={Geico} />
+						</div>
+						<div className={styles.qorvo}>
+							<Image alt="qorvo-logo" src={Qorvo} />
 						</div>
 					</div>
 				</div>
