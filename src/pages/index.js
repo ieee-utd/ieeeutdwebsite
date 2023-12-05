@@ -41,12 +41,11 @@ export default function Home() {
 				<TutoringCalendar />
 				<GridSection />
 				<div className={styles.sponsors__section}>
-					<div>Laith is working on this part</div>
 					<div className={styles.sponsors__title}>Corporate Sponsors</div>
 					<div className={styles.logo__section}>
-						{/*<div className={styles.texas}>
-							<Image src={Texas} alt="texas-instruments-logo" /> 
-						</div> */}
+						<div className={styles.qorvo}>
+							<Image alt="qorvo-logo" src={Qorvo} />
+						</div>
 						<div className={styles.murata}>
 							<Image src={Murata} alt="murata-logo" />
 						</div>
@@ -55,9 +54,6 @@ export default function Home() {
 						</div>
 						<div className={styles.geico}>
 							<Image alt="geico-logo" src={Geico} />
-						</div>
-						<div className={styles.qorvo}>
-							<Image alt="qorvo-logo" src={Qorvo} />
 						</div>
 					</div>
 				</div>

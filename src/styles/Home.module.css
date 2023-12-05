@@ -138,7 +138,6 @@
 	flex-direction: column;
 	background: #ffffff;
 	color: black;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	height: 80vh;
 }
 
@@ -163,11 +162,11 @@
 	margin-top: 4%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 10%;
+	gap: 5%;
 	padding: 20px;
 	width: 60%;
 	align-self: center;
-	border: 2px solid black;
+	/* border: 2px solid black; */
 }
 
 .murata {
@@ -175,8 +174,10 @@
   height: fit-content;
   grid-column: 2 / 3;
   grid-row: 2 / 3;*/
+	margin-right: auto;
 	max-width: 100%;
 	height: auto;
+	align-self: center;
 }
 
 .intertek {
@@ -184,8 +185,10 @@
   height: fit-content;
   grid-column: 3 / 3;
   grid-row: 3 / 3;*/
-	max-width: 100%;
+	margin-left: auto;
+	max-width: 50%;
 	height: auto;
+	align-self: center;
 }
 
 .qorvo {
@@ -193,8 +196,10 @@
   height: fit-content;
   grid-column: 3 / 3;
   grid-row: 3 / 3;*/
-	max-width: 100%;
+	margin-left: auto;
+	max-width: 90%;
 	height: auto;
+	align-self: center;
 }
 
 .geico {
@@ -202,8 +207,11 @@
   height: fit-content;
   grid-column: 3 / 3;
   grid-row: 3 / 3;*/
-	max-width: 100%;
+	margin-top: 5%;
+	margin-right: auto;
+	max-width: 50%;
 	height: auto;
+	align-self: center;
 }
 
 .link {
