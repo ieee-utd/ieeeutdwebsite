@@ -4,7 +4,7 @@ import GridInfo from "./GridInfo";
 export default function WhatWeDo() {
   return (
     <div className={styles.main__container}>
-      <div className={styles.what__we__do}>What we do</div>
+      <div className={styles.what__we__do}>Hello</div>
       <div className={styles.what__container}>
         <GridInfo
           title="Tutoring"
