@@ -1,5 +1,6 @@
 import styles from "@/styles/Home.module.css";
 import GridInfo from "./GridInfo";
+import GridSpecific from "./GridSpecific";
 
 export default function WhatWeDo() {
   return (
@@ -20,12 +21,14 @@ talks,workshops,networking events throughout the semester"
         <GridInfo
           title="Workshops"
           content="Perfect your technical and leadership skills and boost your resume "
-          page="tech"
+          page="events"
         />
-        <GridInfo
+        <GridSpecific
           title="Forge"
           content="This is a 10 week design program engineering solutions to real world problems"
-          page="forge"
+          page1="robotics"
+          page2="pes"
+          page3="rfs" 
         />
       </div>
     </div>
