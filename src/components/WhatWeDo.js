@@ -24,8 +24,8 @@ talks,workshops,networking events throughout the semester"
           page="events"
         />
         <GridSpecific
-          title="Forge"
-          content="This is a 10 week design program engineering solutions to real world problems"
+          title="Societies"
+          content="Collaborate on exciting projects with like-minded peers"
           page1="robotics"
           page2="pes"
           page3="rfs" 
