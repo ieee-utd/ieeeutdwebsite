@@ -34,7 +34,7 @@
     "googleapis": "^111.0.0",
     "ical": "^0.8.0",
     "lodash": "^4.17.21",
-    "next": "13.1.6",
+    "next": "^13.1.6",
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.8.4",
     "next-transpile-modules": "^10.0.0",

@@ -1,10 +1,11 @@
 import styles from "@/styles/Home.module.css";
 import GridInfo from "./GridInfo";
+import GridSpecific from "./GridSpecific";
 
 export default function WhatWeDo() {
   return (
     <div className={styles.main__container}>
-      <div className={styles.what__we__do}>What we do</div>
+      <div className={styles.what__we__do}>Hello</div>
       <div className={styles.what__container}>
         <GridInfo
           title="Tutoring"
@@ -20,12 +21,14 @@ talks,workshops,networking events throughout the semester"
         <GridInfo
           title="Workshops"
           content="Perfect your technical and leadership skills and boost your resume "
-          page="tech"
+          page="events"
         />
-        <GridInfo
-          title="Forge"
-          content="This is a 10 week design program engineering solutions to real world problems"
-          page="forge"
+        <GridSpecific
+          title="Societies"
+          content="Collaborate on exciting projects with like-minded peers"
+          page1="robotics"
+          page2="pes"
+          page3="rfs" 
         />
       </div>
     </div>

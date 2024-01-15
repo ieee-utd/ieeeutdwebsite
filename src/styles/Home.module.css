@@ -88,6 +88,13 @@
 	height: 41%;
 	text-align: center;
 }
+.grid__textTwo{
+
+  margin-top: 2%;
+  height: 21%;
+  text-align: center;
+
+}
 .grid__title {
 	color: var(--ieeeorange);
 	align-self: center;
