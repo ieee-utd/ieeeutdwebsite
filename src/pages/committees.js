@@ -8,6 +8,7 @@ import styles from '@/styles/Committees.module.css';
 import Image from 'next/image';
 import Officers from '@/assets/IEEE/Officers.png';
 
+
 export default function Committees() {
 	return (
 		<div>
