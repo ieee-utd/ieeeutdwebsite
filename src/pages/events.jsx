@@ -19,10 +19,9 @@ const EventsPage = ({ pageDimensions }) => {
 	}, [pageDimensions.width])
 
 	const viewOptions = {
-
 		timeGrid: {
 			dayMaxEvents: 1  // adjust to 6 only for timeGridWeek/timeGridDay
-		}
+		},
 	
 	}
 	const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
@@ -52,9 +51,11 @@ const EventsPage = ({ pageDimensions }) => {
 						stickyFooterScrollbar={true}
 						googleCalendarApiKey={apiKey}
 						selectable={false}
-						dayMaxEventRows={true}
-						views={viewOptions}
-						height={"44rem"}
+						// dayMaxEventRows={3}
+						// views={viewOptions}
+						// eventLimit={3}
+						// height={800}
+						// contentHeight={"auto"}
 						initialView={'dayGridMonth'}
 						windowResize={() => {
 							if(calendarRef){

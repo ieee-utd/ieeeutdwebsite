@@ -29,14 +29,14 @@ export default function Member({
 	  }, []);
 
   return (
-    <div className={`${styles.profile__container} ${isVisible ? styles.fade__in : ''}`}>
+    <div className="tw-w-fit tw-p-8">
       <div className={styles.outer_image}>
       <div className={styles.image}>
         <Image cover ref={imgRef} src={image} alt="pic" />
       </div>
       </div>
-      <div className={styles.info}>
-        <p className={styles.name}>{name}</p>
+      <div className="tw-flex tw-flex-col tw-flex-start">
+        <p className="tw-text-[#2C6A9B] tw-font-bold">{name}</p>
         <p className={styles.info__title}>{title}</p>
         <div className="tw-self-center tw-flex tw-gap-6">
           <a href={linkedin}>
