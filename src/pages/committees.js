@@ -33,7 +33,7 @@ export default function Committees() {
 			<Image className={styles.group__img} src={Officers} alt="ieee-officer-group" /> 
 			{/* update this picture */}
 			</div>
-		<div className='tw-grid tw-grid-cols-3 tw-p-16 tw-around tw-border-green-500 tw-border-4'>
+		<div className='tw-grid tw-grid-cols-3 tw-p-16 tw-around'>
 			{mappedMembers}
 		</div>
 	</>

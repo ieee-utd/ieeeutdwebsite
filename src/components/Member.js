@@ -32,13 +32,13 @@ export default function Member({
     <div className="tw-w-fit tw-p-8">
       <div className={styles.outer_image}>
       <div className={styles.image}>
-        <Image cover ref={imgRef} src={image} alt="pic" />
+        <Image cover ref={imgRef} src={image} alt="pic" className="tw-aspect-[3/4] tw-object-cover"/>
       </div>
       </div>
       <div className="tw-flex tw-flex-col tw-flex-start">
-        <p className="tw-text-[#2C6A9B] tw-font-bold">{name}</p>
-        <p className={styles.info__title}>{title}</p>
-        <div className="tw-self-center tw-flex tw-gap-6">
+        <p className="tw-text-[#2C6A9B] tw-font-bold tw-text-[2vw]">{name}</p>
+        <p className="tw-font-bold tw-my-4 tw-text-[2vw] tw-text-start">{title}</p>
+        <div className="tw-flex tw-gap-6 tw-flex-start">
           <a href={linkedin}>
             <FaLinkedin className="tw-transition tw-ease-in-out tw-delay-150 tw-text-3xl w-cursor-pointer hover:tw-fill-orange" />
           </a>
