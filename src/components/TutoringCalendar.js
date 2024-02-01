@@ -4,6 +4,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import scrollGridPlugin from '@fullcalendar/scrollgrid';
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import React, { useEffect, useState } from 'react';
+import { TUTORING_COLORS } from '@/contants/colors';
 
 const FullCalendar = dynamic(() => import('@fullcalendar/react'), {
 	ssr: false
@@ -21,13 +22,18 @@ export default function TutoringCalendar() {
 	const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 	const calendarId = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
 	let eventIndex = 0;
-	const colors = ['#8f1600', '#9c5d00', '#7a9c00', '#009c17', '#007d9c', '#00009c']; //temp colors
-	const handleEventDidMount = (eventInfo) => {
-		const eventColor = colors[eventIndex % colors.length];
-		eventIndex++;
-		eventInfo.el.style.backgroundColor = eventColor;
-		eventInfo.el.style.borderColor = eventColor;
-	};
+	const colors = [TUTORING_COLORS.eventColorOne, TUTORING_COLORS.eventColorTwo,
+        TUTORING_COLORS.eventColorThree, TUTORING_COLORS.eventColorFour,
+        TUTORING_COLORS.eventColorFive ]; //temp colors
+	    const handleEventDidMount = (eventInfo) => {
+            const eventId = eventInfo.event.id; // Assuming you have a unique identifier for each event
+            console.log(eventInfo.event.id)
+            const eventColor = colors[parseInt(eventId) % colors.length]; // Use the unique identifier for color determination
+            console.log(eventId % colors.length)
+            eventInfo.el.style.backgroundColor = eventColor;
+            eventInfo.el.style.borderColor = eventColor;
+        };
+    
 
 
     return(
@@ -40,7 +46,7 @@ export default function TutoringCalendar() {
                 googleCalendarApiKey={apiKey}
                 events={{ googleCalendarId: calendarId }}
                 eventDidMount={handleEventDidMount} // set colors for events
-                initialDate={'2023-02-06'} //START DATE FOR THE WEEK
+                initialDate={'2024-01-01'} //START DATE FOR THE WEEK
                 slotDuration="00:15:00"
                 slotMinTime="10:00"
                 slotMaxTime="17:30"
