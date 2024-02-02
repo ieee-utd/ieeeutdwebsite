@@ -55,7 +55,7 @@ export default function Navbar() {
             className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
             href={"/committees"}
           >
-            <p className={styles.navbar__hover__underline}>Committees</p>
+            <p className={styles.navbar__hover__underline}>Officers</p>
           </Link>
           <li
             className={"tw-list-none tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue " + (dropDown ? "tw-w-[20vw]" : "")}
@@ -88,6 +88,12 @@ export default function Navbar() {
                 )
               }
             </li>
+            <Link
+            className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
+            href={"/committees"}
+            >
+            <p className={styles.navbar__hover__underline}>Join</p>
+          </Link>
         </div>
         <HamburgerMenu burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen} />
       </header>
@@ -149,7 +155,6 @@ export default function Navbar() {
               </li>
             </ul>)
           }
-          
         </ul>
       )}
     </>

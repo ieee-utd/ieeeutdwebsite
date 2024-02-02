@@ -33,9 +33,6 @@ export default function TutoringCalendar() {
             eventInfo.el.style.backgroundColor = eventColor;
             eventInfo.el.style.borderColor = eventColor;
         };
-    
-
-
     return(
             <div className="tw-flex tw-flex-col tw-bg-ieeeorange tw-pb-[4rem]">
              <p className={styles['tutoring-hours-title']}>Tutoring hours</p>
