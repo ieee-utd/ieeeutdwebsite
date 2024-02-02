@@ -6,7 +6,7 @@ import EventsCommittee from '@/components/EventsCommittee';
 // import Developers from '@/components/Developers';
 import styles from '@/styles/Committees.module.css';
 import Image from 'next/image';
-import Officers from '@/assets/IEEE/Officers.png';
+import Officers from '@/assets/IEEE/Officers.jpeg';
 import committeeMembers from '@/components/committeeMembers';
 import Member from '@/components/Member';
 
@@ -28,7 +28,7 @@ export default function Committees() {
 	<>
 		<div className={styles.group__container}>
 			<div className={styles.overlay}>
-				<div className={styles.overlay__title}>COMMITTEES</div>
+				<div className="tw-justify-center tw-text-white tw-text-[5rem] tw-font-bold">2023-2024<br/>Officer Team</div>
 			</div>
 			<Image className={styles.group__img} src={Officers} alt="ieee-officer-group" /> 
 			{/* update this picture */}
