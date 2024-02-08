@@ -20,7 +20,7 @@ export default function Committees() {
 				image={member.image}
 				linkedin={member.linkedin}
 				email={member.email}
-
+				key={member.name}
 			/>
 		);
 	});
