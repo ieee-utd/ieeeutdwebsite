@@ -7,12 +7,12 @@ import EventsCommittee from '@/components/EventsCommittee';
 import styles from '@/styles/Committees.module.css';
 import Image from 'next/image';
 import Officers from '@/assets/IEEE/Officers.jpeg';
-import committeeMembers from '@/components/committeeMembers';
+import officerData from '@/components/committeeMembers';
 import Member from '@/components/Member';
 
 
 export default function Committees() {
-	let mappedMembers = committeeMembers.map((member) => {
+	let mappedMembers = officerData.map((member) => {
 		return (
 			<Member
 				name={member.name}
@@ -27,12 +27,14 @@ export default function Committees() {
 	return (
 	<>
 		<div className={styles.group__container}>
-			<div className={styles.overlay}>
-				<div className="tw-justify-center tw-text-white tw-text-[5rem] tw-font-bold">2023-2024<br/>Officer Team</div>
+			<div className="tw-absolute tw-flex tw-flex-col tw-items-center tw-justify-center tw-w-[100vw] tw-h-full">
+				<div className="tw-justify-center tw-text-white tw-text-[5rem] tw-font-bold">
+					<h1 className='tw-text-center tw-text-[6vw]'>2023-2024</h1>
+					<h1 className='tw-text-[6vw]'>IEEE Officers</h1>
+				</div>
 			</div>
 			<Image className={styles.group__img} src={Officers} alt="ieee-officer-group" /> 
-			{/* update this picture */}
-			</div>
+		</div>
 		<div className='tw-grid tw-grid-cols-3 tw-p-16 tw-around'>
 			{mappedMembers}
 		</div>
