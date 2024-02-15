@@ -55,8 +55,6 @@
     color: #FFFFFF;
     margin-top: 15%;
     justify-content: center;
-
-  
   }
 
   .overlay {
@@ -76,40 +74,31 @@
   }
 
   .group__container .group__img {
-
-    
     width: 100%;
     height: auto;
     object-fit: contain;
   }
+  .group__img {
+    filter: brightness(.7);  
+    z-index: 0;
+  }
 
   .image{
-
     /* background-color: gray; */
     display: flex;
-
     width: 100%;
-
-
   }
-
-  .fade__in {
+  .fade-in-section {
     opacity: 0;
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    transform: translateY(5%)
+    transform: translateY(10vh);
+    visibility: hidden;
+    transition: opacity .6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(5%)
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0)
-    }
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
   }
 
   .mainContainer {
@@ -136,35 +125,22 @@
     animation-fill-mode: forwards;
   }
 
-
   .info {
-
     display: flex;
     flex-direction: column;
-    
-    
   }
 
   .info__title{
 
-    
     font-weight: bold;
     text-align: center;
-    
- 
-
   }
 
   .profile__container {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5vh;
-    
-
-
-
   }
 
   .name { 
