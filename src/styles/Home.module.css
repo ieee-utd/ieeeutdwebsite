@@ -228,12 +228,17 @@
 }
 
 .image__grid {
-	display: grid;
-	grid-template-columns: 50% 50%;
+/* border: 5px solid red; */
+display: grid;
+
+	/* display: grid; */
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 }
 
 .grid__image {
 	height: 100%;
+	object-fit: cover;
 }
 
 .title__logo {
@@ -262,7 +267,7 @@
 	}
 
 	.geico {
-		width: 45vh;
+		width: 45vh ;
 	}
 
 	/*.texas {
