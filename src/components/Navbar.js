@@ -34,10 +34,10 @@ export default function Navbar() {
 
         <div className="tw-group tw-hidden tw-gap-6 tw-pb-5 tw-mt-6 lg-sm:tw-flex tw-mr-12">
           <Link
-            href={"/"}
-            className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-text-2xl group-hover:tw-text-fadedblue"
-          >
-            <p className={styles.navbar__hover__underline}>Home</p>
+              className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
+              href={"/about"}
+            >
+            <p className={styles.navbar__hover__underline}>About</p>
           </Link>
           <Link
             className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
