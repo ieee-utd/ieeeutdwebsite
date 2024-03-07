@@ -64,7 +64,7 @@ const committeeMembers = [
     {
         name: "Mason",
         title: "Director of Business",
-        image: require("../assets/IEEE/Mason.jpeg"), 
+        image: require("../assets/IEEE/mason.jpeg"), 
         linkedin: "", // Please provide the LinkedIn profile if available
         email: "msr200000@utdallas.edu",
     },
