@@ -46,7 +46,7 @@ export default function Committees() {
 	<>
 		<div className={styles.group__container}>
 			<div className="tw-absolute tw-flex tw-flex-col tw-items-center tw-justify-center tw-w-[100vw] tw-h-full">
-				<div className="tw-justify-center tw-text-white tw-text-[5rem] tw-font-bold tw-z-10">
+				<div className="tw-justify-center tw-text-white tw-text-[5rem] tw-font-bold tw-z-10 bg-gra">
 					<h1 className='tw-text-center tw-text-[6vw]'>2023-2024</h1>
 					<h1 className='tw-text-[6vw]'>IEEE Officers</h1>
 				</div>

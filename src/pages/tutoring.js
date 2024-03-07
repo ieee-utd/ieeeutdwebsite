@@ -33,68 +33,7 @@ export default function Tutoring() {
 						alt="Tutoring Banner"
 					/>
 				</div>
-				<div className={styles['section-one-container']}>
-					<div className={styles['course-list-container']}>
-						<h2>Courses</h2>
-						<p className="tw-pb-12 tw-underline tw-font-medium tw-text-white tw-text-3xl">
-							We provide tutoring for the following courses:
-						</p>
-						<ul className={styles['course-list']}>
-							<li>
-								Introduction to Programming <br />
-								(CS 1325)
-							</li>
-							<li>
-								Introduction to Electrical Engineering II <br />
-								(CE/EE 1202){' '}
-							</li>
-							<li>
-								Introduction to Digital Systems <br />
-								(CE/EE 2310)
-							</li>
-							<li>
-								Fundamentals I <br />
-								(CE/EE 3201)
-							</li>
-							<li>
-								Fundamentals II <br />
-								(CE/EE 3202)
-							</li>
-							<li>
-								Digital Circuits <br />
-								(CE/EE 3320)
-							</li>
-							<li>
-								Electrical Network Analysis <br />
-								(CE/EE 3301)
-							</li>
-							<li>
-								Signals and Systems <br />
-								(CE/EE 3302)
-							</li>
-							<li>
-								Electromagnetic Engineering <br />
-								(CE/EE 4301)
-							</li>
-							<li>
-								Statics <br />
-								(MECH 2310)
-							</li>
-							<li>
-								Dynamics <br />
-								(MECH 2330)
-							</li>
-							<li>
-								Mechanics of Materials <br />
-								(MECH 2320)
-							</li>
-							<li>
-								Linear Algebra <br />
-								(ENGR 3300)
-							</li>
-						</ul>
-					</div>
-				</div>
+
 				<div className={styles['section-two-container']}>
 					<div className={styles['section-two-title']}>
 						The <span>IEEE</span> Room
@@ -116,6 +55,11 @@ export default function Tutoring() {
 						signs and a big window. The entrance is in the hallway on the other side of the tutoring
 						room.
 					</p>
+				</div>
+				<div>
+					<span>
+						
+					</span>
 				</div>
 					<TutoringCalendar />
 				<div className={styles['section-four-container']}>
