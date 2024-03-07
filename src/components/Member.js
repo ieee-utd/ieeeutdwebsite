@@ -4,7 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { SiMicrosoftoutlook } from "react-icons/si";
 import committeeMembers from "./committeeMembers";
 import { useEffect, useRef, useState } from "react";
-import blank from "@/assets/IEEE/placeholder.png";
+import blank from "@/assets/IEEE/placeholder.jpeg";
 
 export default function Member({
   name = "default",
