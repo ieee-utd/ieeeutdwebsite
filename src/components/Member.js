@@ -4,17 +4,21 @@ import { FaLinkedin } from "react-icons/fa";
 import { SiMicrosoftoutlook } from "react-icons/si";
 import committeeMembers from "./committeeMembers";
 import { useEffect, useRef, useState } from "react";
+import blank from "@/assets/IEEE/placeholder.jpeg";
 
 export default function Member({
   name = "default",
   title,
   email,
   linkedin,
-  image=committeeMembers[committeeMembers.length - 1]["src"],
+  image=committeeMembers[committeeMembers.length - 1],
 }) {
 
   const [isVisible, setIsVisible] = useState(false);
   const imgRef = useRef(image);
+  if (image === "") {
+    image = blank;
+  }
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
@@ -28,25 +32,25 @@ export default function Member({
 		observer.observe(imgRef.current);
 	  }, []);
 
-  return (
-    <div className={`${styles.profile__container} ${isVisible ? styles.fade__in : ''}`}>
-      <div className={styles.outer_image}>
-      <div className={styles.image}>
-        <Image cover ref={imgRef} src={image} alt="pic" />
-      </div>
-      </div>
-      <div className={styles.info}>
-        <p className={styles.name}>{name}</p>
-        <p className={styles.info__title}>{title}</p>
-        <div className="tw-self-center tw-flex tw-gap-6">
-          <a href={linkedin}>
-            <FaLinkedin className="tw-transition tw-ease-in-out tw-delay-150 tw-text-3xl w-cursor-pointer hover:tw-fill-orange" />
-          </a>
-          <a href={`mailto:${email}`}>
-            <SiMicrosoftoutlook className="tw-transition tw-ease-in-out tw-delay-150 tw-text-3xl tw-cursor-pointer hover:tw-fill-blue" />
-          </a>
+    return (
+        <div className="tw-w-fit tw-p-8 tw-flex tw-flex-col tw-justify-center tw-items-start">
+            <div className={styles.outer_image}>
+                <div className="tw-mb-[2rem]">
+                    <Image cover ref={imgRef} src={image} alt="pic" className="tw-aspect-[3/4] tw-object-cover"/>
+                </div>
+            </div>
+            <div className="tw-flex tw-flex-col">
+                <p className="tw-text-[#2C6A9B] tw-font-bold tw-text-[2vw]">{name}</p>
+                <p className="tw-font-bold tw-my-4 tw-text-[1.5vw] tw-text-start">{title}</p>
+                <div className="tw-flex tw-gap-6 tw-flex-start">
+                    <a href={linkedin}>
+                        <FaLinkedin className="tw-transition tw-ease-in-out tw-delay-150 tw-text-3xl w-cursor-pointer hover:tw-fill-orange" />
+                    </a>
+                    <a href={`mailto:${email}`}>
+                    <SiMicrosoftoutlook className="tw-transition tw-ease-in-out tw-delay-150 tw-text-3xl tw-cursor-pointer hover:tw-fill-blue" />
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
   );
 }
