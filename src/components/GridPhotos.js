@@ -8,22 +8,22 @@ export default function GridPhotos() {
       <Image
         className={styles.grid__image}
         src={gridImages["images"][0]["src"]}
-        alt="tutoring session"
+        alt="Qorvo event"
       />
       <Image
         className={styles.grid__image}
         src={gridImages["images"][1]["src"]}
-        alt="ecsw workshop"
+        alt="IEEE Spring Kickoff"
       />
       <Image
         className={styles.grid__image}
         src={gridImages["images"][2]["src"]}
-        alt="general body meeting"
+        alt="IEEE tutoring room"
       />
       <Image
         className={styles.grid__image}
         src={gridImages["images"][3]["src"]}
-        alt="another general body meeting"
+        alt="Murata Event"
       />
     </div>
   );

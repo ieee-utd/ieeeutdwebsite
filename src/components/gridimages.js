@@ -2,7 +2,7 @@ export const gridImages = {
   images: [
     {
       id: 0,
-      src: require("@/assets/gridimages/grid1.png"),
+      src: require("@/assets/gridimages/grid1.jpeg"),
     },
 
     {

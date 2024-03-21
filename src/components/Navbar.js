@@ -53,7 +53,7 @@ export default function Navbar() {
           </Link>
           <Link
             className="tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue"
-            href={"/committees"}
+            href={"/officers"}
           >
             <p className={styles.navbar__hover__underline}>Officers</p>
           </Link>

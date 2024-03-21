@@ -1,103 +1,122 @@
 const committeeMembers = [
- 
-  {
-    id: 0,
-    name: "Aaron Lin",
-    src: require("../assets/IEEE/Aaron_Lin.png"),
-  },
-  {
-    id: 1,
-    name: "Alec Manley",
-    src: require("../assets/IEEE/Alec_Manley.png"),
-  },
-  {
-    id: 2,
-    name: "Allison Pham",
-    src: require("../assets/IEEE/Allison_Pham.png"),
-  },
-  {
-    id: 3,
-    name: "Bhabishya Shrestha",
-    src: require("../assets/IEEE/Bhabishya_Shrestha.png"),
-  },
-  {
-    id: 4,
-    name: "Bhavya Chandran",
-    src: require("../assets/IEEE/Bhavya_Chandran.png"),
-  },
-  {
-    id: 5,
-    name: "Caroline Lowe",
-    src: require("../assets/IEEE/Caroline_Lowe.png"),
-  },
-  {
-    id: 6,
-    name: "Dylan Nguyen",
-    src: require("../assets/IEEE/Dylan_Nguyen.png"),
-  },
-  {
-    id: 7,
-    name: "James Odebiyi",
-    src: require("../assets/IEEE/James_Odebiyi.png"),
-  },
-  {
-    id: 8,
-    name: "Krishna Chilukuri",
-    src: require("../assets/IEEE/Krishna_Chilukuri.png"),
-  },
-  {
-    id: 9,
-    name: "Logan Gonzalez",
-    src: require("../assets/IEEE/Logan_Gonzalez.png"),
-  },
-  {
-    id: 10,
-    name: "Muhammad Ikram",
-    src: require("../assets/IEEE/Muhammad_Ikram.png"),
-  },
-  {
-    id: 11,
-    name: "Muneeb Shahid",
-    src: require("../assets/IEEE/Muneeb_Shahid.png"),
-  },
-  {
-    id: 12,
-    name: "Nithila Shenoy",
-    src: require("../assets/IEEE/Nithila_Shenoy.png"),
-  },
-  {
-    id: 13,
-    name: "Stephanie Barnard",
-    src: require("../assets/IEEE/Stephanie_Barnard.png"),
-  },
-  {
-    id: 14,
-    name: "Arhum Khan",
-    src: require("../assets/IEEE/Arhum_Khan.png"),
-  },
-  {
-    id: 15,
-    name: "Ritambhara Kaushik",
-    src: require("../assets/IEEE/Ritambhara_Kaushik.jpeg"),
-  },
-  {
-    id: 16,
-    name: "Steven Nguyen",
-    src: require("../assets/IEEE/Steven_Nguyen.jpeg"),
-  },
-  {
-    id: 17,
-    name: "Kevin Debord",
-    src: require("../assets/IEEE/Kevin_Debord.png"),
-  },
- 
-  {
-
-    id: -1,
-    name: "Placeholder",
-    src: require("../assets/IEEE/placeholder.jpeg"),
-
-  },
+    {
+        name: "Allison Pham",
+        title: "President",
+        image: require("../assets/IEEE/Allison.jpeg"),
+        linkedin: "https://www.linkedin.com/in/allison-nhi-pham/",
+        email: "anp200002@utdallas.edu",
+    },
+    {
+        name: "Jacob Martin",
+        title: "Vice President",
+        image: require('../assets/IEEE/Jacob.jpeg'),
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "jrm190007@utdallas.edu",
+    },
+    {
+        name: "Gaby Tobias",
+        title: "Treasurer",
+        image: require("../assets/IEEE/Gaby.jpeg"),
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "gst200000@utdallas.edu",
+    },
+    {
+        name: "Alex Monroy",
+        title: "Secretary",
+        image: require("../assets/IEEE/Alex.jpeg"), // Please provide the image if available
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "aas170530@utdallas.edu",
+    },
+    {
+        name: "Kevin Debord",
+        title: "Advisor",
+        image: require("../assets/IEEE/Kevin.jpeg"), // Please provide the image if available
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "kjd200004@utdallas.edu",
+    },
+    {
+        name: "Rushil Sivaiah",
+        title: "Secretary",
+        image: "",
+        linkedin: "rrs220003@utdallas.edu", // Please provide the LinkedIn profile if available
+    },
+    {
+        name: "Nethra",
+        title: "Director of Tutoring",
+        image: require("../assets/IEEE/Nethra.jpeg"), // Please provide the image if available
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "nxs200035@utdallas.edu",
+    },
+    {
+        name: "Laura Pinto",
+        title: "Director of Operations",
+        image: require("../assets/IEEE/Laura.jpeg"), // Please provide the image if available
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "lsp210000@utdallas.edu",
+    },
+    {
+        name: "James Odebiyi",
+        title: "Web Master",
+        image: require("../assets/IEEE/James.jpeg"),
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "jxo190003@utdallas.edu",
+    },
+    {
+        name: "Mason",
+        title: "Director of Business",
+        image: require("../assets/IEEE/mason.jpeg"), 
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "msr200000@utdallas.edu",
+    },
+    {
+        name: "James Dao",
+        title: "RF Director",
+        image: "", // Please provide the image if available
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "jkd190003@utdallas.edu"
+    },
+    {
+        name: "Jane Bae",
+        title: "RF Director",
+        image: require("../assets/IEEE/Jane.jpeg"),
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "jxb190001@utdallas.edu"
+    },
+    {
+        name: "Muneeb",
+        title: "RF Project Supervisor",
+        image: require("../assets/IEEE/Muneeb.jpeg"), // Please provide the image if available
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "mss200007@utdallas.edu",
+    },
+    {
+        name: "Zaid",
+        title: "PES Project Supervisor",
+        image: require("../assets/IEEE/Zaid.jpeg"), // Please provide the image if available
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "mxz190024@utdallas.edu",
+    },
+    {
+        name: "Manuel Contreras",
+        title: "PES Director",
+        image: require("../assets/IEEE/Manuel.jpeg"), // Please provide the image if available
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "mad210014@utdallas.edu",
+    },
+    {
+        name: "Ian Kintz",
+        title: "Director of Robotics",
+        image: require("../assets/IEEE/Ian.jpeg"), // Please provide the image if available
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "ijk180001@utdallas.edu",
+    },
+    {
+        name: "Mandy Hardono",
+        title: "RAS Director",
+        image: "", // Please provide the image if available
+        linkedin: "", // Please provide the LinkedIn profile if available
+        email: "vah200000@utdallas.edu",
+    }
 ];
 
 export default committeeMembers;
