@@ -14,6 +14,7 @@ import banner from 'public/tutoring_banner.jpg';
 import labtools from 'public/labtools.jpg';
 import TutoringCalendar from '@/components/TutoringCalendar';
 import React from 'react';
+import Courses from '@/components/Courses';
 
 export default function Tutoring() {
 
@@ -105,7 +106,7 @@ export default function Tutoring() {
 					</div>
 					<p
 						style={{
-							paddingLeft: '10%',
+					    	paddingLeft: '10%',
 							paddingRight: '10%',
 							width: '100%',
 							fontSize: '150%',
@@ -117,6 +118,7 @@ export default function Tutoring() {
 						room.
 					</p>
 				</div>
+                    <Courses />
 					<TutoringCalendar />
 				<div className={styles['section-four-container']}>
 					<h2>Resources</h2>
