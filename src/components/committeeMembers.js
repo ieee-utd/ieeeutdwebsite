@@ -37,7 +37,7 @@ const committeeMembers = [
     {
         name: "Rushil Sivaiah",
         title: "Secretary",
-        image: "",
+        image: require("../assets/IEEE/rushil.jpg"),
         linkedin: "rrs220003@utdallas.edu", // Please provide the LinkedIn profile if available
     },
     {
@@ -71,7 +71,7 @@ const committeeMembers = [
     {
         name: "James Dao",
         title: "RF Director",
-        image: "", // Please provide the image if available
+        image: require("../assets/IEEE/james_dao.jpg"), // Please provide the image if available
         linkedin: "", // Please provide the LinkedIn profile if available
         email: "jkd190003@utdallas.edu"
     },
@@ -113,7 +113,7 @@ const committeeMembers = [
     {
         name: "Mandy Hardono",
         title: "RAS Director",
-        image: "", // Please provide the image if available
+        image: require("../assets/IEEE/mandy.jpg"), // Please provide the image if available
         linkedin: "", // Please provide the LinkedIn profile if available
         email: "vah200000@utdallas.edu",
     }
