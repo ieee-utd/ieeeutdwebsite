@@ -88,6 +88,16 @@ export default function Navbar() {
                 )
               }
             </li>
+            {
+              !dropDown && (
+                <li className={"tw-list-none tw-transition tw-ease-in-out tw-delay-150 tw-text-white tw-cursor-pointer tw-text-2xl group-hover:tw-text-fadedblue " + (dropDown ? "tw-w-[20vw]" : "")} >
+                  <Link href={"/join"}>
+                    <p className={styles.navbar__hover__underline}>Join</p>
+                  </Link>
+                </li>
+              )
+            }
+           
         </div>
         <HamburgerMenu burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen} />
       </header>
@@ -112,11 +122,7 @@ export default function Navbar() {
           </li>
           </Link>
           <Divider />
-          <Link href={"/committees"}>
-          <li>
-            Committees
-          </li>
-          </Link>
+
           <Divider />
           <li
             onMouseEnter={() => { setDropDown(true)}}
@@ -124,6 +130,7 @@ export default function Navbar() {
           >
           Societies
           </li>
+          
           <Divider />
           {
             dropDown && ( <ul
@@ -145,6 +152,11 @@ export default function Navbar() {
               <li>
                 <Link href={"/rfs"}>
                     Radio Frequency
+                </Link>
+              </li>
+              <li>
+                <Link href={"/join"}>
+                    Join
                 </Link>
               </li>
             </ul>)
