@@ -25,14 +25,28 @@ export default function Courses() {
         };
         fetchData();
     }, []);
-    console.log(tutoringMap);
+
     return (
-        <div className='tw-flex tw-flex-col tw-items-center tw-justify-center tw-bg-gray-300'>
-            <h2 className='tw-font-bold tw-font-poppins tw-text-[72px] tw-p-8'>Courses</h2>
-            <h3 className='tw-font-medium tw-text-black tw-text-[32px] font-poppins'>
-                We currently provide tutoring in the following courses
-            </h3>
-            <Course courseName="test" date="test"/>
-        </div>
+        <>
+            <div className='tw-flex tw-flex-col tw-items-center tw-justify-center tw-bg-[#EEEEEE]'>
+                <h2 className='tw-font-bold tw-font-poppins tw-text-[72px] tw-p-8'>Courses</h2>
+                <h3 className='tw-font-medium tw-text-black tw-text-[32px] tw-font-poppins'>
+                    We currently provide tutoring in the following courses
+                </h3>
+            </div>
+            {tutoringMap ? (
+                Object.keys(tutoringMap).map((course) => (
+                    <Course
+                        key={course}
+                        courseName={courseMap[course]}
+                        courseCode={course}
+                        tutors={tutoringMap[course]}
+                    />
+                ))
+            ) : (
+                <h2>Loading...</h2>
+            )}
+        </>
     );
 }
+
