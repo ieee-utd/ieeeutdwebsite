@@ -132,6 +132,7 @@ export default function Navbar() {
           </li>
           
           <Divider />
+          
           {
             dropDown && ( <ul
             onMouseEnter={() => { setDropDown(true)}}
@@ -154,13 +155,15 @@ export default function Navbar() {
                     Radio Frequency
                 </Link>
               </li>
+            </ul>)
+          
+          }
+          <Divider />
               <li>
                 <Link href={"/join"}>
                     Join
                 </Link>
-              </li>
-            </ul>)
-          }
+          </li>
         </ul>
       )}
     </>

@@ -4,7 +4,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import scrollGridPlugin from '@fullcalendar/scrollgrid';
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import React, { useEffect, useState } from 'react';
-import { TUTORING_COLORS } from '@/contants/colors';
+import { TUTORING_COLORS } from '@/constants/colors';
 
 const FullCalendar = dynamic(() => import('@fullcalendar/react'), {
 	ssr: false
