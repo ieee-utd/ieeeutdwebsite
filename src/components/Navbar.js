@@ -10,16 +10,12 @@ import HamburgerMenu from "./HamburgerMenu";
 export default function Navbar() {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const [dropDown, setDropDown] = useState(false);
-
-
   const router = useRouter();
 
   useEffect(() => {
     setBurgerOpen(false);
     setDropDown(false);
   }, [router.asPath]);
-
-
 
   return (
     <>
@@ -96,8 +92,7 @@ export default function Navbar() {
                   </Link>
                 </li>
               )
-            }
-           
+            }   
         </div>
         <HamburgerMenu burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen} />
       </header>
@@ -156,9 +151,8 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>)
-          
           }
-          <Divider />
+              <Divider />
               <li>
                 <Link href={"/join"}>
                     Join

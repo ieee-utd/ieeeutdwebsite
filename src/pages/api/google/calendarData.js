@@ -2,8 +2,11 @@ import { google } from 'googleapis';
 
 const calendar = google.calendar('v3');
 
-const TUTORING_CALENDAR_ID = process.env.TUTORING_CALENDAR_ID;
-const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
+const TUTORING_CALENDAR_ID = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
+const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
+
+console.log(TUTORING_CALENDAR_ID)
+console.log(GOOGLE_API_KEY)
 
 async function getEvents() {
     return await calendar.events.list({
