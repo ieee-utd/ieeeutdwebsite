@@ -14,13 +14,14 @@ import banner from 'public/tutoring_banner.jpg';
 import labtools from 'public/labtools.jpg';
 import TutoringCalendar from '@/components/TutoringCalendar';
 import React from 'react';
+import Courses from '@/components/Courses';
 
 export default function Tutoring() {
 
 	return (
 		<>
 			<Head></Head>
-			<main>
+			<main className='tw-bg-[#EEEEEE]'>
 				<div className={styles['header-container']}>
 					<div className={styles.overlay}>
 						<h1 className={styles.title}>TUTORING</h1>
@@ -32,8 +33,7 @@ export default function Tutoring() {
 						src={banner}
 						alt="Tutoring Banner"
 					/>
-				</div>
-
+				 </div>
 				<div className={styles['section-two-container']}>
 					<div className={styles['section-two-title']}>
 						The <span>IEEE</span> Room
@@ -42,13 +42,13 @@ export default function Tutoring() {
 						<Image className={styles.imagemap} src={utdMap} />
 						<Image className={styles.imagemap} src={escnMap} />
 					</div>
-					<p
+					<p className='tw-font-[Poppins]'
 						style={{
-							paddingLeft: '10%',
+					    	paddingLeft: '10%',
 							paddingRight: '10%',
 							width: '100%',
 							fontSize: '150%',
-							color: 'black'
+							color: 'black',
 						}}
 					>
 						The tutoring room is located at ECSN 2.318. We are the room in the main lobby with IEEE
@@ -56,6 +56,7 @@ export default function Tutoring() {
 						room.
 					</p>
 				</div>
+            <Courses />
 				<div>
 					<span>
 						
