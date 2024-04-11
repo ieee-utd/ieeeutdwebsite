@@ -83,7 +83,7 @@
   color: #ffffff;
 }
 .section-two-container {
-  background-color: #ffffff;
+  background-color: #EEEEEE;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -161,12 +161,14 @@
 }
 .calendarEvent {
   padding-left: 5%;
+  
  
 
 }
 .calendarText {
   word-wrap: break-word;
   white-space: pre-line;
+  font-size: 0.7rem;
 }
 
 

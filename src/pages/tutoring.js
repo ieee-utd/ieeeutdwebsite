@@ -33,7 +33,7 @@ export default function Tutoring() {
 						src={banner}
 						alt="Tutoring Banner"
 					/>
-				</div>
+				 </div>
 				<div className={styles['section-two-container']}>
 					<div className={styles['section-two-title']}>
 						The <span>IEEE</span> Room
@@ -56,7 +56,12 @@ export default function Tutoring() {
 						room.
 					</p>
 				</div>
-                    <Courses />
+            <Courses />
+				<div>
+					<span>
+						
+					</span>
+				</div>
 					<TutoringCalendar />
 				<div className={styles['section-four-container']}>
 					<h2>Resources</h2>
