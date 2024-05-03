@@ -138,7 +138,7 @@
 	flex-direction: column;
 	background: #ffffff;
 	color: black;
-	height: 80vh;
+	padding-bottom: 2%;
 }
 
 .sponsors__title {
