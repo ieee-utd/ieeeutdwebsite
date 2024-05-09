@@ -15,13 +15,17 @@ import labtools from 'public/labtools.jpg';
 import TutoringCalendar from '@/components/TutoringCalendar';
 import React from 'react';
 import Courses from '@/components/Courses';
+import applyButton from 'src/assets/applyButton.png';
 
 export default function Tutoring() {
+	function applyButtonOnClick() {
+		alert('Work In Progress');
+	}
 
 	return (
 		<>
 			<Head></Head>
-			<main className='tw-bg-[#EEEEEE]'>
+			<main className="tw-bg-[#EEEEEE]">
 				<div className={styles['header-container']}>
 					<div className={styles.overlay}>
 						<h1 className={styles.title}>TUTORING</h1>
@@ -33,7 +37,7 @@ export default function Tutoring() {
 						src={banner}
 						alt="Tutoring Banner"
 					/>
-				 </div>
+				</div>
 				<div className={styles['section-two-container']}>
 					<div className={styles['section-two-title']}>
 						The <span>IEEE</span> Room
@@ -42,13 +46,14 @@ export default function Tutoring() {
 						<Image className={styles.imagemap} src={utdMap} />
 						<Image className={styles.imagemap} src={escnMap} />
 					</div>
-					<p className='tw-font-[Poppins]'
+					<p
+						className="tw-font-[Poppins]"
 						style={{
-					    	paddingLeft: '10%',
+							paddingLeft: '10%',
 							paddingRight: '10%',
 							width: '100%',
 							fontSize: '150%',
-							color: 'black',
+							color: 'black'
 						}}
 					>
 						The tutoring room is located at ECSN 2.318. We are the room in the main lobby with IEEE
@@ -56,35 +61,33 @@ export default function Tutoring() {
 						room.
 					</p>
 				</div>
-            <Courses />
+				<Courses />
 				<div>
-					<span>
-						
-					</span>
+					<span></span>
 				</div>
-					<TutoringCalendar />
+				<TutoringCalendar />
 				<div className={styles['section-four-container']}>
 					<h2>Resources</h2>
-					<h3 className="tw-pl-[5%] tw-text-white tw-text-[250%] tw-underline tw-decoration-2 ">Lab Tools</h3>
+					<h3 className="tw-pl-[5%] tw-text-white tw-text-[250%] tw-underline tw-decoration-2 ">
+						Lab Tools
+					</h3>
 					<div className="tw-flex tw-flex-col tw-justify-center tw-content-center">
 						<div className="tw-pl-[5%] tw-text-white tw-text-[120%] tw-w-[95%] tw-py-4 tw-pr-2">
 							<p>
 								Our tutoring room is equipped with a variety of electrical engineering tools to help
-								students learn and master the subject. 
+								students learn and master the subject.
 							</p>
 							<br />
 							<p className="tw-mt-[2%]">
-								Here are some of the tools available in the
-								room: Oscilloscopes, Campus computers, Power supplies, Multimeters
+								Here are some of the tools available in the room: Oscilloscopes, Campus computers,
+								Power supplies, Multimeters
 							</p>
-							< br />
+							<br />
 							<div className="tw-mt-[2%]">
-							    In addition to the above tools, our tutoring room is also equipped with a variety of other general purpose
-								electrical engineering tools, such as: function generators, signal generators, and
-								logic analyzers. 
+								In addition to the above tools, our tutoring room is also equipped with a variety of
+								other general purpose electrical engineering tools, such as: function generators,
+								signal generators, and logic analyzers.
 							</div>
-			
-							
 						</div>
 						<Image
 							className="tw-relative tw-left-[30%] tw-w-[60%] tw-max-w-[600px] tw-content-center tw-justify-center"
@@ -97,9 +100,8 @@ export default function Tutoring() {
 						Discord Server
 					</h3>
 					<p className="tw-pl-[5%] tw-text-white tw-text-[120%] tw-w-[80%] tw-py-4 tw-pr-4">
-						Our Discord server is a convenient way
-						for students to get the support they need, whether they&apos;re working on a problem set
-						or studying for an exam.
+						Our Discord server is a convenient way for students to get the support they need,
+						whether they&apos;re working on a problem set or studying for an exam.
 					</p>
 					<a
 						rel="noreferrer"
@@ -123,6 +125,21 @@ export default function Tutoring() {
 					>
 						<Image className="tw-pl-[5%] tw-m-0 tw-w-[50%] tw-max-w-[200px] " src={youtubeImage} />
 					</a>
+				</div>
+				<div className={styles.apply}>
+					<h1>Want to be a tutor?</h1>
+					<ul>
+						<li>2 hours every week</li>
+						<li>good understanding of course</li>
+						<li>finished the class</li>
+						<li>any major, any grade</li>
+						<li>I’ll embed the application somehow</li>
+					</ul>
+					<Image
+						className={styles.applyButton}
+						src={applyButton}
+						onClick={applyButtonOnClick}
+					></Image>
 				</div>
 			</main>
 		</>
