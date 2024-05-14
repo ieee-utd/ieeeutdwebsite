@@ -99,7 +99,7 @@ export default function Robotics(props) {
 						2024 IEEE Region 5 Student Robotics Competition
 					</h2>
 					<p className={styles.competitionDescription}>
-						Gear up for excitement! We're diving into the IEEE Region 5 Student Robotics Competition
+						Gear up for excitement! We&apos;re diving into the IEEE Region 5 Student Robotics Competition
 						on April 6, 2024. Our mission? Conquer the unmanned ground vehicle challenge. Picture a
 						robot skillfully navigating obstacles, pressing buttons without a hitch, and then
 						cruising a set path powered solely by a super capacitor. Get ready to witness innovation
