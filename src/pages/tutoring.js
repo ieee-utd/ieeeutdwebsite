@@ -133,7 +133,7 @@ export default function Tutoring() {
 						<li>good understanding of course</li>
 						<li>finished the class</li>
 						<li>any major, any grade</li>
-						<li>I’ll embed the application somehow</li>
+						<li>I&apos;ll embed the application somehow</li>
 					</ul>
 					<Image
 						className={styles.applyButton}
