@@ -5,9 +5,6 @@ const calendar = google.calendar('v3');
 const TUTORING_CALENDAR_ID = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
 const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 
-console.log(TUTORING_CALENDAR_ID)
-console.log(GOOGLE_API_KEY)
-
 async function getEvents() {
     return await calendar.events.list({
         calendarId: TUTORING_CALENDAR_ID,
@@ -24,36 +21,41 @@ export default async function handler(req, res) {
             let calendarData = {
                 message: events.data.items.map((val) => ({
                     title: val.summary,
-                    start: val.start.dateTime ?? val.start.date,
-                    end: val.end.dateTime ?? val.end.date,
+                    start: val.start ? (val.start.dateTime ?? val.start.date) : undefined,
+                    end: val.end ? (val.end.dateTime ?? val.end.date) : undefined,
                 })),
             };
             calendarData = calendarData.message.filter(
                 (event) =>
                     new Date(event.start) > minDate && new Date(event.start) < maxDate
             );
-
             let calendarMap = {};
             calendarData.forEach((event) => {
-                if (!event.title.includes("-")) return;
-                let title = event.title.split("-");
-                let course = title[0].trim();
-                let name = title[1].trim();
-                let start = new Date(event.start);
-                let day = start.toLocaleDateString("en-US", { weekday: "long" });
-                let time = start.toLocaleTimeString("en-US", { timeStyle: "short" });
-                let end = new Date(event.end);
+                // this expects event titles to be in the format "FIRST_NAME LAST_NAME (COURSE)"
+                // this might be stupid
+                if (!event.title.includes("(")) {
+                    return
+                }
+                const words = event.title.split(" ");
 
+                // ok yea this is stupid
+                const course = words[words.length - 2].substring(1, words[words.length - 2].length) + " " + words[words.length - 1].replace("(", "").replace(")", "");
+                const name = `${words[0]} ${words[1]}`;
+                const day = new Date(event.start).toLocaleDateString("en-US", { weekday: "long" });
+                const time = new Date(event.start).toLocaleTimeString("en-US", { timeStyle: "short" });
+                const end = new Date(event.end);
                 if (!calendarMap[course]) {
                     calendarMap[course] = {};
                 }
                 if (!calendarMap[course][name]) {
                     calendarMap[course][name] = [];
                 }
+                // this could be cleaned up
                 calendarMap[course][name].push({
                     date: day,
                     time: time,
                     end: end.toLocaleTimeString("en-US", { timeStyle: "short" }),
+                    course: course,
                 });
             });
 

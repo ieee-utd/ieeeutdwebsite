@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Course from './Course';
 
 const courseMap = {
-    'CS 1325': 'Introduction to Programming',
-    'CE/EE 1202': 'Introduction to Electrical Engineering II',
-    'CE/EE 2310': 'Introduction to Digital Systems',
-    'CE/EE 3202': 'Fundamentals II',
-    'CE/EE 3320': 'Digital Circuits',
-    'CE/EE 3311': 'Electronic Circuits',
-    'EE 4301': 'Electromagnetic Engineering',
+    'CS 1325': 'Introduction to Programming (CS 1325)',
+    'EE/CE 1202': 'Introduction to Electrical Engineering II (EE/CE 1202)',
+    'EE/CE 2310': 'Introduction to Digital Systems (EE/CE 2310)',
+    'EE/CE 3202': 'Fundamentals II (EE/CE 3202)',
+    'EE/CE 3310': 'Electronic Devices (EE/CE 3310)',
+    'EE/CE 3320': 'Digital Circuits (EE/CE 3320)',
+    'EE/CE 3311': 'Electronic Circuits (EE/CE 3311)',
+    'EE 4301': 'Electromagnetic Engineering (EE 4301)',
 }
 export default function Courses() {
     const [tutoringMap, setTutoringMap] = useState(null);
@@ -25,7 +26,7 @@ export default function Courses() {
         };
         fetchData();
     }, []);
-
+    console.log(tutoringMap);
     return (
         <>
             <div className='tw-flex tw-flex-col tw-items-center tw-justify-center tw-bg-[#EEEEEE]'>
