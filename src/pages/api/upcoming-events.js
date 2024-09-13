@@ -6,7 +6,6 @@ const apis = google.getSupportedAPIs();
 const calendar = google.calendar('v3');
 
 export default async function handler(req, res) {
-  console.log('api hit')
   try {
     const response = await calendar.calendarList.get({
         auth: process.env.NEXT_PUBLIC_GOOGLE_API_KEY,

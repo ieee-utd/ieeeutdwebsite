@@ -5,9 +5,6 @@ const calendar = google.calendar('v3');
 const TUTORING_CALENDAR_ID = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
 const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 
-console.log(TUTORING_CALENDAR_ID)
-console.log(GOOGLE_API_KEY)
-
 async function getEvents() {
     return await calendar.events.list({
         calendarId: TUTORING_CALENDAR_ID,
@@ -33,7 +30,6 @@ export default async function handler(req, res) {
                     new Date(event.start) > minDate && new Date(event.start) < maxDate
             );
             let calendarMap = {};
-            console.log(calendarData)
             calendarData.forEach((event) => {
                 // this expects event titles to be in the format "FIRST_NAME LAST_NAME (COURSE)"
                 // this might be stupid
