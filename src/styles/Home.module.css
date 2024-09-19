@@ -143,6 +143,8 @@
 .sponsors__section {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	flex-direction: column;
 	background: #ffffff;
 	color: black;
 	padding-bottom: 2%;
@@ -166,13 +168,13 @@
 } */
 
 .logo__section {
-	margin-top: 4%;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 5%;
-	padding: 20px;
+	padding: 10px;
 	width: 60%;
 	align-self: center;
+	align-items: center;
 	/* border: 2px solid black; */
 }
 
@@ -424,5 +426,10 @@ display: grid;
 		border-color: var(--ieeeorange);
 	}
 }
-
+.BMD {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50%; /* Adjust as needed */
+  }
 /* Mobile */
