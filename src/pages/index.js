@@ -6,10 +6,11 @@ import CarouselComponent from '@/components/CarouselComponent';
 import WhoWeAre from '@/components/WhoWeAre';
 import WhatWeDo from '@/components/WhatWeDo';
 import GridSection from '@/components/GridPhotos';
-import Murata from '@/assets/murata.png';
-import Intertek from '@/assets/intertek.png';
-import Geico from '@/assets/geico.png';
+
+
+import TexasInstruments from '@/assets/texas_instruments.avif';
 import Qorvo from '@/assets/qorvo.png';
+import BurnsMcDonnell from '@/assets/burns_mcdonnell.png';
 /*import Texas from '@/assets/texas.png'; */
 import TutoringCalendar from '@/components/TutoringCalendar';
 
@@ -47,13 +48,10 @@ export default function Home() {
 							<Image alt="qorvo-logo" src={Qorvo} />
 						</div>
 						<div className={styles.murata}>
-							<Image src={Murata} alt="murata-logo" />
+							<Image src={TexasInstruments} alt="texas_instruments-logo" />
 						</div>
-						<div className={styles.intertek}>
-							<Image alt="intertek-logo" src={Intertek} />
-						</div>
-						<div className={styles.geico}>
-							<Image alt="geico-logo" src={Geico} />
+						<div className={styles.BMD}>
+							<Image src={BurnsMcDonnell} alt="Burns & McDonnell-logo" />
 						</div>
 					</div>
 				</div>
