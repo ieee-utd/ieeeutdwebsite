@@ -26,7 +26,6 @@ export default function Courses() {
         };
         fetchData();
     }, []);
-    console.log(tutoringMap);
     return (
         <>
             <div className='tw-flex tw-flex-col tw-items-center tw-justify-center tw-bg-[#EEEEEE]'>
