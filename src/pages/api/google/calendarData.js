@@ -22,9 +22,9 @@ export default async function handler(req, res) {
 
     getEvents()
     .then((events) => {
-            console.log(events.data.items)
+            // console.log(events.data.items)
             let calendarData = events.data.items
-                    .filter((val) => {
+                    .filter((val, index, array) => {
                         // Ensure the event has both a valid start and end date
                         const hasValidStart = val.start && (val.start.dateTime || val.start.date);
                         const hasValidEnd = val.end && (val.end.dateTime || val.end.date);
@@ -34,6 +34,9 @@ export default async function handler(req, res) {
                         if (val.summary.includes("-")) return false; // Filter out events with a "-" in the title   
                         // Parse the start date for comparison
                         const startDate = new Date(val.start.dateTime ?? val.start.date);
+                        if (index != array.length - 1 && "status" in array[index + 1] && array[index + 1].status !== "confirmed") {
+                            return false;
+                        }
             
                         // Ensure the start date falls within the specified date range
                         return startDate > minDate && startDate < maxDate;
@@ -44,6 +47,7 @@ export default async function handler(req, res) {
                         // end: val.end ? (val.end.dateTime ?? val.end.date) : undefined,
                         start: val.start.timeZone ? new Date(val.start.dateTime).toLocaleString("en-US", { timeZone: val.start.timeZone }) : new Date(val.start.dateTime).toLocaleString("en-US", { timeZone: "America/Chicago" }),
                         end: val.end.timeZone ? new Date(val.end.dateTime).toLocaleString("en-US", { timeZone: val.end.timeZone }) : new Date(val.end.dateTime).toLocaleString("en-US", { timeZone: "America/Chicago" }),
+                        id: val.id,
                     }));
             // 
             let calendarMap = {};
