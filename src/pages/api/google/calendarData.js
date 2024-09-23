@@ -22,7 +22,6 @@ export default async function handler(req, res) {
 
     getEvents()
     .then((events) => {
-            // console.log(events.data.items)
             let calendarData = events.data.items
                     .filter((val, index, array) => {
                         // Ensure the event has both a valid start and end date
@@ -72,7 +71,6 @@ export default async function handler(req, res) {
                     course: course,
                 });
             });
-            // console.log(calendarData);
             // Sort dates within calendarMap based on day of the week
             Object.keys(calendarMap).forEach((course) => {
                 Object.keys(calendarMap[course]).forEach((name) => {
