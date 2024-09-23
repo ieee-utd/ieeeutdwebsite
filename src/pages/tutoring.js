@@ -61,11 +61,10 @@ export default function Tutoring() {
 						room.
 					</p>
 				</div>
-				<Courses />
+				<TutoringCalendar />
 				<div>
 					<span></span>
 				</div>
-				<TutoringCalendar />
 				<div className={styles['section-four-container']}>
 					<h2>Resources</h2>
 					<h3 className="tw-pl-[5%] tw-text-white tw-text-[250%] tw-underline tw-decoration-2 ">
