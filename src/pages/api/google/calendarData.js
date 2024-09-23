@@ -14,13 +14,15 @@ async function getEvents() {
         timeMin: minDate.toISOString(),
         timeMax: maxDate.toISOString(),
         timeZone: "America/Chicago",
+        showDeleted: false,
     });
 }
 
 export default async function handler(req, res) {
 
     getEvents()
-        .then((events) => {
+    .then((events) => {
+            console.log(events.data.items)
             let calendarData = events.data.items
                     .filter((val) => {
                         // Ensure the event has both a valid start and end date
@@ -38,8 +40,10 @@ export default async function handler(req, res) {
                     })
                     .map((val) => ({
                         title: val.summary,
-                        start: val.start ? (val.start.dateTime ?? val.start.date) : undefined,
-                        end: val.end ? (val.end.dateTime ?? val.end.date) : undefined,
+                        // start: val.start ? (val.start.dateTime ?? val.start.date) : undefined,
+                        // end: val.end ? (val.end.dateTime ?? val.end.date) : undefined,
+                        start: val.start.timeZone ? new Date(val.start.dateTime).toLocaleString("en-US", { timeZone: val.start.timeZone }) : new Date(val.start.dateTime).toLocaleString("en-US", { timeZone: "America/Chicago" }),
+                        end: val.end.timeZone ? new Date(val.end.dateTime).toLocaleString("en-US", { timeZone: val.end.timeZone }) : new Date(val.end.dateTime).toLocaleString("en-US", { timeZone: "America/Chicago" }),
                     }));
             // 
             let calendarMap = {};
@@ -64,7 +68,7 @@ export default async function handler(req, res) {
                     course: course,
                 });
             });
-            console.log(calendarData);
+            // console.log(calendarData);
             // Sort dates within calendarMap based on day of the week
             Object.keys(calendarMap).forEach((course) => {
                 Object.keys(calendarMap[course]).forEach((name) => {
