@@ -30,7 +30,6 @@ export default function Pes(props) {
 	]
 
 	useEffect(() => {
-		console.log(events)
 	}, [events])
 	return (
 		<div className={styles.mainContainer}>

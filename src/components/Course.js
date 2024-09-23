@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 export default function Course(props) {
-    console.log(props.tutors)
     return (
         <div className="tw-flex tw-flex-col tw-bg-white tw-rounded-lg p-4 m-4 tw-w-[90vw]">
             <div className="tw-flex tw-flex-row tw-justify-between tw-items-center tw-p-4 tw-bg-ieeeblue tw-text-white tw-font-bold tw-text-2xl">

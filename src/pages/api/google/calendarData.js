@@ -5,40 +5,54 @@ const calendar = google.calendar('v3');
 const TUTORING_CALENDAR_ID = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
 const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 
+const minDate = new Date("2024-01-01T00:00:00Z");
+const maxDate = new Date("2024-01-06T23:59:59Z");
 async function getEvents() {
     return await calendar.events.list({
         calendarId: TUTORING_CALENDAR_ID,
         key: GOOGLE_API_KEY,
+        timeMin: minDate.toISOString(),
+        timeMax: maxDate.toISOString(),
+        timeZone: "America/Chicago",
+        showDeleted: false,
     });
 }
 
 export default async function handler(req, res) {
-    const minDate = new Date("2024-01-01T00:00:00Z");
-    const maxDate = new Date("2024-01-06T23:59:59Z");
 
     getEvents()
-        .then((events) => {
-            let calendarData = {
-                message: events.data.items.map((val) => ({
-                    title: val.summary,
-                    start: val.start ? (val.start.dateTime ?? val.start.date) : undefined,
-                    end: val.end ? (val.end.dateTime ?? val.end.date) : undefined,
-                })),
-            };
-            calendarData = calendarData.message.filter(
-                (event) =>
-                    new Date(event.start) > minDate && new Date(event.start) < maxDate
-            );
+    .then((events) => {
+            let calendarData = events.data.items
+                    .filter((val, index, array) => {
+                        // Ensure the event has both a valid start and end date
+                        const hasValidStart = val.start && (val.start.dateTime || val.start.date);
+                        const hasValidEnd = val.end && (val.end.dateTime || val.end.date);
+                        
+                        if (!hasValidStart || !hasValidEnd) return false; // Filter out events without start or end date
+                        if (val.organizer && val.organizer.displayName !== "Tutor Hours") return false; // Filter out events not organized by "Tutor Hours"
+                        if (val.summary.includes("-")) return false; // Filter out events with a "-" in the title   
+                        // Parse the start date for comparison
+                        const startDate = new Date(val.start.dateTime ?? val.start.date);
+                        if (index != array.length - 1 && "status" in array[index + 1] && array[index + 1].status !== "confirmed") {
+                            return false;
+                        }
+            
+                        // Ensure the start date falls within the specified date range
+                        return startDate > minDate && startDate < maxDate;
+                    })
+                    .map((val) => ({
+                        title: val.summary,
+                        // start: val.start ? (val.start.dateTime ?? val.start.date) : undefined,
+                        // end: val.end ? (val.end.dateTime ?? val.end.date) : undefined,
+                        start: val.start.timeZone ? new Date(val.start.dateTime).toLocaleString("en-US", { timeZone: val.start.timeZone }) : new Date(val.start.dateTime).toLocaleString("en-US", { timeZone: "America/Chicago" }),
+                        end: val.end.timeZone ? new Date(val.end.dateTime).toLocaleString("en-US", { timeZone: val.end.timeZone }) : new Date(val.end.dateTime).toLocaleString("en-US", { timeZone: "America/Chicago" }),
+                        id: val.id,
+                    }));
+            // 
             let calendarMap = {};
             calendarData.forEach((event) => {
-                // this expects event titles to be in the format "FIRST_NAME LAST_NAME (COURSE)"
-                // this might be stupid
-                if (!event.title.includes("(")) {
-                    return
-                }
                 const words = event.title.split(" ");
 
-                // ok yea this is stupid
                 const course = words[words.length - 2].substring(1, words[words.length - 2].length) + " " + words[words.length - 1].replace("(", "").replace(")", "");
                 const name = `${words[0]} ${words[1]}`;
                 const day = new Date(event.start).toLocaleDateString("en-US", { weekday: "long" });
@@ -50,7 +64,6 @@ export default async function handler(req, res) {
                 if (!calendarMap[course][name]) {
                     calendarMap[course][name] = [];
                 }
-                // this could be cleaned up
                 calendarMap[course][name].push({
                     date: day,
                     time: time,
@@ -58,7 +71,6 @@ export default async function handler(req, res) {
                     course: course,
                 });
             });
-
             // Sort dates within calendarMap based on day of the week
             Object.keys(calendarMap).forEach((course) => {
                 Object.keys(calendarMap[course]).forEach((name) => {

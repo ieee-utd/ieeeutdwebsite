@@ -27,9 +27,7 @@ export default function TutoringCalendar() {
         TUTORING_COLORS.eventColorFive ]; //temp colors
 	    const handleEventDidMount = (eventInfo) => {
             const eventId = eventInfo.event.id; // Assuming you have a unique identifier for each event
-            console.log(eventInfo.event.id)
             const eventColor = colors[parseInt(eventId) % colors.length]; // Use the unique identifier for color determination
-            console.log(eventId % colors.length)
             eventInfo.el.style.backgroundColor = eventColor;
             eventInfo.el.style.borderColor = eventColor;
         };
