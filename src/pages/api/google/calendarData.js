@@ -5,16 +5,19 @@ const calendar = google.calendar('v3');
 const TUTORING_CALENDAR_ID = process.env.NEXT_PUBLIC_TUTORING_CALENDAR_ID;
 const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 
+const minDate = new Date("2024-01-01T00:00:00Z");
+const maxDate = new Date("2024-01-06T23:59:59Z");
 async function getEvents() {
     return await calendar.events.list({
         calendarId: TUTORING_CALENDAR_ID,
         key: GOOGLE_API_KEY,
+        timeMin: minDate.toISOString(),
+        timeMax: maxDate.toISOString(),
+        timeZone: "America/Chicago",
     });
 }
 
 export default async function handler(req, res) {
-    const minDate = new Date("2024-01-01T00:00:00Z");
-    const maxDate = new Date("2024-01-06T23:59:59Z");
 
     getEvents()
         .then((events) => {
