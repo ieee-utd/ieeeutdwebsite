@@ -1,0 +1,139 @@
+
+.main_container {
+    
+}
+
+.top_section {
+    background-color: var(--ieeeblue);
+    color: white;
+    text-align: center; 
+    padding-bottom: 50px;
+}
+
+.top_header {
+    color: #ffffff;
+    width: 100%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+
+.paragraph_container {
+    margin: 0 auto; 
+    max-width: 1200px; 
+}
+
+.bottom_header {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.bottom_section {
+    background-color: white;
+    display: flex;
+    padding: 5%
+
+}
+
+.smallTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 20px;
+  }
+  
+
+.all_contents {
+    margin-left: 10px;
+    list-style-type: disc;
+    text-align: justify;
+    font-size: 30px;
+    line-height: 32px;
+    display: list-item;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .contents {
+    margin-left: 10px;
+    list-style-type: disc;
+    text-align: justify;
+    font-size: 24px;
+    line-height: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  .button {
+    background-color: var(--ieeeblue);
+    border: none;
+    border-radius: 36px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.member_access {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    align-items: center;
+    margin-bottom: 100px;
+    gap: 36px;
+    flex: 0 0 350px;
+    height: auto;
+
+}
+
+.general_membership {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 100px;
+    height: auto;
+    flex: 0 0 500px;
+}
+
+.generalMessage {
+    font-size: 30px; 
+    text-align: center;
+    padding: 20px;
+    font-weight: normal;
+}
+.box-image {
+
+    max-width: 50%;
+    max-height: 50%;
+
+}
+
+.officer_applications {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.officerMessage {
+    font-size: 36px; 
+    text-align: center;
+    padding: 20px;
+}

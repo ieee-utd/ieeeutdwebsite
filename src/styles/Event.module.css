@@ -1,0 +1,32 @@
+/* Event.module.css */
+
+.eventCard {
+	width: 300px; /* Set card width */
+	height: 250px; /* Set card height */
+	border-radius: 10px;
+	border: 2px solid #ccc;
+	box-shadow: 15px 15px #32363d;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	margin-right: 2rem;
+	background-color: white;
+}
+
+.eventTitle {
+	color: black;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+.eventTitleSection {
+	height: 60%;
+}
+
+.eventDate,
+.eventTime,
+.eventLocation {
+	font-size: 1.2rem;
+	color: black;
+	line-height: 1.5rem;
+	margin-bottom: 0.2rem;
+}

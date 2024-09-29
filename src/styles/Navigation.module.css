@@ -1,0 +1,214 @@
+
+
+.navbar {
+
+
+    display: flex;
+    flex-direction: row;
+    background-color: var(--ieeeblue);
+    height: 85px;
+   
+  
+  }
+
+
+  .nav_list {
+
+    display: flex;
+    position:absolute;
+    flex-direction: column;
+    color: white;
+    z-index: 50;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(44, 107, 155, 0.9);
+    list-style: none;
+    padding: 0;
+
+  }
+  .nav_list li {
+
+    padding: 0.5rem;
+    padding-left: 0.4rem;
+ 
+    
+  }
+
+  .nav_list li:hover{
+    background-color: rgba(45, 136, 201, 0.9);
+  }
+
+  .nav_list a:hover {
+    
+    text-decoration: none;
+    display: block;
+    color:inherit;
+
+  }
+
+  .title__logo {
+
+    margin-left: 0.7em;
+    position: absolute;
+    margin-top: 0.8em;
+    display: flex;
+    width: max-content;
+    flex-direction: row;
+
+  }
+  
+
+  .navbar__title {
+
+    color: white;
+    font-size: 2rem;
+    white-space: nowrap;
+
+
+  }
+
+
+  .first__container {
+
+    margin-right: auto;
+    position: relative;
+  }
+
+  .logo {
+
+    width: 55px;
+    height: 55px;
+    margin-right:5%;
+
+  }
+
+  .navbar__hover__underline{
+
+    display: inline-block;
+    position: relative;
+   
+  }
+
+    
+  .navbar__hover__underline:hover{
+
+    color: white;
+
+  }
+
+  .navbar__hover__underline:after{
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--ieeeorange);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out
+
+  }
+  
+  .navbar__hover__underline:hover:after{
+
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+  }
+
+
+
+  .hamburger__menu {
+
+    display: none;
+ 
+
+  }
+
+  
+  .hamburger__container {
+
+    display: none;
+
+  
+  }
+
+  .mobile_nav_list {
+
+  display: none;
+  
+
+  }
+
+  .mobile_nav_list li{
+
+    color: white;
+    padding: 0.5rem;
+    padding-left: 4rem;
+    font-size: 2rem;
+
+      
+  }
+
+  .mobile_nav_list li a:hover{
+
+   text-decoration: none;
+   color: inherit;
+
+  }
+
+  @media  (max-width: 820px){
+
+    .navbar__options {
+          
+    display: none;
+    
+    }
+
+    .hamburger__menu{
+
+      display: block;
+      margin-top: 1%;
+      color: white;
+
+
+    }
+
+    .hamburger__container {
+
+      display: flex;
+      align-self: center;
+      
+  
+    }
+
+    .hamburger__container button {
+
+      outline: none;
+    }
+
+    .mobile_nav_list {
+
+      display: flex;
+      position:absolute;
+      flex-direction: column;
+      z-index: 50;
+      width: 100%;
+      overflow-x: hidden;
+      background-color: rgb(44, 107, 155, 0.9);
+      list-style: none;
+      padding: 0;
+
+    }
+    
+    .mobile_nav_list li:hover {
+
+      background-color: rgba(45, 136, 201, 0.9);
+
+    }
+    
+
+  }
+
